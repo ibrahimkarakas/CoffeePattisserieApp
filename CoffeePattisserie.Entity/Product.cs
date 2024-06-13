@@ -18,6 +18,5 @@ namespace CoffeePattisserie.Entity
         
         //This section will be used to view the advertised products.
         public bool IsAdvertised { get; set; }
-        public DateTime ExpirationDate { get; set; }
     }
 }
