@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\CoffeePattisserie.Api.props" />
+</Project>
