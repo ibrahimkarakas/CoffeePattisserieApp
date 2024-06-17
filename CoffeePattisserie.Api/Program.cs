@@ -5,7 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.AddControllers();
-builder.Services.AddDbContext<CoffeeAppContext>(options=>options.UseSqlServer(builder.Configuration.GetConnectionString("SqlServerConnection")));
+builder.Services.AddDbContext<CoffeeAppDbContext>(options=>options.UseSqlServer(builder.Configuration.GetConnectionString("SqlServerConnection")));
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 

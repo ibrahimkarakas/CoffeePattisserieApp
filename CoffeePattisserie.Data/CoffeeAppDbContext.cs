@@ -7,10 +7,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CoffeePattisserie.Data
 {
-    public class CoffeeAppContext:DbContext
+    public class CoffeeAppDbContext:DbContext
     {
         //Aşağıda Connection stringi karşılıyoruz.
-        public CoffeeAppContext(DbContextOptions options):base(options)
+        public CoffeeAppDbContext(DbContextOptions options):base(options)
         {
             
         }
