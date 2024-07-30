@@ -10,3 +10,15 @@ C:\Users\Greki\Desktop\FinalProject-CoffeePattisserie\CoffeePattisserieApp\Coffe
 C:\Users\Greki\Desktop\FinalProject-CoffeePattisserie\CoffeePattisserieApp\CoffeePattisserie.Entity\obj\Debug\net8.0\refint\CoffeePattisserie.Entity.dll
 C:\Users\Greki\Desktop\FinalProject-CoffeePattisserie\CoffeePattisserieApp\CoffeePattisserie.Entity\obj\Debug\net8.0\CoffeePattisserie.Entity.pdb
 C:\Users\Greki\Desktop\FinalProject-CoffeePattisserie\CoffeePattisserieApp\CoffeePattisserie.Entity\obj\Debug\net8.0\ref\CoffeePattisserie.Entity.dll
+C:\Users\Admin\Desktop\FinalProject-CoffeePattisserie\CoffeePattisserieApp\CoffeePattisserie.Entity\bin\Debug\net8.0\CoffeePattisserie.Entity.deps.json
+C:\Users\Admin\Desktop\FinalProject-CoffeePattisserie\CoffeePattisserieApp\CoffeePattisserie.Entity\bin\Debug\net8.0\CoffeePattisserie.Entity.dll
+C:\Users\Admin\Desktop\FinalProject-CoffeePattisserie\CoffeePattisserieApp\CoffeePattisserie.Entity\bin\Debug\net8.0\CoffeePattisserie.Entity.pdb
+C:\Users\Admin\Desktop\FinalProject-CoffeePattisserie\CoffeePattisserieApp\CoffeePattisserie.Entity\obj\Debug\net8.0\CoffeePattisserie.Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\FinalProject-CoffeePattisserie\CoffeePattisserieApp\CoffeePattisserie.Entity\obj\Debug\net8.0\CoffeePattisserie.Entity.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\FinalProject-CoffeePattisserie\CoffeePattisserieApp\CoffeePattisserie.Entity\obj\Debug\net8.0\CoffeePattisserie.Entity.AssemblyInfo.cs
+C:\Users\Admin\Desktop\FinalProject-CoffeePattisserie\CoffeePattisserieApp\CoffeePattisserie.Entity\obj\Debug\net8.0\CoffeePattisserie.Entity.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\FinalProject-CoffeePattisserie\CoffeePattisserieApp\CoffeePattisserie.Entity\obj\Debug\net8.0\CoffeePattisserie.Entity.sourcelink.json
+C:\Users\Admin\Desktop\FinalProject-CoffeePattisserie\CoffeePattisserieApp\CoffeePattisserie.Entity\obj\Debug\net8.0\CoffeePattisserie.Entity.dll
+C:\Users\Admin\Desktop\FinalProject-CoffeePattisserie\CoffeePattisserieApp\CoffeePattisserie.Entity\obj\Debug\net8.0\refint\CoffeePattisserie.Entity.dll
+C:\Users\Admin\Desktop\FinalProject-CoffeePattisserie\CoffeePattisserieApp\CoffeePattisserie.Entity\obj\Debug\net8.0\CoffeePattisserie.Entity.pdb
+C:\Users\Admin\Desktop\FinalProject-CoffeePattisserie\CoffeePattisserieApp\CoffeePattisserie.Entity\obj\Debug\net8.0\ref\CoffeePattisserie.Entity.dll

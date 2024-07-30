@@ -10,5 +10,6 @@ namespace CoffeePattisserie.Data.Abstract
     {
         Task<List<Coffee>> GetCoffeesWithCategoriesAsync();
         Task<List<Coffee>> GetCoffeesByCategoryIdAsync();
+        Task GetCoffeesByCategoryIdAsync(int categoryId);
     }
 }

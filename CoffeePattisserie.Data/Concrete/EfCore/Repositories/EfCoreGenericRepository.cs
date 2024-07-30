@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using CoffeePattisserie.Data.Abstract;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace CoffeePattisserie.Data.Concrete.EfCore.Repositories
 {
@@ -20,9 +21,10 @@ namespace CoffeePattisserie.Data.Concrete.EfCore.Repositories
            return entity;
         }
 
-        public Task DeleteAsync(TEntity entity)
+        public async Task DeleteAsync(TEntity entity)
         {
-            throw new NotImplementedException();
+            _dbContext.Set<TEntity>().Remove(entity);
+            await _dbContext.SaveChangesAsync();
         }
 
         public async Task<List<TEntity>> GetAllAsync()
@@ -31,14 +33,17 @@ namespace CoffeePattisserie.Data.Concrete.EfCore.Repositories
            return entities;
         }
 
-        public Task<TEntity> GetByIdAsync(int id)
+        public async Task<TEntity> GetByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            TEntity entity = await _dbContext.Set<TEntity>().FindAsync(id);
+            return entity;
         }
 
-        public Task<TEntity> UpdateAsync(TEntity entity)
+        public async Task<TEntity> UpdateAsync(TEntity entity)
         {
-            throw new NotImplementedException();
+           EntityEntry<TEntity> result = _dbContext.Set<TEntity>().Update(entity);
+           await _dbContext.SaveChangesAsync();
+           return entity;
         }
     }
 }
