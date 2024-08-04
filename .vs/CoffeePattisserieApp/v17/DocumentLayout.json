@@ -3,20 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{141889B5-7254-4DC6-9D3A-9D9E3C16C1C1}|CoffeePattisserie.Data\\CoffeePattisserie.Data.csproj|c:\\users\\admin\\desktop\\finalproject-coffeepattisserie\\coffeepattisserieapp\\coffeepattisserie.data\\concrete\\efcore\\configs\\coffeecategoryconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{141889B5-7254-4DC6-9D3A-9D9E3C16C1C1}|CoffeePattisserie.Data\\CoffeePattisserie.Data.csproj|solutionrelative:coffeepattisserie.data\\concrete\\efcore\\configs\\coffeecategoryconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3C99A845-11C6-49DC-9CD3-86167641CDC1}|CoffeePattisserie.Entity\\CoffeePattisserie.Entity.csproj|c:\\users\\admin\\desktop\\finalproject-coffeepattisserie\\coffeepattisserieapp\\coffeepattisserie.entity\\concrete\\coffeecategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C99A845-11C6-49DC-9CD3-86167641CDC1}|CoffeePattisserie.Entity\\CoffeePattisserie.Entity.csproj|solutionrelative:coffeepattisserie.entity\\concrete\\coffeecategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1332A360-BFF3-4C91-9988-EF1CD629422B}|CoffeePattisserie.Api\\CoffeePattisserie.Api.csproj|c:\\users\\admin\\desktop\\finalproject-coffeepattisserie\\coffeepattisserieapp\\coffeepattisserie.api\\controllers\\coffeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1332A360-BFF3-4C91-9988-EF1CD629422B}|CoffeePattisserie.Api\\CoffeePattisserie.Api.csproj|solutionrelative:coffeepattisserie.api\\controllers\\coffeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3C99A845-11C6-49DC-9CD3-86167641CDC1}|CoffeePattisserie.Entity\\CoffeePattisserie.Entity.csproj|c:\\users\\admin\\desktop\\finalproject-coffeepattisserie\\coffeepattisserieapp\\coffeepattisserie.entity\\concrete\\coffee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C99A845-11C6-49DC-9CD3-86167641CDC1}|CoffeePattisserie.Entity\\CoffeePattisserie.Entity.csproj|solutionrelative:coffeepattisserie.entity\\concrete\\coffee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{141889B5-7254-4DC6-9D3A-9D9E3C16C1C1}|CoffeePattisserie.Data\\CoffeePattisserie.Data.csproj|c:\\users\\admin\\desktop\\finalproject-coffeepattisserie\\coffeepattisserieapp\\coffeepattisserie.data\\concrete\\efcore\\configs\\coffeeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{141889B5-7254-4DC6-9D3A-9D9E3C16C1C1}|CoffeePattisserie.Data\\CoffeePattisserie.Data.csproj|solutionrelative:coffeepattisserie.data\\concrete\\efcore\\configs\\coffeeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,58 +14,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CoffeeCategory.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Entity\\Concrete\\CoffeeCategory.cs",
-              "RelativeDocumentMoniker": "CoffeePattisserie.Entity\\Concrete\\CoffeeCategory.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Entity\\Concrete\\CoffeeCategory.cs",
-              "RelativeToolTip": "CoffeePattisserie.Entity\\Concrete\\CoffeeCategory.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-04T13:07:47.428Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Coffee.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Entity\\Concrete\\Coffee.cs",
-              "RelativeDocumentMoniker": "CoffeePattisserie.Entity\\Concrete\\Coffee.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Entity\\Concrete\\Coffee.cs",
-              "RelativeToolTip": "CoffeePattisserie.Entity\\Concrete\\Coffee.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-04T13:06:48.471Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CoffeeCategoryConfig.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Data\\Concrete\\EfCore\\Configs\\CoffeeCategoryConfig.cs",
-              "RelativeDocumentMoniker": "CoffeePattisserie.Data\\Concrete\\EfCore\\Configs\\CoffeeCategoryConfig.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Data\\Concrete\\EfCore\\Configs\\CoffeeCategoryConfig.cs",
-              "RelativeToolTip": "CoffeePattisserie.Data\\Concrete\\EfCore\\Configs\\CoffeeCategoryConfig.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAB4AAABEAAAA",
+              "Title": "CoffeeConfig.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Data\\Concrete\\EfCore\\Configs\\CoffeeConfig.cs",
+              "RelativeDocumentMoniker": "CoffeePattisserie.Data\\Concrete\\EfCore\\Configs\\CoffeeConfig.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Data\\Concrete\\EfCore\\Configs\\CoffeeConfig.cs",
+              "RelativeToolTip": "CoffeePattisserie.Data\\Concrete\\EfCore\\Configs\\CoffeeConfig.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-04T13:01:25.414Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CoffeesController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\Controllers\\CoffeesController.cs",
-              "RelativeDocumentMoniker": "CoffeePattisserie.Api\\Controllers\\CoffeesController.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\Controllers\\CoffeesController.cs",
-              "RelativeToolTip": "CoffeePattisserie.Api\\Controllers\\CoffeesController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADYAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-01T15:42:37.343Z",
+              "WhenOpened": "2024-08-04T20:37:27.354Z",
               "EditorCaption": ""
             }
           ]

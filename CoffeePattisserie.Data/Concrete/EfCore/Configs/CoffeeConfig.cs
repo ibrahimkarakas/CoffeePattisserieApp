@@ -17,7 +17,7 @@ namespace CoffeePattisserie.Data.Concrete.EfCore.Configs
 
             builder.Property(x=>x.Name).IsRequired().HasMaxLength(40);
             builder.Property(x=>x.StockQuantity).IsRequired();
-            builder.Property(x=>x.Price).HasColumnType("decimal(16,2)"); 
+            builder.Property(x=>x.Price).HasColumnType("real"); 
             // builder.Property(x=>x.CreatedDate).HasDefaultValueSql("getdate()");
             builder.ToTable("Products");
 

@@ -3,7 +3,6 @@ using System;
 using CoffeePattisserie.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
@@ -12,44 +11,38 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CoffeePattisserie.Data.Migrations
 {
     [DbContext(typeof(CoffeeAppDbContext))]
-    [Migration("20240804151059_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20240804205930_InitialDb")]
+    partial class InitialDb
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.4")
-                .HasAnnotation("Relational:MaxIdentifierLength", 128);
-
-            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+            modelBuilder.HasAnnotation("ProductVersion", "8.0.4");
 
             modelBuilder.Entity("CoffeePattisserie.Entity.Concrete.Category", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                        .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Description")
                         .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
+                        .HasColumnType("TEXT");
 
                     b.Property<bool>("IsActive")
-                        .HasColumnType("bit");
+                        .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("ModifiedDate")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
@@ -98,47 +91,45 @@ namespace CoffeePattisserie.Data.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("CaffeineContent")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("CategoryId")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("FlavorNotes")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<bool>("IsActive")
-                        .HasColumnType("bit");
+                        .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("ModifiedDate")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(40)
-                        .HasColumnType("nvarchar(40)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("OriginCountry")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<decimal>("Price")
-                        .HasColumnType("decimal(16,2)");
+                        .HasColumnType("real");
 
                     b.Property<string>("RoastLevel")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("StockQuantity")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
 
@@ -150,10 +141,10 @@ namespace CoffeePattisserie.Data.Migrations
                             Id = 1,
                             CaffeineContent = 120,
                             CategoryId = 0,
-                            CreatedDate = new DateTime(2024, 7, 25, 18, 10, 58, 937, DateTimeKind.Local).AddTicks(9515),
+                            CreatedDate = new DateTime(2024, 7, 25, 23, 59, 30, 251, DateTimeKind.Local).AddTicks(6655),
                             FlavorNotes = "Floral, Citrus",
                             IsActive = true,
-                            ModifiedDate = new DateTime(2024, 8, 4, 18, 10, 58, 937, DateTimeKind.Local).AddTicks(9514),
+                            ModifiedDate = new DateTime(2024, 8, 4, 23, 59, 30, 251, DateTimeKind.Local).AddTicks(6654),
                             Name = "Ethiopian Yirgacheffe",
                             OriginCountry = "Ethiopia",
                             Price = 350m,
@@ -165,10 +156,10 @@ namespace CoffeePattisserie.Data.Migrations
                             Id = 2,
                             CaffeineContent = 110,
                             CategoryId = 0,
-                            CreatedDate = new DateTime(2024, 7, 13, 18, 10, 58, 937, DateTimeKind.Local).AddTicks(9525),
+                            CreatedDate = new DateTime(2024, 7, 13, 23, 59, 30, 251, DateTimeKind.Local).AddTicks(6664),
                             FlavorNotes = "Nutty, Chocolate",
                             IsActive = true,
-                            ModifiedDate = new DateTime(2024, 8, 4, 18, 10, 58, 937, DateTimeKind.Local).AddTicks(9524),
+                            ModifiedDate = new DateTime(2024, 8, 4, 23, 59, 30, 251, DateTimeKind.Local).AddTicks(6664),
                             Name = "Colombian Supremo",
                             OriginCountry = "Colombia",
                             Price = 299m,
@@ -180,10 +171,10 @@ namespace CoffeePattisserie.Data.Migrations
                             Id = 3,
                             CaffeineContent = 100,
                             CategoryId = 0,
-                            CreatedDate = new DateTime(2024, 7, 30, 18, 10, 58, 937, DateTimeKind.Local).AddTicks(9528),
+                            CreatedDate = new DateTime(2024, 7, 30, 23, 59, 30, 251, DateTimeKind.Local).AddTicks(6667),
                             FlavorNotes = "Earthy, Herbal",
                             IsActive = true,
-                            ModifiedDate = new DateTime(2024, 8, 4, 18, 10, 58, 937, DateTimeKind.Local).AddTicks(9527),
+                            ModifiedDate = new DateTime(2024, 8, 4, 23, 59, 30, 251, DateTimeKind.Local).AddTicks(6667),
                             Name = "Sumatra Mandheling",
                             OriginCountry = "Indonesia",
                             Price = 499m,
@@ -195,10 +186,10 @@ namespace CoffeePattisserie.Data.Migrations
                             Id = 4,
                             CaffeineContent = 115,
                             CategoryId = 0,
-                            CreatedDate = new DateTime(2024, 7, 25, 18, 10, 58, 937, DateTimeKind.Local).AddTicks(9530),
+                            CreatedDate = new DateTime(2024, 7, 25, 23, 59, 30, 251, DateTimeKind.Local).AddTicks(6670),
                             FlavorNotes = "Sweet, Nutty",
                             IsActive = true,
-                            ModifiedDate = new DateTime(2024, 8, 4, 18, 10, 58, 937, DateTimeKind.Local).AddTicks(9530),
+                            ModifiedDate = new DateTime(2024, 8, 4, 23, 59, 30, 251, DateTimeKind.Local).AddTicks(6669),
                             Name = "Brazil Santos",
                             OriginCountry = "Brazil",
                             Price = 250m,
@@ -210,10 +201,10 @@ namespace CoffeePattisserie.Data.Migrations
                             Id = 5,
                             CaffeineContent = 105,
                             CategoryId = 0,
-                            CreatedDate = new DateTime(2024, 7, 5, 18, 10, 58, 937, DateTimeKind.Local).AddTicks(9533),
+                            CreatedDate = new DateTime(2024, 7, 5, 23, 59, 30, 251, DateTimeKind.Local).AddTicks(6672),
                             FlavorNotes = "Smooth, Sweet, Mild",
                             IsActive = true,
-                            ModifiedDate = new DateTime(2024, 8, 4, 18, 10, 58, 937, DateTimeKind.Local).AddTicks(9532),
+                            ModifiedDate = new DateTime(2024, 8, 4, 23, 59, 30, 251, DateTimeKind.Local).AddTicks(6671),
                             Name = "Jamaican Blue Mountain",
                             OriginCountry = "Jamaica",
                             Price = 899m,
@@ -225,10 +216,10 @@ namespace CoffeePattisserie.Data.Migrations
             modelBuilder.Entity("CoffeePattisserie.Entity.Concrete.CoffeeCategory", b =>
                 {
                     b.Property<int>("CoffeeId")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("CategoryId")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("CoffeeId", "CategoryId");
 
@@ -308,47 +299,45 @@ namespace CoffeePattisserie.Data.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("CategoryId")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("FlavorProfile")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Ingredients")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<bool>("IsActive")
-                        .HasColumnType("bit");
+                        .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("ModifiedDate")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("PreparationMethod")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("StockQuantity")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
 
@@ -359,47 +348,45 @@ namespace CoffeePattisserie.Data.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Allergens")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("CategoryId")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Ingredients")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<bool>("IsActive")
-                        .HasColumnType("bit");
+                        .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("ModifiedDate")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("ShelfLife")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("StockQuantity")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
 
