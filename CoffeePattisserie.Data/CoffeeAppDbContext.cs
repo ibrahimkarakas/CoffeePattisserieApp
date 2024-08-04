@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using CoffeePattisserie.Data.Concrete.EfCore.Configs;
 using CoffeePattisserie.Entity.Concrete;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
+
 
 namespace CoffeePattisserie.Data
 {
@@ -19,10 +21,10 @@ namespace CoffeePattisserie.Data
         public DbSet<Moctail> Moctails { get; set; }
         public DbSet<Pattisserie> PattisserieProducts { get; set; }
         public DbSet<Coffee> Coffees { get; set; }
+        public DbSet<CoffeeCategory> CoffeeCategories { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(CategoryConfig).Assembly);
-            modelBuilder.Entity<CoffeeC
             base.OnModelCreating(modelBuilder);
         }
 

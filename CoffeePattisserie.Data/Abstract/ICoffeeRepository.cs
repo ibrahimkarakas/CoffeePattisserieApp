@@ -9,7 +9,8 @@ namespace CoffeePattisserie.Data.Abstract
     public interface ICoffeeRepository: IGenericRepository<Coffee>
     {
         Task<List<Coffee>> GetCoffeesWithCategoriesAsync();
-        Task<List<Coffee>> GetCoffeesByCategoryIdAsync();
-        Task GetCoffeesByCategoryIdAsync(int categoryId);
+        Task<Coffee> GetCoffeeWithCategories(int id);
+        Task<List<Coffee>> GetCoffeesByCategoryIdAsync (int categoryId);
+        Task<Coffee> CreateCoffeeWithCategories(Coffee coffee, List<int> categoryIds);
     }
 }

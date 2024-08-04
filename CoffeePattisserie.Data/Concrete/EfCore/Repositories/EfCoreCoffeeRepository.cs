@@ -20,24 +20,50 @@ namespace CoffeePattisserie.Data.Concrete.EfCore.Repositories
                 return _dbContext as CoffeeAppDbContext;
             }
         }
+
+        public async Task<Coffee> CreateCoffeeWithCategories(Coffee coffee, List<int> categoryIds)
+        {
+            var createdCoffee = await Context.Coffees.AddAsync(coffee);
+            if (createdCoffee != null)
+            {
+                await Context.SaveChangesAsync();
+                var coffeeCategories = categoryIds
+                .Select(x => new CoffeeCategory {CoffeeId = coffee.Id, CategoryId = x})
+                .ToList();
+                await Context.CoffeeCategories.AddRangeAsync(coffeeCategories);
+                await Context.SaveChangesAsync();
+            }
+            var result = await GetCoffeeWithCategories(coffee.Id);
+            return result;
+        }
+
         public async Task<List<Coffee>> GetCoffeesByCategoryIdAsync(int categoryId)
         {
             List<Coffee> coffees = await Context
-            .Coffees
-            .Include(x=>x.CoffeCategories)
-            .ThenInclude(y=>y.Category)
-            .Where(x=>x.CoffeCategories.Any(y=>y.CategoryId==categoryId))
+            .Coffees.Include(x => x.CoffeeCategories)
+            .ThenInclude(y => y.Category)
+            .Where(x => x.CoffeeCategories.Any(y => y.CategoryId == categoryId))
             .ToListAsync();
+            return coffees;
         }
 
         public async Task<List<Coffee>> GetCoffeesWithCategoriesAsync()
         {
-            var coffees = await Context
-            .Coffees
-            .Include(x=>x.CoffeCategories)
+            List<Coffee> coffees = await Context
+            .Coffees.Include(x=> x.CoffeeCategories)
             .ThenInclude(y => y.Category)
             .ToListAsync();
             return coffees;
+        }
+
+        public async Task<Coffee> GetCoffeeWithCategories(int id)
+        {
+            Coffee coffee = await Context
+            .Coffees.Where(x => x.Id == id)
+            .Include(x => x.CoffeeCategories)
+            .ThenInclude(y => y.Category)
+            .FirstOrDefaultAsync();
+            return coffee;
         }
     }
 }

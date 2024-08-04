@@ -1,13 +1,14 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
-namespace BooksApp.Entity.Concrete
+namespace CoffeePattisserie.Entity.Concrete
 {
     public class CoffeeCategory
     {
-        public int BookId { get; set; }
+        public int CoffeeId { get; set; }
         public Coffee Coffee { get; set; }
         public int CategoryId { get; set; }
         public Category Category { get; set; }
