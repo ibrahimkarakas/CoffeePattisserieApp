@@ -2,12 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using CoffeePattisserie.Entity.Abstract;
 
-namespace CoffeePattisserie.Entity.Concrete
+namespace CoffeePattisserie.Shared.Dtos
 {
-    public class Pattisserie : IBaseEntity, ICommonEntity
-    {
+    public class PattisserieDto{
         public int Id { get; set; }
         public string Name { get; set; }
         public DateTime CreatedDate { get; set; }
@@ -19,6 +17,6 @@ namespace CoffeePattisserie.Entity.Concrete
         public string Ingredients { get; set; }
         public string Allergens { get; set; }
         public string ShelfLife { get; set; }
-        public List<PattisserieCategory> PattisserieCategories { get; set; }
+        public List<CategoryDto> Categories { get; set; }
     }
 }

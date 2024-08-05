@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CoffeePattisserie.Data.Migrations
 {
     [DbContext(typeof(CoffeeAppDbContext))]
-    [Migration("20240804205930_InitialDb")]
-    partial class InitialDb
+    [Migration("20240805085700_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -141,10 +141,10 @@ namespace CoffeePattisserie.Data.Migrations
                             Id = 1,
                             CaffeineContent = 120,
                             CategoryId = 0,
-                            CreatedDate = new DateTime(2024, 7, 25, 23, 59, 30, 251, DateTimeKind.Local).AddTicks(6655),
+                            CreatedDate = new DateTime(2024, 7, 26, 11, 57, 0, 377, DateTimeKind.Local).AddTicks(8279),
                             FlavorNotes = "Floral, Citrus",
                             IsActive = true,
-                            ModifiedDate = new DateTime(2024, 8, 4, 23, 59, 30, 251, DateTimeKind.Local).AddTicks(6654),
+                            ModifiedDate = new DateTime(2024, 8, 5, 11, 57, 0, 377, DateTimeKind.Local).AddTicks(8278),
                             Name = "Ethiopian Yirgacheffe",
                             OriginCountry = "Ethiopia",
                             Price = 350m,
@@ -156,10 +156,10 @@ namespace CoffeePattisserie.Data.Migrations
                             Id = 2,
                             CaffeineContent = 110,
                             CategoryId = 0,
-                            CreatedDate = new DateTime(2024, 7, 13, 23, 59, 30, 251, DateTimeKind.Local).AddTicks(6664),
+                            CreatedDate = new DateTime(2024, 7, 14, 11, 57, 0, 377, DateTimeKind.Local).AddTicks(8289),
                             FlavorNotes = "Nutty, Chocolate",
                             IsActive = true,
-                            ModifiedDate = new DateTime(2024, 8, 4, 23, 59, 30, 251, DateTimeKind.Local).AddTicks(6664),
+                            ModifiedDate = new DateTime(2024, 8, 5, 11, 57, 0, 377, DateTimeKind.Local).AddTicks(8288),
                             Name = "Colombian Supremo",
                             OriginCountry = "Colombia",
                             Price = 299m,
@@ -171,10 +171,10 @@ namespace CoffeePattisserie.Data.Migrations
                             Id = 3,
                             CaffeineContent = 100,
                             CategoryId = 0,
-                            CreatedDate = new DateTime(2024, 7, 30, 23, 59, 30, 251, DateTimeKind.Local).AddTicks(6667),
+                            CreatedDate = new DateTime(2024, 7, 31, 11, 57, 0, 377, DateTimeKind.Local).AddTicks(8292),
                             FlavorNotes = "Earthy, Herbal",
                             IsActive = true,
-                            ModifiedDate = new DateTime(2024, 8, 4, 23, 59, 30, 251, DateTimeKind.Local).AddTicks(6667),
+                            ModifiedDate = new DateTime(2024, 8, 5, 11, 57, 0, 377, DateTimeKind.Local).AddTicks(8292),
                             Name = "Sumatra Mandheling",
                             OriginCountry = "Indonesia",
                             Price = 499m,
@@ -186,10 +186,10 @@ namespace CoffeePattisserie.Data.Migrations
                             Id = 4,
                             CaffeineContent = 115,
                             CategoryId = 0,
-                            CreatedDate = new DateTime(2024, 7, 25, 23, 59, 30, 251, DateTimeKind.Local).AddTicks(6670),
+                            CreatedDate = new DateTime(2024, 7, 26, 11, 57, 0, 377, DateTimeKind.Local).AddTicks(8294),
                             FlavorNotes = "Sweet, Nutty",
                             IsActive = true,
-                            ModifiedDate = new DateTime(2024, 8, 4, 23, 59, 30, 251, DateTimeKind.Local).AddTicks(6669),
+                            ModifiedDate = new DateTime(2024, 8, 5, 11, 57, 0, 377, DateTimeKind.Local).AddTicks(8294),
                             Name = "Brazil Santos",
                             OriginCountry = "Brazil",
                             Price = 250m,
@@ -201,10 +201,10 @@ namespace CoffeePattisserie.Data.Migrations
                             Id = 5,
                             CaffeineContent = 105,
                             CategoryId = 0,
-                            CreatedDate = new DateTime(2024, 7, 5, 23, 59, 30, 251, DateTimeKind.Local).AddTicks(6672),
+                            CreatedDate = new DateTime(2024, 7, 6, 11, 57, 0, 377, DateTimeKind.Local).AddTicks(8297),
                             FlavorNotes = "Smooth, Sweet, Mild",
                             IsActive = true,
-                            ModifiedDate = new DateTime(2024, 8, 4, 23, 59, 30, 251, DateTimeKind.Local).AddTicks(6671),
+                            ModifiedDate = new DateTime(2024, 8, 5, 11, 57, 0, 377, DateTimeKind.Local).AddTicks(8296),
                             Name = "Jamaican Blue Mountain",
                             OriginCountry = "Jamaica",
                             Price = 899m,
@@ -352,20 +352,20 @@ namespace CoffeePattisserie.Data.Migrations
 
                     b.Property<string>("Allergens")
                         .IsRequired()
+                        .HasMaxLength(200)
                         .HasColumnType("TEXT");
-
-                    b.Property<int>("CategoryId")
-                        .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Description")
                         .IsRequired()
+                        .HasMaxLength(200)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Ingredients")
                         .IsRequired()
+                        .HasMaxLength(500)
                         .HasColumnType("TEXT");
 
                     b.Property<bool>("IsActive")
@@ -376,13 +376,15 @@ namespace CoffeePattisserie.Data.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
+                        .HasMaxLength(50)
                         .HasColumnType("TEXT");
 
                     b.Property<decimal>("Price")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("real");
 
                     b.Property<string>("ShelfLife")
                         .IsRequired()
+                        .HasMaxLength(50)
                         .HasColumnType("TEXT");
 
                     b.Property<int>("StockQuantity")
@@ -390,7 +392,160 @@ namespace CoffeePattisserie.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("PattisserieProducts");
+                    b.ToTable("PattisserieProducts", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Allergens = "Dairy, Nuts, Gluten",
+                            CreatedDate = new DateTime(2024, 7, 21, 11, 57, 0, 378, DateTimeKind.Local).AddTicks(2565),
+                            Description = "Traditional French dessert made with choux pastry and praline-flavored cream.",
+                            Ingredients = "Choux pastry, Praline cream, Almonds",
+                            IsActive = true,
+                            ModifiedDate = new DateTime(2024, 8, 5, 11, 57, 0, 378, DateTimeKind.Local).AddTicks(2571),
+                            Name = "Paris Brest",
+                            Price = 155m,
+                            ShelfLife = "2 days in refrigerator",
+                            StockQuantity = 20
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Allergens = "Dairy, Gluten, Eggs",
+                            CreatedDate = new DateTime(2024, 7, 26, 11, 57, 0, 378, DateTimeKind.Local).AddTicks(2578),
+                            Description = "Classic Italian dessert with coffee-soaked ladyfingers and mascarpone cheese.",
+                            Ingredients = "Ladyfingers, Mascarpone cheese, Coffee, Cocoa",
+                            IsActive = true,
+                            ModifiedDate = new DateTime(2024, 8, 5, 11, 57, 0, 378, DateTimeKind.Local).AddTicks(2579),
+                            Name = "Tiramisu",
+                            Price = 145m,
+                            ShelfLife = "3 days refrigerated",
+                            StockQuantity = 30
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Allergens = "Nuts, Gluten",
+                            CreatedDate = new DateTime(2024, 7, 31, 11, 57, 0, 378, DateTimeKind.Local).AddTicks(2581),
+                            Description = "Traditional Turkish dessert made with layers of filo pastry, nuts, and honey syrup.",
+                            Ingredients = "Filo pastry, Walnuts, Honey syrup",
+                            IsActive = true,
+                            ModifiedDate = new DateTime(2024, 8, 5, 11, 57, 0, 378, DateTimeKind.Local).AddTicks(2582),
+                            Name = "Baklava",
+                            Price = 700m,
+                            ShelfLife = "5 days",
+                            StockQuantity = 50
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Allergens = "Dairy, Gluten",
+                            CreatedDate = new DateTime(2024, 7, 16, 11, 57, 0, 378, DateTimeKind.Local).AddTicks(2584),
+                            Description = "Rich dessert with a cream cheese filling on a graham cracker crust.",
+                            Ingredients = "Cream cheese, Graham crackers, Sugar",
+                            IsActive = true,
+                            ModifiedDate = new DateTime(2024, 8, 5, 11, 57, 0, 378, DateTimeKind.Local).AddTicks(2585),
+                            Name = "Cheesecake",
+                            Price = 150m,
+                            ShelfLife = "5 days refrigerated",
+                            StockQuantity = 40
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Allergens = "Dairy, Gluten, Eggs",
+                            CreatedDate = new DateTime(2024, 7, 26, 11, 57, 0, 378, DateTimeKind.Local).AddTicks(2587),
+                            Description = "Long French pastry made with choux dough filled with cream and topped with icing.",
+                            Ingredients = "Choux pastry, Chocolate icing, Pastry cream",
+                            IsActive = true,
+                            ModifiedDate = new DateTime(2024, 8, 5, 11, 57, 0, 378, DateTimeKind.Local).AddTicks(2588),
+                            Name = "Éclair",
+                            Price = 80m,
+                            ShelfLife = "1 day",
+                            StockQuantity = 50
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Allergens = "Gluten, Dairy",
+                            CreatedDate = new DateTime(2024, 7, 29, 11, 57, 0, 378, DateTimeKind.Local).AddTicks(2590),
+                            Description = "Light, flaky pastry with a variety of sweet fillings.",
+                            Ingredients = "Flour, Butter, Sugar, Fruit filling",
+                            IsActive = true,
+                            ModifiedDate = new DateTime(2024, 8, 5, 11, 57, 0, 378, DateTimeKind.Local).AddTicks(2591),
+                            Name = "Danish Pastry",
+                            Price = 140m,
+                            ShelfLife = "2 days",
+                            StockQuantity = 60
+                        });
+                });
+
+            modelBuilder.Entity("CoffeePattisserie.Entity.Concrete.PattisserieCategory", b =>
+                {
+                    b.Property<int>("PattisserieId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("PattisserieId", "CategoryId");
+
+                    b.HasIndex("CategoryId");
+
+                    b.ToTable("PattisserieCategories", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            PattisserieId = 1,
+                            CategoryId = 1
+                        },
+                        new
+                        {
+                            PattisserieId = 1,
+                            CategoryId = 3
+                        },
+                        new
+                        {
+                            PattisserieId = 2,
+                            CategoryId = 2
+                        },
+                        new
+                        {
+                            PattisserieId = 3,
+                            CategoryId = 1
+                        },
+                        new
+                        {
+                            PattisserieId = 4,
+                            CategoryId = 4
+                        },
+                        new
+                        {
+                            PattisserieId = 5,
+                            CategoryId = 2
+                        },
+                        new
+                        {
+                            PattisserieId = 5,
+                            CategoryId = 5
+                        },
+                        new
+                        {
+                            PattisserieId = 2,
+                            CategoryId = 4
+                        },
+                        new
+                        {
+                            PattisserieId = 3,
+                            CategoryId = 2
+                        },
+                        new
+                        {
+                            PattisserieId = 4,
+                            CategoryId = 3
+                        });
                 });
 
             modelBuilder.Entity("CoffeePattisserie.Entity.Concrete.CoffeeCategory", b =>
@@ -412,6 +567,25 @@ namespace CoffeePattisserie.Data.Migrations
                     b.Navigation("Coffee");
                 });
 
+            modelBuilder.Entity("CoffeePattisserie.Entity.Concrete.PattisserieCategory", b =>
+                {
+                    b.HasOne("CoffeePattisserie.Entity.Concrete.Category", "Category")
+                        .WithMany()
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CoffeePattisserie.Entity.Concrete.Pattisserie", "Pattisserie")
+                        .WithMany("PattisserieCategories")
+                        .HasForeignKey("PattisserieId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Category");
+
+                    b.Navigation("Pattisserie");
+                });
+
             modelBuilder.Entity("CoffeePattisserie.Entity.Concrete.Category", b =>
                 {
                     b.Navigation("CoffeeCategories");
@@ -420,6 +594,11 @@ namespace CoffeePattisserie.Data.Migrations
             modelBuilder.Entity("CoffeePattisserie.Entity.Concrete.Coffee", b =>
                 {
                     b.Navigation("CoffeeCategories");
+                });
+
+            modelBuilder.Entity("CoffeePattisserie.Entity.Concrete.Pattisserie", b =>
+                {
+                    b.Navigation("PattisserieCategories");
                 });
 #pragma warning restore 612, 618
         }

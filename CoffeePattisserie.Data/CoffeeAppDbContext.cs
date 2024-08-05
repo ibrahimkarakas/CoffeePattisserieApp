@@ -19,7 +19,7 @@ namespace CoffeePattisserie.Data
         }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Moctail> Moctails { get; set; }
-        public DbSet<Pattisserie> PattisserieProducts { get; set; }
+        public DbSet<Pattisserie> Pattisserie { get; set; }
         public DbSet<Coffee> Coffees { get; set; }
         public DbSet<CoffeeCategory> CoffeeCategories { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
