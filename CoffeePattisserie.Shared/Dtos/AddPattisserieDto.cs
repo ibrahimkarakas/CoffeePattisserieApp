@@ -14,5 +14,7 @@ namespace CoffeePattisserie.Shared.Dtos
         public string Ingredients { get; set; }
         public string Allergens { get; set; }
         public string ShelfLife { get; set; }
+        public List<int> CategoryIds { get; set; }
+
     }
 }

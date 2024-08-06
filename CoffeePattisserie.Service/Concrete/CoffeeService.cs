@@ -31,6 +31,12 @@ namespace CoffeePattisserie.Service.Concrete
             {
                 return Response<CoffeeDto>.Fail("Bir sorun oluştu.", 404);
             }
+            createdCoffee.CoffeeCategories=addCoffeeDto.CategoryIds.Select(x=>
+            new CoffeeCategory{
+                CoffeeId=createdCoffee.Id,
+                CategoryId=x
+            }).ToList();
+            await _coffeeRepository.UpdateAsync(coffee);
             var coffeeDto = _mapper.Map<CoffeeDto>(createdCoffee);
             return Response<CoffeeDto>.Success(coffeeDto, 201);
         }
