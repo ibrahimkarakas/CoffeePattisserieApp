@@ -2,11 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using CoffeePattisserie.Entity.Abstract;
 
-namespace CoffeePattisserie.Entity.Concrete
+namespace CoffeePattisserie.Shared.Dtos
 {
-    public class Moctail : IBaseEntity, ICommonEntity
+    public class MoctailDto
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -19,6 +18,6 @@ namespace CoffeePattisserie.Entity.Concrete
         public decimal Price { get; set; }
         public int StockQuantity { get; set; }
         public string FlavorProfile { get; set; }
-        public List<MoctailCategory> MoctailCategories { get; set; }    
-}
+        public List<CategoryDto> Categories { get; set; }
+    }
 }

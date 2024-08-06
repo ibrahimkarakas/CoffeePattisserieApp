@@ -36,17 +36,16 @@ namespace CoffeePattisserie.Data.Migrations
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Name = table.Column<string>(type: "TEXT", nullable: false),
+                    Name = table.Column<string>(type: "TEXT", maxLength: 50, nullable: false),
                     CreatedDate = table.Column<DateTime>(type: "TEXT", nullable: false),
                     ModifiedDate = table.Column<DateTime>(type: "TEXT", nullable: false),
                     IsActive = table.Column<bool>(type: "INTEGER", nullable: false),
-                    Description = table.Column<string>(type: "TEXT", nullable: false),
-                    Ingredients = table.Column<string>(type: "TEXT", nullable: false),
-                    PreparationMethod = table.Column<string>(type: "TEXT", nullable: false),
-                    Price = table.Column<decimal>(type: "TEXT", nullable: false),
+                    Description = table.Column<string>(type: "TEXT", maxLength: 200, nullable: false),
+                    Ingredients = table.Column<string>(type: "TEXT", maxLength: 500, nullable: false),
+                    PreparationMethod = table.Column<string>(type: "TEXT", maxLength: 500, nullable: false),
+                    Price = table.Column<decimal>(type: "real", nullable: false),
                     StockQuantity = table.Column<int>(type: "INTEGER", nullable: false),
-                    FlavorProfile = table.Column<string>(type: "TEXT", nullable: false),
-                    CategoryId = table.Column<int>(type: "INTEGER", nullable: false)
+                    FlavorProfile = table.Column<string>(type: "TEXT", maxLength: 100, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -96,6 +95,30 @@ namespace CoffeePattisserie.Data.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Products", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "MoctailCategories",
+                columns: table => new
+                {
+                    MoctailId = table.Column<int>(type: "INTEGER", nullable: false),
+                    CategoryId = table.Column<int>(type: "INTEGER", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_MoctailCategories", x => new { x.MoctailId, x.CategoryId });
+                    table.ForeignKey(
+                        name: "FK_MoctailCategories_Categories_CategoryId",
+                        column: x => x.CategoryId,
+                        principalTable: "Categories",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_MoctailCategories_Moctails_MoctailId",
+                        column: x => x.MoctailId,
+                        principalTable: "Moctails",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -158,16 +181,29 @@ namespace CoffeePattisserie.Data.Migrations
                 });
 
             migrationBuilder.InsertData(
+                table: "Moctails",
+                columns: new[] { "Id", "CreatedDate", "Description", "FlavorProfile", "Ingredients", "IsActive", "ModifiedDate", "Name", "PreparationMethod", "Price", "StockQuantity" },
+                values: new object[,]
+                {
+                    { 1, new DateTime(2024, 7, 21, 16, 51, 9, 915, DateTimeKind.Local).AddTicks(3342), "Refreshing non-alcoholic cocktail with mint and lime.", "Minty, Citrusy, Refreshing", "Mint leaves, Lime juice, Soda water, Sugar", true, new DateTime(2024, 8, 5, 16, 51, 9, 915, DateTimeKind.Local).AddTicks(3348), "Virgin Mojito", "Muddle mint leaves with sugar and lime juice. Add soda water and ice.", 120m, 20 },
+                    { 2, new DateTime(2024, 7, 26, 16, 51, 9, 915, DateTimeKind.Local).AddTicks(3352), "Tropical blend of pineapple and coconut.", "Tropical, Sweet, Creamy", "Pineapple juice, Coconut milk, Ice", true, new DateTime(2024, 8, 5, 16, 51, 9, 915, DateTimeKind.Local).AddTicks(3353), "Pineapple Coconut Delight", "Blend all ingredients until smooth. Serve chilled.", 110m, 30 },
+                    { 3, new DateTime(2024, 7, 28, 16, 51, 9, 915, DateTimeKind.Local).AddTicks(3356), "A sweet and tangy blend of mixed berries.", "Fruity, Tangy, Refreshing", "Strawberries, Blueberries, Raspberries, Lemon juice, Soda water", true, new DateTime(2024, 8, 5, 16, 51, 9, 915, DateTimeKind.Local).AddTicks(3356), "Berry Blast", "Blend berries with lemon juice. Top with soda water and serve over ice.", 135m, 25 },
+                    { 4, new DateTime(2024, 7, 24, 16, 51, 9, 915, DateTimeKind.Local).AddTicks(3358), "Sparkling mango drink with a hint of lime.", "Mango, Citrusy, Sparkling", "Mango puree, Lime juice, Sparkling water", true, new DateTime(2024, 8, 5, 16, 51, 9, 915, DateTimeKind.Local).AddTicks(3359), "Mango Fizz", "Mix mango puree and lime juice. Add sparkling water and serve over ice.", 135m, 35 },
+                    { 5, new DateTime(2024, 7, 18, 16, 51, 9, 915, DateTimeKind.Local).AddTicks(3361), "Cool and refreshing cucumber drink with mint.", "Fresh, Minty, Light", "Cucumber, Mint leaves, Lemon juice, Soda water", true, new DateTime(2024, 8, 5, 16, 51, 9, 915, DateTimeKind.Local).AddTicks(3361), "Cucumber Cooler", "Blend cucumber and mint. Add lemon juice and soda water. Serve chilled.", 125m, 40 },
+                    { 6, new DateTime(2024, 7, 16, 16, 51, 9, 915, DateTimeKind.Local).AddTicks(3363), "A vibrant blend of orange and grenadine.", "Citrusy, Sweet, Vibrant", "Orange juice, Grenadine syrup, Ice", true, new DateTime(2024, 8, 5, 16, 51, 9, 915, DateTimeKind.Local).AddTicks(3364), "Orange Sunset", "Mix orange juice and grenadine. Serve over ice for a layered effect.", 120m, 50 }
+                });
+
+            migrationBuilder.InsertData(
                 table: "PattisserieProducts",
                 columns: new[] { "Id", "Allergens", "CreatedDate", "Description", "Ingredients", "IsActive", "ModifiedDate", "Name", "Price", "ShelfLife", "StockQuantity" },
                 values: new object[,]
                 {
-                    { 1, "Dairy, Nuts, Gluten", new DateTime(2024, 7, 21, 11, 57, 0, 378, DateTimeKind.Local).AddTicks(2565), "Traditional French dessert made with choux pastry and praline-flavored cream.", "Choux pastry, Praline cream, Almonds", true, new DateTime(2024, 8, 5, 11, 57, 0, 378, DateTimeKind.Local).AddTicks(2571), "Paris Brest", 155m, "2 days in refrigerator", 20 },
-                    { 2, "Dairy, Gluten, Eggs", new DateTime(2024, 7, 26, 11, 57, 0, 378, DateTimeKind.Local).AddTicks(2578), "Classic Italian dessert with coffee-soaked ladyfingers and mascarpone cheese.", "Ladyfingers, Mascarpone cheese, Coffee, Cocoa", true, new DateTime(2024, 8, 5, 11, 57, 0, 378, DateTimeKind.Local).AddTicks(2579), "Tiramisu", 145m, "3 days refrigerated", 30 },
-                    { 3, "Nuts, Gluten", new DateTime(2024, 7, 31, 11, 57, 0, 378, DateTimeKind.Local).AddTicks(2581), "Traditional Turkish dessert made with layers of filo pastry, nuts, and honey syrup.", "Filo pastry, Walnuts, Honey syrup", true, new DateTime(2024, 8, 5, 11, 57, 0, 378, DateTimeKind.Local).AddTicks(2582), "Baklava", 700m, "5 days", 50 },
-                    { 4, "Dairy, Gluten", new DateTime(2024, 7, 16, 11, 57, 0, 378, DateTimeKind.Local).AddTicks(2584), "Rich dessert with a cream cheese filling on a graham cracker crust.", "Cream cheese, Graham crackers, Sugar", true, new DateTime(2024, 8, 5, 11, 57, 0, 378, DateTimeKind.Local).AddTicks(2585), "Cheesecake", 150m, "5 days refrigerated", 40 },
-                    { 5, "Dairy, Gluten, Eggs", new DateTime(2024, 7, 26, 11, 57, 0, 378, DateTimeKind.Local).AddTicks(2587), "Long French pastry made with choux dough filled with cream and topped with icing.", "Choux pastry, Chocolate icing, Pastry cream", true, new DateTime(2024, 8, 5, 11, 57, 0, 378, DateTimeKind.Local).AddTicks(2588), "Éclair", 80m, "1 day", 50 },
-                    { 6, "Gluten, Dairy", new DateTime(2024, 7, 29, 11, 57, 0, 378, DateTimeKind.Local).AddTicks(2590), "Light, flaky pastry with a variety of sweet fillings.", "Flour, Butter, Sugar, Fruit filling", true, new DateTime(2024, 8, 5, 11, 57, 0, 378, DateTimeKind.Local).AddTicks(2591), "Danish Pastry", 140m, "2 days", 60 }
+                    { 1, "Dairy, Nuts, Gluten", new DateTime(2024, 7, 21, 16, 51, 9, 915, DateTimeKind.Local).AddTicks(6474), "Traditional French dessert made with choux pastry and praline-flavored cream.", "Choux pastry, Praline cream, Almonds", true, new DateTime(2024, 8, 5, 16, 51, 9, 915, DateTimeKind.Local).AddTicks(6478), "Paris Brest", 155m, "2 days in refrigerator", 20 },
+                    { 2, "Dairy, Gluten, Eggs", new DateTime(2024, 7, 26, 16, 51, 9, 915, DateTimeKind.Local).AddTicks(6486), "Classic Italian dessert with coffee-soaked ladyfingers and mascarpone cheese.", "Ladyfingers, Mascarpone cheese, Coffee, Cocoa", true, new DateTime(2024, 8, 5, 16, 51, 9, 915, DateTimeKind.Local).AddTicks(6486), "Tiramisu", 145m, "3 days refrigerated", 30 },
+                    { 3, "Nuts, Gluten", new DateTime(2024, 7, 31, 16, 51, 9, 915, DateTimeKind.Local).AddTicks(6491), "Traditional Turkish dessert made with layers of filo pastry, nuts, and honey syrup.", "Filo pastry, Walnuts, Honey syrup", true, new DateTime(2024, 8, 5, 16, 51, 9, 915, DateTimeKind.Local).AddTicks(6491), "Baklava", 700m, "5 days", 50 },
+                    { 4, "Dairy, Gluten", new DateTime(2024, 7, 16, 16, 51, 9, 915, DateTimeKind.Local).AddTicks(6495), "Rich dessert with a cream cheese filling on a graham cracker crust.", "Cream cheese, Graham crackers, Sugar", true, new DateTime(2024, 8, 5, 16, 51, 9, 915, DateTimeKind.Local).AddTicks(6496), "Cheesecake", 150m, "5 days refrigerated", 40 },
+                    { 5, "Dairy, Gluten, Eggs", new DateTime(2024, 7, 26, 16, 51, 9, 915, DateTimeKind.Local).AddTicks(6498), "Long French pastry made with choux dough filled with cream and topped with icing.", "Choux pastry, Chocolate icing, Pastry cream", true, new DateTime(2024, 8, 5, 16, 51, 9, 915, DateTimeKind.Local).AddTicks(6499), "Éclair", 80m, "1 day", 50 },
+                    { 6, "Gluten, Dairy", new DateTime(2024, 7, 29, 16, 51, 9, 915, DateTimeKind.Local).AddTicks(6501), "Light, flaky pastry with a variety of sweet fillings.", "Flour, Butter, Sugar, Fruit filling", true, new DateTime(2024, 8, 5, 16, 51, 9, 915, DateTimeKind.Local).AddTicks(6501), "Danish Pastry", 140m, "2 days", 60 }
                 });
 
             migrationBuilder.InsertData(
@@ -175,11 +211,11 @@ namespace CoffeePattisserie.Data.Migrations
                 columns: new[] { "Id", "CaffeineContent", "CategoryId", "CreatedDate", "FlavorNotes", "IsActive", "ModifiedDate", "Name", "OriginCountry", "Price", "RoastLevel", "StockQuantity" },
                 values: new object[,]
                 {
-                    { 1, 120, 0, new DateTime(2024, 7, 26, 11, 57, 0, 377, DateTimeKind.Local).AddTicks(8279), "Floral, Citrus", true, new DateTime(2024, 8, 5, 11, 57, 0, 377, DateTimeKind.Local).AddTicks(8278), "Ethiopian Yirgacheffe", "Ethiopia", 350m, "Light", 45 },
-                    { 2, 110, 0, new DateTime(2024, 7, 14, 11, 57, 0, 377, DateTimeKind.Local).AddTicks(8289), "Nutty, Chocolate", true, new DateTime(2024, 8, 5, 11, 57, 0, 377, DateTimeKind.Local).AddTicks(8288), "Colombian Supremo", "Colombia", 299m, "Medium", 100 },
-                    { 3, 100, 0, new DateTime(2024, 7, 31, 11, 57, 0, 377, DateTimeKind.Local).AddTicks(8292), "Earthy, Herbal", true, new DateTime(2024, 8, 5, 11, 57, 0, 377, DateTimeKind.Local).AddTicks(8292), "Sumatra Mandheling", "Indonesia", 499m, "Dark", 30 },
-                    { 4, 115, 0, new DateTime(2024, 7, 26, 11, 57, 0, 377, DateTimeKind.Local).AddTicks(8294), "Sweet, Nutty", true, new DateTime(2024, 8, 5, 11, 57, 0, 377, DateTimeKind.Local).AddTicks(8294), "Brazil Santos", "Brazil", 250m, "Medium", 120 },
-                    { 5, 105, 0, new DateTime(2024, 7, 6, 11, 57, 0, 377, DateTimeKind.Local).AddTicks(8297), "Smooth, Sweet, Mild", true, new DateTime(2024, 8, 5, 11, 57, 0, 377, DateTimeKind.Local).AddTicks(8296), "Jamaican Blue Mountain", "Jamaica", 899m, "Light", 10 }
+                    { 1, 120, 0, new DateTime(2024, 7, 26, 16, 51, 9, 915, DateTimeKind.Local).AddTicks(16), "Floral, Citrus", true, new DateTime(2024, 8, 5, 16, 51, 9, 915, DateTimeKind.Local).AddTicks(15), "Ethiopian Yirgacheffe", "Ethiopia", 350m, "Light", 45 },
+                    { 2, 110, 0, new DateTime(2024, 7, 14, 16, 51, 9, 915, DateTimeKind.Local).AddTicks(26), "Nutty, Chocolate", true, new DateTime(2024, 8, 5, 16, 51, 9, 915, DateTimeKind.Local).AddTicks(25), "Colombian Supremo", "Colombia", 299m, "Medium", 100 },
+                    { 3, 100, 0, new DateTime(2024, 7, 31, 16, 51, 9, 915, DateTimeKind.Local).AddTicks(29), "Earthy, Herbal", true, new DateTime(2024, 8, 5, 16, 51, 9, 915, DateTimeKind.Local).AddTicks(28), "Sumatra Mandheling", "Indonesia", 499m, "Dark", 30 },
+                    { 4, 115, 0, new DateTime(2024, 7, 26, 16, 51, 9, 915, DateTimeKind.Local).AddTicks(31), "Sweet, Nutty", true, new DateTime(2024, 8, 5, 16, 51, 9, 915, DateTimeKind.Local).AddTicks(31), "Brazil Santos", "Brazil", 250m, "Medium", 120 },
+                    { 5, 105, 0, new DateTime(2024, 7, 6, 16, 51, 9, 915, DateTimeKind.Local).AddTicks(34), "Smooth, Sweet, Mild", true, new DateTime(2024, 8, 5, 16, 51, 9, 915, DateTimeKind.Local).AddTicks(33), "Jamaican Blue Mountain", "Jamaica", 899m, "Light", 10 }
                 });
 
             migrationBuilder.InsertData(
@@ -200,6 +236,21 @@ namespace CoffeePattisserie.Data.Migrations
                     { 4, 4 },
                     { 2, 5 },
                     { 3, 5 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "MoctailCategories",
+                columns: new[] { "CategoryId", "MoctailId" },
+                values: new object[,]
+                {
+                    { 1, 1 },
+                    { 2, 1 },
+                    { 3, 2 },
+                    { 1, 3 },
+                    { 2, 3 },
+                    { 4, 4 },
+                    { 3, 5 },
+                    { 5, 6 }
                 });
 
             migrationBuilder.InsertData(
@@ -225,6 +276,11 @@ namespace CoffeePattisserie.Data.Migrations
                 column: "CategoryId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_MoctailCategories_CategoryId",
+                table: "MoctailCategories",
+                column: "CategoryId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_PattisserieCategories_CategoryId",
                 table: "PattisserieCategories",
                 column: "CategoryId");
@@ -237,13 +293,16 @@ namespace CoffeePattisserie.Data.Migrations
                 name: "CoffeeCategories");
 
             migrationBuilder.DropTable(
-                name: "Moctails");
+                name: "MoctailCategories");
 
             migrationBuilder.DropTable(
                 name: "PattisserieCategories");
 
             migrationBuilder.DropTable(
                 name: "Products");
+
+            migrationBuilder.DropTable(
+                name: "Moctails");
 
             migrationBuilder.DropTable(
                 name: "Categories");
