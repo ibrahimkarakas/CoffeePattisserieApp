@@ -8,7 +8,6 @@ namespace CoffeePattisserie.Shared.Dtos
     public class EditPattisserieDto{
         public int Id { get; set; }
         public string Name { get; set; }
-        public DateTime ModifiedDate { get; set; }
         public bool IsActive { get; set; }
         public string Description { get; set; }
         public decimal Price { get; set; }
@@ -16,5 +15,7 @@ namespace CoffeePattisserie.Shared.Dtos
         public string Ingredients { get; set; }
         public string Allergens { get; set; }
         public string ShelfLife { get; set; }
+        public List<int> CategoryIds { get; set; } = [];
+
     }
 }

@@ -18,12 +18,7 @@ namespace CoffeePattisserie.Service.Mapping
             CreateMap<Category, EditCategoryDto>().ReverseMap();
 
             // Coffee Mappings
-            CreateMap<Coffee, AddCoffeeDto>()
-                .ForMember(acdto => acdto.CategoryIds, options =>
-                    options.MapFrom(c =>
-                        c.CoffeeCategories.Select(cc => cc.CategoryId)))
-                .ReverseMap();
-
+            CreateMap<Coffee, AddCoffeeDto>().ReverseMap();
             CreateMap<Coffee, EditCoffeeDto>().ReverseMap();
 
             CreateMap<Coffee, CoffeeDto>()
@@ -39,12 +34,7 @@ namespace CoffeePattisserie.Service.Mapping
                         p.PattisserieCategories.Select(pc => pc.Category)))
                 .ReverseMap();
 
-            CreateMap<Pattisserie, AddPattisserieDto>()
-                .ForMember(apdto => apdto.CategoryIds, options =>
-                    options.MapFrom(p =>
-                        p.PattisserieCategories.Select(pc => pc.CategoryId)))
-                .ReverseMap();
-
+            CreateMap<Pattisserie, AddPattisserieDto>().ReverseMap();
             CreateMap<Pattisserie, EditPattisserieDto>().ReverseMap();
 
             // Moctail Mappings
@@ -54,12 +44,7 @@ namespace CoffeePattisserie.Service.Mapping
                         m.MoctailCategories.Select(mc => mc.Category)))
                 .ReverseMap();
 
-            CreateMap<Moctail, AddMoctailDto>()
-                .ForMember(amdto => amdto.CategoryIds, options =>
-                    options.MapFrom(m =>
-                        m.MoctailCategories.Select(mc => mc.CategoryId)))
-                .ReverseMap();
-
+            CreateMap<Moctail, AddMoctailDto>().ReverseMap();
             CreateMap<Moctail, EditMoctailDto>().ReverseMap();
         }
     }

@@ -22,7 +22,17 @@ namespace CoffeePattisserie.Data.Concrete.EfCore.Repositories
             }
         }
 
-        public async Task<Pattisserie> CreatePattisserieWithCategories(Pattisserie pattisserie, List<int> categoryIds)
+        public async Task ClearPattisserieCategoriesAsync(int pattisserieId)
+        {
+            List<PattisserieCategory> pattisserieCategories = await Context
+                .PattisserieCategories
+                .Where(pc => pc.PattisserieId == pattisserieId)
+                .ToListAsync();
+            Context.PattisserieCategories.RemoveRange(pattisserieCategories);
+            await Context.SaveChangesAsync();
+        }
+
+        public async Task<Pattisserie> CreatePattisserieWithCategoriesAsync(Pattisserie pattisserie, List<int> categoryIds)
         {
             var createdPattisserie = await Context.Pattisserie.AddAsync(pattisserie);
             if (createdPattisserie != null)
@@ -31,11 +41,22 @@ namespace CoffeePattisserie.Data.Concrete.EfCore.Repositories
                 var pattisserieCategories = categoryIds
                     .Select(x => new PattisserieCategory { PattisserieId = pattisserie.Id, CategoryId = x })
                     .ToList();
-                await Context.Set<PattisserieCategory>().AddRangeAsync(pattisserieCategories);
+                await Context.PattisserieCategories.AddRangeAsync(pattisserieCategories);
                 await Context.SaveChangesAsync();
             }
-            var result = await GetPattisserieWithCategories(pattisserie.Id);
+            var result = await GetPattisserieWithCategoriesAsync(pattisserie.Id);
             return result;
+        }
+
+        public async Task<List<Pattisserie>> GetActivePattisserieAsync(bool isActive)
+        {
+            List<Pattisserie> pattisseries = await Context
+                .Pattisserie
+                .Where(p => p.IsActive == isActive)
+                .Include(p => p.PattisserieCategories)
+                .ThenInclude(pc => pc.Category)
+                .ToListAsync();
+            return pattisseries;
         }
 
         public async Task<List<Pattisserie>> GetPattisserieByCategoryIdAsync(int categoryId)
@@ -48,16 +69,6 @@ namespace CoffeePattisserie.Data.Concrete.EfCore.Repositories
             return pattisseries;
         }
 
-        public async Task<Pattisserie> GetPattisserieWithCategories(int id)
-        {
-            Pattisserie pattisserie = await Context
-                .Pattisserie.Where(x => x.Id == id)
-                .Include(x => x.PattisserieCategories)
-                .ThenInclude(y => y.Category)
-                .FirstOrDefaultAsync();
-            return pattisserie;
-        }
-
         public async Task<List<Pattisserie>> GetPattisserieWithCategoriesAsync()
         {
             List<Pattisserie> pattisseries = await Context
@@ -65,6 +76,16 @@ namespace CoffeePattisserie.Data.Concrete.EfCore.Repositories
                 .ThenInclude(y => y.Category)
                 .ToListAsync();
             return pattisseries;
+        }
+
+        public async Task<Pattisserie> GetPattisserieWithCategoriesAsync(int id)
+        {
+            Pattisserie pattisserie = await Context
+                .Pattisserie.Where(x => x.Id == id)
+                .Include(x => x.PattisserieCategories)
+                .ThenInclude(y => y.Category)
+                .FirstOrDefaultAsync();
+            return pattisserie;
         }
     }
 }

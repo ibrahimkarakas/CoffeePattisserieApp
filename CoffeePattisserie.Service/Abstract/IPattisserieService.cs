@@ -16,5 +16,7 @@ namespace CoffeePattisserie.Service.Abstract
         Task<Response<PattisserieDto>> UpdateAsync(EditPattisserieDto editPattisserieDto);
         Task<Response<PattisserieDto>> GetByIdAsync (int id);
         Task<Response<NoContent>> DeleteAsync (int id);
+        Task<Response<List<PattisserieDto>>> GetActivePattisserieAsync(bool isActive = true);
+
     }
 }

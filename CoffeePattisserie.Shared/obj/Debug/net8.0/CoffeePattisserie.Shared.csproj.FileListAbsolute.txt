@@ -1,11 +1,11 @@
+C:\Users\Admin\Desktop\FinalProject-CoffeePattisserie\CoffeePattisserieApp\CoffeePattisserie.Shared\bin\Debug\net8.0\CoffeePattisserie.Shared.deps.json
+C:\Users\Admin\Desktop\FinalProject-CoffeePattisserie\CoffeePattisserieApp\CoffeePattisserie.Shared\bin\Debug\net8.0\CoffeePattisserie.Shared.dll
+C:\Users\Admin\Desktop\FinalProject-CoffeePattisserie\CoffeePattisserieApp\CoffeePattisserie.Shared\bin\Debug\net8.0\CoffeePattisserie.Shared.pdb
 C:\Users\Admin\Desktop\FinalProject-CoffeePattisserie\CoffeePattisserieApp\CoffeePattisserie.Shared\obj\Debug\net8.0\CoffeePattisserie.Shared.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Admin\Desktop\FinalProject-CoffeePattisserie\CoffeePattisserieApp\CoffeePattisserie.Shared\obj\Debug\net8.0\CoffeePattisserie.Shared.AssemblyInfoInputs.cache
 C:\Users\Admin\Desktop\FinalProject-CoffeePattisserie\CoffeePattisserieApp\CoffeePattisserie.Shared\obj\Debug\net8.0\CoffeePattisserie.Shared.AssemblyInfo.cs
 C:\Users\Admin\Desktop\FinalProject-CoffeePattisserie\CoffeePattisserieApp\CoffeePattisserie.Shared\obj\Debug\net8.0\CoffeePattisserie.Shared.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Desktop\FinalProject-CoffeePattisserie\CoffeePattisserieApp\CoffeePattisserie.Shared\obj\Debug\net8.0\CoffeePattisserie.Shared.sourcelink.json
-C:\Users\Admin\Desktop\FinalProject-CoffeePattisserie\CoffeePattisserieApp\CoffeePattisserie.Shared\bin\Debug\net8.0\CoffeePattisserie.Shared.deps.json
-C:\Users\Admin\Desktop\FinalProject-CoffeePattisserie\CoffeePattisserieApp\CoffeePattisserie.Shared\bin\Debug\net8.0\CoffeePattisserie.Shared.dll
-C:\Users\Admin\Desktop\FinalProject-CoffeePattisserie\CoffeePattisserieApp\CoffeePattisserie.Shared\bin\Debug\net8.0\CoffeePattisserie.Shared.pdb
 C:\Users\Admin\Desktop\FinalProject-CoffeePattisserie\CoffeePattisserieApp\CoffeePattisserie.Shared\obj\Debug\net8.0\CoffeePattisserie.Shared.dll
 C:\Users\Admin\Desktop\FinalProject-CoffeePattisserie\CoffeePattisserieApp\CoffeePattisserie.Shared\obj\Debug\net8.0\refint\CoffeePattisserie.Shared.dll
 C:\Users\Admin\Desktop\FinalProject-CoffeePattisserie\CoffeePattisserieApp\CoffeePattisserie.Shared\obj\Debug\net8.0\CoffeePattisserie.Shared.pdb

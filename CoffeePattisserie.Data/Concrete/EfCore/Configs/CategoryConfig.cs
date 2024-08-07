@@ -40,7 +40,12 @@ namespace CoffeePattisserie.Data.Concrete.EfCore.Configs
                     Id=4,
                     Name="Wholesales",
                     Description="Toptan satış kategorisi"
-                }             
+                },
+                new Category{
+                    Id=5,
+                    Name="Moctails",
+                    Description="Alkolsüz karışım içecekler."
+                }           
             );
         }
     }

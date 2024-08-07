@@ -1,4 +1,4 @@
-﻿using CoffeePattisserie.Service.Abstract;
+using CoffeePattisserie.Service.Abstract;
 using CoffeePattisserie.Shared.Dtos;
 using CoffeePattisserie.Shared.Helpers.Abstract;
 using Microsoft.AspNetCore.Http;
@@ -8,21 +8,21 @@ namespace CoffeePattisserie.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CoffeesController : ControllerBase
+    public class MoctailsController : ControllerBase
     {
-        private readonly ICoffeeService _coffeeService;
+        private readonly IMoctailService _moctailService;
         private readonly IImageHelper _imageHelper;
 
-        public CoffeesController(ICoffeeService coffeeService, IImageHelper imageHelper)
+        public MoctailsController(IMoctailService moctailService, IImageHelper imageHelper)
         {
-            _coffeeService = coffeeService;
+            _moctailService = moctailService;
             _imageHelper = imageHelper;
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(AddCoffeeDto addCoffeeDto)
+        public async Task<IActionResult> Create(AddMoctailDto addMoctailDto)
         {
-            var response = await _coffeeService.AddAsync(addCoffeeDto);
+            var response = await _moctailService.AddAsync(addMoctailDto);
             if (!response.IsSucceeded)
             {
                 return NotFound(response);
@@ -33,7 +33,7 @@ namespace CoffeePattisserie.Api.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var response = await _coffeeService.GetAllAsync();
+            var response = await _moctailService.GetAllAsync();
             if (!response.IsSucceeded)
             {
                 return NotFound(response);
@@ -44,7 +44,7 @@ namespace CoffeePattisserie.Api.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
-            var response = await _coffeeService.GetByIdAsync(id);
+            var response = await _moctailService.GetByIdAsync(id);
             if (!response.IsSucceeded)
             {
                 return NotFound(response);
@@ -53,9 +53,9 @@ namespace CoffeePattisserie.Api.Controllers
         }
 
         [HttpPut]
-        public async Task<IActionResult> Update(EditCoffeeDto editCoffeeDto)
+        public async Task<IActionResult> Update(EditMoctailDto editMoctailDto)
         {
-            var response = await _coffeeService.UpdateAsync(editCoffeeDto);
+            var response = await _moctailService.UpdateAsync(editMoctailDto);
             if (!response.IsSucceeded)
             {
                 return NotFound(response);
@@ -66,7 +66,7 @@ namespace CoffeePattisserie.Api.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            var response = await _coffeeService.DeleteAsync(id);
+            var response = await _moctailService.DeleteAsync(id);
             if (!response.IsSucceeded)
             {
                 return NotFound(response);
@@ -77,7 +77,7 @@ namespace CoffeePattisserie.Api.Controllers
         [HttpGet("bycategory/{categoryId}")]
         public async Task<IActionResult> GetByCategoryId(int categoryId)
         {
-            var response = await _coffeeService.GetCoffeesByCategoryIdAsync(categoryId);
+            var response = await _moctailService.GetMoctailsByCategoryIdAsync(categoryId);
             if (!response.IsSucceeded)
             {
                 return NotFound(response);
@@ -86,9 +86,9 @@ namespace CoffeePattisserie.Api.Controllers
         }
 
         [HttpGet("active/{isActive}")]
-        public async Task<IActionResult> GetActiveCoffees(bool isActive)
+        public async Task<IActionResult> GetActiveMoctails(bool isActive)
         {
-            var response = await _coffeeService.GetActiveCoffeesAsync(isActive);
+            var response = await _moctailService.GetActiveMoctailsAsync(isActive);
             if (!response.IsSucceeded)
             {
                 return NotFound(response);

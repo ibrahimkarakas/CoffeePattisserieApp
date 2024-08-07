@@ -2,8 +2,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CoffeePattisserie.Data\CoffeePattisserie.Data.csproj" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\CoffeePattisserie.Shared\CoffeePattisserie.Shared.csproj" />
   </ItemGroup>
    <ItemGroup>

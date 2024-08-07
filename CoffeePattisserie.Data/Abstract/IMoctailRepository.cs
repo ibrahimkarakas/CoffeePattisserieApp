@@ -9,8 +9,11 @@ namespace CoffeePattisserie.Data.Abstract
     public interface IMoctailRepository: IGenericRepository<Moctail>
     {
         Task<List<Moctail>> GetMoctailsWithCategoriesAsync();
-        Task<Moctail> GetMoctailWithCategories(int id);
+        Task<Moctail> GetMoctailWithCategoriesAsync(int id);
         Task<List<Moctail>> GetMoctailsByCategoryIdAsync (int categoryId);
-        Task<Moctail> CreateMoctailWithCategories(Moctail moctail, List<int> categoryIds);
+        Task<Moctail> CreateMoctailWithCategoriesAsync(Moctail moctail, List<int> categoryIds);
+        // Task<Coffee> UpdateMoctailWithCategoriesAsync(Coffee coffee, List<int> categoryIds);
+        Task ClearMoctailCategoriesAsync(int moctailId);
+        Task<List<Moctail>> GetActiveMoctailsAsync(bool isActive);
     }
 }

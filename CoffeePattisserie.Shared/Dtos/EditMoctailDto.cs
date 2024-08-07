@@ -16,5 +16,7 @@ namespace CoffeePattisserie.Shared.Dtos
         public decimal Price { get; set; }
         public int StockQuantity { get; set; }
         public string FlavorProfile { get; set; }
+        public List<int> CategoryIds { get; set; } = [];
+
     }
 }

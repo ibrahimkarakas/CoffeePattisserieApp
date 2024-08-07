@@ -22,7 +22,17 @@ namespace CoffeePattisserie.Data.Concrete.EfCore.Repositories
             }
         }
 
-        public async Task<Moctail> CreateMoctailWithCategories(Moctail moctail, List<int> categoryIds)
+        public async Task ClearMoctailCategoriesAsync(int moctailId)
+        {
+            List<MoctailCategory> moctailCategories = await Context
+                .MoctailCategories
+                .Where(mc => mc.MoctailId == moctailId)
+                .ToListAsync();
+            Context.MoctailCategories.RemoveRange(moctailCategories);
+            await Context.SaveChangesAsync();
+        }
+
+        public async Task<Moctail> CreateMoctailWithCategoriesAsync(Moctail moctail, List<int> categoryIds)
         {
             var createdMoctail = await Context.Moctails.AddAsync(moctail);
             if (createdMoctail != null)
@@ -31,11 +41,22 @@ namespace CoffeePattisserie.Data.Concrete.EfCore.Repositories
                 var moctailCategories = categoryIds
                     .Select(x => new MoctailCategory { MoctailId = moctail.Id, CategoryId = x })
                     .ToList();
-                await Context.Set<MoctailCategory>().AddRangeAsync(moctailCategories);
+                await Context.MoctailCategories.AddRangeAsync(moctailCategories);
                 await Context.SaveChangesAsync();
             }
-            var result = await GetMoctailWithCategories(moctail.Id);
+            var result = await GetMoctailWithCategoriesAsync(moctail.Id);
             return result;
+        }
+
+        public async Task<List<Moctail>> GetActiveMoctailsAsync(bool isActive)
+        {
+            List<Moctail> moctails = await Context
+                .Moctails
+                .Where(m => m.IsActive == isActive)
+                .Include(m => m.MoctailCategories)
+                .ThenInclude(mc => mc.Category)
+                .ToListAsync();
+            return moctails;
         }
 
         public async Task<List<Moctail>> GetMoctailsByCategoryIdAsync(int categoryId)
@@ -57,7 +78,7 @@ namespace CoffeePattisserie.Data.Concrete.EfCore.Repositories
             return moctails;
         }
 
-        public async Task<Moctail> GetMoctailWithCategories(int id)
+        public async Task<Moctail> GetMoctailWithCategoriesAsync(int id)
         {
             Moctail moctail = await Context
                 .Moctails.Where(x => x.Id == id)

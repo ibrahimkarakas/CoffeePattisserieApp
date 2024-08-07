@@ -1250,7 +1250,10 @@
         },
         "runtime": {
           "bin/placeholder/CoffeePattisserie.Shared.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },

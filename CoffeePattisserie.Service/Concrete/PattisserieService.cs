@@ -24,7 +24,7 @@ namespace CoffeePattisserie.Service.Concrete
         public async Task<Response<PattisserieDto>> AddAsync(AddPattisserieDto addPattisserieDto)
         {
             var pattisserie = _mapper.Map<Pattisserie>(addPattisserieDto);
-            var createdPattisserie = await _pattisserieRepository.CreateAsync(pattisserie);
+            var createdPattisserie = await _pattisserieRepository.CreatePattisserieWithCategoriesAsync(pattisserie, addPattisserieDto.CategoryIds);
             if (createdPattisserie == null)
             {
                 return Response<PattisserieDto>.Fail("Bir sorun oluştu", 404);
@@ -44,9 +44,20 @@ namespace CoffeePattisserie.Service.Concrete
             return Response<NoContent>.Success(200);
         }
 
+        public async Task<Response<List<PattisserieDto>>> GetActivePattisserieAsync(bool isActive = true)
+        {
+            var pattisseries = await _pattisserieRepository.GetActivePattisserieAsync(isActive);
+            if (pattisseries.Count == 0)
+            {
+                return Response<List<PattisserieDto>>.Fail("İstediğiniz kriterde ürün bulunamadı", 404);
+            }
+            var pattisserieDtos = _mapper.Map<List<PattisserieDto>>(pattisseries);
+            return Response<List<PattisserieDto>>.Success(pattisserieDtos, 200);
+        }
+
         public async Task<Response<List<PattisserieDto>>> GetAllAsync()
         {
-            var pattisserie = await _pattisserieRepository.GetAllAsync();
+            var pattisserie = await _pattisserieRepository.GetPattisserieWithCategoriesAsync();
             if (pattisserie.Count == 0)
             {
                 return Response<List<PattisserieDto>>.Fail("Hiç ürün bulunamadı.", 404);
@@ -57,7 +68,7 @@ namespace CoffeePattisserie.Service.Concrete
 
         public async Task<Response<PattisserieDto>> GetByIdAsync(int id)
         {
-            var pattisserie = await _pattisserieRepository.GetByIdAsync(id);
+            var pattisserie = await _pattisserieRepository.GetPattisserieWithCategoriesAsync(id);
             if (pattisserie == null)
             {
                 return Response<PattisserieDto>.Fail("Böyle bir ürün bulunamadı.", 404);
@@ -97,7 +108,17 @@ namespace CoffeePattisserie.Service.Concrete
             }
             pattisserie.ModifiedDate = DateTime.Now;
             var updatedPattisserie = await _pattisserieRepository.UpdateAsync(pattisserie);
-            var pattisserieDto = _mapper.Map<PattisserieDto>(updatedPattisserie);
+            await _pattisserieRepository.ClearPattisserieCategoriesAsync(updatedPattisserie.Id);
+            updatedPattisserie.PattisserieCategories = editPattisserieDto
+                .CategoryIds
+                .Select(categoryId => new PattisserieCategory
+                {
+                    PattisserieId = updatedPattisserie.Id,
+                    CategoryId = categoryId
+                }).ToList();
+            await _pattisserieRepository.UpdateAsync(updatedPattisserie);
+            var result = await _pattisserieRepository.GetPattisserieWithCategoriesAsync(updatedPattisserie.Id);
+            var pattisserieDto = _mapper.Map<PattisserieDto>(result);
             return Response<PattisserieDto>.Success(pattisserieDto, 200);
         }
     }
