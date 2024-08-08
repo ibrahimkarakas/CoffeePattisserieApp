@@ -18,7 +18,10 @@ namespace CoffeePattisserie.Entity.Concrete
         public string PreparationMethod { get; set; }
         public decimal Price { get; set; }
         public int StockQuantity { get; set; }
+        public string ImageUrl { get; set; }
         public string FlavorProfile { get; set; }
+        public int CategoryId  { get; set; }
+        public bool IsHome { get; set; }
         public List<MoctailCategory> MoctailCategories { get; set; }    
 }
 }

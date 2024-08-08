@@ -3,6 +3,8 @@ using CoffeePattisserie.Shared.Dtos;
 using CoffeePattisserie.Shared.Helpers.Abstract;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Text.Json;
+using System.Threading.Tasks;
 
 namespace CoffeePattisserie.Api.Controllers
 {
@@ -52,6 +54,17 @@ namespace CoffeePattisserie.Api.Controllers
             return Ok(response);
         }
 
+        [HttpGet("homepattisserie")]
+        public async Task<IActionResult> GetHomePattisserie()
+        {
+            var response = await _pattisserieService.GetHomePattisserieAsync();
+            if (!response.IsSucceeded)
+            {
+                return NotFound(JsonSerializer.Serialize(response));
+            }
+            return Ok(JsonSerializer.Serialize(response));
+        }
+
         [HttpPut]
         public async Task<IActionResult> Update(EditPattisserieDto editPattisserieDto)
         {
@@ -91,15 +104,15 @@ namespace CoffeePattisserie.Api.Controllers
             var response = await _pattisserieService.GetActivePattisserieAsync(isActive);
             if (!response.IsSucceeded)
             {
-                return NotFound(response);
+                return NotFound(JsonSerializer.Serialize(response));
             }
-            return Ok(response);
+            return Ok(JsonSerializer.Serialize(response));
         }
 
         [HttpPost("addimage")]
         public async Task<IActionResult> ImageUpload(IFormFile file)
         {
-            var response = await _imageHelper.Upload(file);
+            var response = await _imageHelper.Upload(file, "pattisserie");
             if (!response.IsSucceeded)
             {
                 return NotFound(response);

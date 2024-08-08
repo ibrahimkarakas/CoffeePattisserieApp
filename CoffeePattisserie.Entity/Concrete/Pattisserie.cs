@@ -19,6 +19,9 @@ namespace CoffeePattisserie.Entity.Concrete
         public string Ingredients { get; set; }
         public string Allergens { get; set; }
         public string ShelfLife { get; set; }
+        public string ImageUrl { get; set; }
+        public int CategoryId  { get; set; }
+        public bool IsHome { get; set; }
         public List<PattisserieCategory> PattisserieCategories { get; set; }
     }
 }

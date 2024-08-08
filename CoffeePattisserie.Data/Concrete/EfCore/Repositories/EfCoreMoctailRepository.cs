@@ -10,16 +10,12 @@ namespace CoffeePattisserie.Data.Concrete.EfCore.Repositories
 {
     public class EfCoreMoctailRepository : EfCoreGenericRepository<Moctail>, IMoctailRepository
     {
-        public EfCoreMoctailRepository(CoffeeAppDbContext coffeeAppDbContext) : base(coffeeAppDbContext)
-        {
-        }
+        public EfCoreMoctailRepository(CoffeeAppDbContext coffeeAppDbContext)
+            : base(coffeeAppDbContext) { }
 
         private CoffeeAppDbContext Context
         {
-            get
-            {
-                return _dbContext as CoffeeAppDbContext;
-            }
+            get { return _dbContext as CoffeeAppDbContext; }
         }
 
         public async Task ClearMoctailCategoriesAsync(int moctailId)
@@ -72,7 +68,8 @@ namespace CoffeePattisserie.Data.Concrete.EfCore.Repositories
         public async Task<List<Moctail>> GetMoctailsWithCategoriesAsync()
         {
             List<Moctail> moctails = await Context
-                .Moctails.Include(x => x.MoctailCategories)
+                .Moctails
+                .Include(x => x.MoctailCategories)
                 .ThenInclude(y => y.Category)
                 .ToListAsync();
             return moctails;
@@ -86,6 +83,38 @@ namespace CoffeePattisserie.Data.Concrete.EfCore.Repositories
                 .ThenInclude(y => y.Category)
                 .FirstOrDefaultAsync();
             return moctail;
+        }
+
+        public async Task<int> GetCount(int? categoryId = null)
+        {
+            int count = 0;
+            if (categoryId == null)
+            {
+                count = await Context.Moctails.CountAsync();
+            }
+            else
+            {
+                var moctailCategoryList = await Context.MoctailCategories.ToListAsync();
+                foreach (var mc in moctailCategoryList)
+                {
+                    if (mc.CategoryId == categoryId)
+                    {
+                        count++;
+                    }
+                }
+            }
+            return count;
+        }
+
+        public async Task<List<Moctail>> GetHomeMoctailsAsync()
+        {
+            List<Moctail> moctails = await Context
+                .Moctails
+                .Where(m => m.IsActive && m.IsHome)
+                .Include(m => m.MoctailCategories)
+                .ThenInclude(mc => mc.Category)
+                .ToListAsync();
+            return moctails;
         }
     }
 }

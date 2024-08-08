@@ -1,5 +1,4 @@
 using CoffeePattisserie.Shared.Helpers.Abstract;
-using CoffeePattisserie.Shared;
 using CoffeePattisserie.Shared.ResponseDtos;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -9,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CoffeePattisserie.Shared.Helpers.Concrete
+namespace BooksApp.Shared.Helpers.Concrete
 {
     public class ImageHelper : IImageHelper
     {
@@ -21,7 +20,7 @@ namespace CoffeePattisserie.Shared.Helpers.Concrete
             // C:/Sites/wwwinfotechcom/images
             _imagesFolder = Path.Combine(env.WebRootPath, "images");
         }
-        public async Task<Response<string>> Upload(IFormFile file)
+        public async Task<Response<string>> Upload(IFormFile file, string directoryName)
         {
 
             if (file==null || file.Length==0)
@@ -39,16 +38,16 @@ namespace CoffeePattisserie.Shared.Helpers.Concrete
             if(!permittedMimeTypes.Contains(file.ContentType)) {
                 return Response<string>.Fail("Lütfen resim dosyası içeriğini kontrol ediniz.", 401);
             }
-
+            //wwwroot/images
+            //wwwroot/images/books
+            //wwwroot/images/authors
+            _imagesFolder= Path.Combine(_imagesFolder, directoryName);
             if (!Directory.Exists(_imagesFolder))
             {
                 Directory.CreateDirectory(_imagesFolder);
             }
 
             var fileName = $"{Guid.NewGuid()}{extension}";
-            //var fileName = Path.Combine(Guid.NewGuid().ToString(), extension);
-
-            // C:/Sites/wwwinfotechcom/images/filename.png
 
             var fullPath = Path.Combine(_imagesFolder, fileName);
 
@@ -56,7 +55,6 @@ namespace CoffeePattisserie.Shared.Helpers.Concrete
             {
                 await file.CopyToAsync(stream);
             };
-            // /images/456ty.png
             return Response<string>.Success($"/images/{fileName}", 201);
         }
     }

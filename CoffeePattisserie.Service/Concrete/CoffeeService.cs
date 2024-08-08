@@ -8,6 +8,7 @@ using CoffeePattisserie.Entity.Concrete;
 using CoffeePattisserie.Service.Abstract;
 using CoffeePattisserie.Shared.Dtos;
 using CoffeePattisserie.Shared.ResponseDtos;
+using Microsoft.AspNetCore.Http;
 
 namespace CoffeePattisserie.Service.Concrete
 {
@@ -121,6 +122,17 @@ namespace CoffeePattisserie.Service.Concrete
             var result = await _coffeeRepository.GetCoffeeWithCategoriesAsync(updatedCoffee.Id);
             var coffeeDto = _mapper.Map<CoffeeDto>(result);
             return Response<CoffeeDto>.Success(coffeeDto, 200);
+        }
+
+        public async Task<Response<List<CoffeeDto>>> GetHomeCoffeesAsync()
+        {
+            var coffees = await _coffeeRepository.GetHomeCoffeesAsync();
+            if (coffees.Count == 0)
+            {
+                return Response<List<CoffeeDto>>.Fail("İstediğiniz kriterde ürün bulunamadı", StatusCodes.Status404NotFound);
+            }
+            var coffeeDtos = _mapper.Map<List<CoffeeDto>>(coffees);
+            return Response<List<CoffeeDto>>.Success(coffeeDtos, StatusCodes.Status200OK);
         }
     }
 }

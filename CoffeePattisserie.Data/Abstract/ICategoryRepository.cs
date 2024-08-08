@@ -9,5 +9,6 @@ namespace CoffeePattisserie.Data.Abstract
     public interface ICategoryRepository:IGenericRepository<Category>
     {
         Task<List<Category>> GetActiveCategoriesAsync();
+        Task<List<Category>> GetHomeCategoriesAsync();
     }
 }

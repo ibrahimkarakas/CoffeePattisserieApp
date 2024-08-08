@@ -10,16 +10,12 @@ namespace CoffeePattisserie.Data.Concrete.EfCore.Repositories
 {
     public class EfCoreCoffeeRepository : EfCoreGenericRepository<Coffee>, ICoffeeRepository
     {
-        public EfCoreCoffeeRepository(CoffeeAppDbContext coffeeAppDbContext) : base(coffeeAppDbContext)
-        {
-        }
+        public EfCoreCoffeeRepository(CoffeeAppDbContext coffeeAppDbContext)
+            : base(coffeeAppDbContext) { }
 
         private CoffeeAppDbContext Context
         {
-            get
-            {
-                return _dbContext as CoffeeAppDbContext;
-            }
+            get { return _dbContext as CoffeeAppDbContext; }
         }
 
         public async Task ClearCoffeeCategoriesAsync(int coffeeId)
@@ -72,7 +68,8 @@ namespace CoffeePattisserie.Data.Concrete.EfCore.Repositories
         public async Task<List<Coffee>> GetCoffeesWithCategoriesAsync()
         {
             List<Coffee> coffees = await Context
-                .Coffees.Include(x => x.CoffeeCategories)
+                .Coffees
+                .Include(x => x.CoffeeCategories)
                 .ThenInclude(y => y.Category)
                 .ToListAsync();
             return coffees;
@@ -86,6 +83,38 @@ namespace CoffeePattisserie.Data.Concrete.EfCore.Repositories
                 .ThenInclude(y => y.Category)
                 .FirstOrDefaultAsync();
             return coffee;
+        }
+
+        public async Task<int> GetCount(int? categoryId = null)
+        {
+            int count = 0;
+            if (categoryId == null)
+            {
+                count = await Context.Coffees.CountAsync();
+            }
+            else
+            {
+                var coffeeCategoryList = await Context.CoffeeCategories.ToListAsync();
+                foreach (var cc in coffeeCategoryList)
+                {
+                    if (cc.CategoryId == categoryId)
+                    {
+                        count++;
+                    }
+                }
+            }
+            return count;
+        }
+
+        public async Task<List<Coffee>> GetHomeCoffeesAsync()
+        {
+            List<Coffee> coffees = await Context
+                .Coffees
+                .Where(c => c.IsActive && c.IsHome)
+                .Include(c => c.CoffeeCategories)
+                .ThenInclude(cc => cc.Category)
+                .ToListAsync();
+            return coffees;
         }
     }
 }

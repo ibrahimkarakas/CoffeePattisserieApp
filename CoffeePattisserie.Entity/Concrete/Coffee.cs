@@ -20,6 +20,8 @@ namespace CoffeePattisserie.Entity.Concrete
         public string FlavorNotes { get; set; }
         public int CaffeineContent { get; set; }
         public int CategoryId  { get; set; }
+        public string ImageUrl { get; set; }
+        public bool IsHome { get; set; }
         public List<CoffeeCategory> CoffeeCategories {get; set;}
     }
 }

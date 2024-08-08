@@ -10,16 +10,12 @@ namespace CoffeePattisserie.Data.Concrete.EfCore.Repositories
 {
     public class EfCorePattisserieRepository : EfCoreGenericRepository<Pattisserie>, IPattisserieRepository
     {
-        public EfCorePattisserieRepository(CoffeeAppDbContext coffeeAppDbContext) : base(coffeeAppDbContext)
-        {
-        }
+        public EfCorePattisserieRepository(CoffeeAppDbContext coffeeAppDbContext)
+            : base(coffeeAppDbContext) { }
 
         private CoffeeAppDbContext Context
         {
-            get
-            {
-                return _dbContext as CoffeeAppDbContext;
-            }
+            get { return _dbContext as CoffeeAppDbContext; }
         }
 
         public async Task ClearPattisserieCategoriesAsync(int pattisserieId)
@@ -72,7 +68,8 @@ namespace CoffeePattisserie.Data.Concrete.EfCore.Repositories
         public async Task<List<Pattisserie>> GetPattisserieWithCategoriesAsync()
         {
             List<Pattisserie> pattisseries = await Context
-                .Pattisserie.Include(x => x.PattisserieCategories)
+                .Pattisserie
+                .Include(x => x.PattisserieCategories)
                 .ThenInclude(y => y.Category)
                 .ToListAsync();
             return pattisseries;
@@ -86,6 +83,38 @@ namespace CoffeePattisserie.Data.Concrete.EfCore.Repositories
                 .ThenInclude(y => y.Category)
                 .FirstOrDefaultAsync();
             return pattisserie;
+        }
+
+        public async Task<int> GetCount(int? categoryId = null)
+        {
+            int count = 0;
+            if (categoryId == null)
+            {
+                count = await Context.Pattisserie.CountAsync();
+            }
+            else
+            {
+                var pattisserieCategoryList = await Context.PattisserieCategories.ToListAsync();
+                foreach (var pc in pattisserieCategoryList)
+                {
+                    if (pc.CategoryId == categoryId)
+                    {
+                        count++;
+                    }
+                }
+            }
+            return count;
+        }
+
+        public async Task<List<Pattisserie>> GetHomePattisserieAsync()
+        {
+            List<Pattisserie> pattisseries = await Context
+                .Pattisserie
+                .Where(p => p.IsActive && p.IsHome)
+                .Include(p => p.PattisserieCategories)
+                .ThenInclude(pc => pc.Category)
+                .ToListAsync();
+            return pattisseries;
         }
     }
 }

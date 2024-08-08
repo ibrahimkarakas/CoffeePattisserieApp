@@ -10,6 +10,6 @@ namespace CoffeePattisserie.Shared.Helpers.Abstract
 {
     public interface IImageHelper
     {
-        Task<Response<string>> Upload(IFormFile file);
+    Task<Response<string>> Upload(IFormFile file,string directoryName);
     }
 }
