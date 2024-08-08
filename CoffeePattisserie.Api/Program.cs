@@ -1,8 +1,11 @@
 using CoffeePattisserie.Data;
 using CoffeePattisserie.Data.Abstract;
 using CoffeePattisserie.Data.Concrete.EfCore.Repositories;
+using CoffeePattisserie.Entity.Concrete;
 using CoffeePattisserie.Service.Abstract;
 using CoffeePattisserie.Service.Concrete;
+using CoffeePattisserie.Shared.Helpers.Abstract;
+using CoffeePattisserie.Shared.Helpers.Concrete;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,8 +16,15 @@ builder.Services.AddDbContext<CoffeeAppDbContext>(options=>options.UseSqlite(bui
 
 builder.Services.AddScoped<ICategoryRepository, EfCoreCategoryRepository>();
 builder.Services.AddScoped<ICoffeeRepository, EfCoreCoffeeRepository>();
+builder.Services.AddScoped<IMoctailRepository, EfCoreMoctailRepository>();
+builder.Services.AddScoped<IPattisserieRepository, EfCorePattisserieRepository>();
+
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<ICoffeeService, CoffeeService>();
+builder.Services.AddScoped<IMoctailService, MoctailService>();
+builder.Services.AddScoped<IPattisserieService, PattisserieService>();
+
+builder.Services.AddScoped<IImageHelper, ImageHelper>();
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 

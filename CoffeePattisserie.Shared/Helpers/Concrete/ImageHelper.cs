@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BooksApp.Shared.Helpers.Concrete
+namespace CoffeePattisserie.Shared.Helpers.Concrete
 {
     public class ImageHelper : IImageHelper
     {
@@ -17,7 +17,6 @@ namespace BooksApp.Shared.Helpers.Concrete
         private readonly string[] permittedMimeTypes = { "image/png", "image/jpg", "image/jpeg" };
         public ImageHelper(IWebHostEnvironment env)
         {
-            // C:/Sites/wwwinfotechcom/images
             _imagesFolder = Path.Combine(env.WebRootPath, "images");
         }
         public async Task<Response<string>> Upload(IFormFile file, string directoryName)
@@ -38,9 +37,6 @@ namespace BooksApp.Shared.Helpers.Concrete
             if(!permittedMimeTypes.Contains(file.ContentType)) {
                 return Response<string>.Fail("Lütfen resim dosyası içeriğini kontrol ediniz.", 401);
             }
-            //wwwroot/images
-            //wwwroot/images/books
-            //wwwroot/images/authors
             _imagesFolder= Path.Combine(_imagesFolder, directoryName);
             if (!Directory.Exists(_imagesFolder))
             {
