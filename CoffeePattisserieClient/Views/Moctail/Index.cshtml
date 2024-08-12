@@ -1,0 +1,47 @@
+@model List<MoctailViewModel>
+@{
+    ViewData["Title"] = "Moctails Ana sayfa";
+}
+<h1 class="display-6 text-danger">Moctails</h1>
+<hr />
+<table class="table table-sm table-bordered">
+    <thead>
+        <tr>
+            <th width="50">Id</th>
+            <th>Moctail Adı</th>
+            <th>İçindekiler</th>
+            <th>Hazırlama Yöntemi</th>
+            <th>Stok</th>
+            <th>Fiyat</th>
+            <th>Lezzet Profili</th>
+            <th width="120">İşlemler</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var moctail in Model)
+        {
+            <tr>
+                <td>@moctail.Id</td>
+                <td>@moctail.Name</td>
+                <td>@moctail.Ingredients</td>
+                <td>@moctail.PreparationMethod</td>
+                <td>@moctail.StockQuantity</td>
+                <td>@($"{moctail.Price:C0}")</td>
+                <td>@moctail.FlavorProfile</td>
+                <td>
+                    <a 
+                        asp-controller="Moctail"
+                        asp-action="Delete"
+                        asp-route-id="@moctail.Id"
+                        class="btn btn-danger btn-sm">Sil</a>
+
+                    <a 
+                        asp-controller="Moctail"
+                        asp-action="Update"
+                        asp-route-id="@moctail.Id"
+                        class="btn btn-warning btn-sm">Düzenle</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

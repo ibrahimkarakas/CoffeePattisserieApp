@@ -1,0 +1,51 @@
+@model CoffeeViewModel
+<h1 class="display-6 text-primary">
+    <span class="text-danger">@Model.Name</span> adlı kahvenin bilgileri güncelleniyor...</h1>
+<hr />
+
+@section Scripts{
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}
+
+<form 
+    asp-controller="Coffee"
+    asp-action="Update"
+    method="post"
+    class="row g-3">
+    <div class="col-md-7">
+        <label asp-for="Name" class="form-label"></label>
+        <input class="form-control" asp-for="Name">
+    </div>
+    <div class="col-md-2">
+        <label asp-for="Price" class="form-label"></label>
+        <input class="form-control" asp-for="Price" >
+    </div>
+    <div class="col-md-2">
+        <label asp-for="StockQuantity" class="form-label"></label>
+        <input class="form-control" asp-for="StockQuantity" >
+    </div>
+    <div class="col-md-4">
+        <label asp-for="OriginCountry" class="form-label"></label>
+        <input class="form-control" asp-for="OriginCountry">
+    </div>
+    <div class="col-md-4">
+        <label asp-for="RoastLevel" class="form-label"></label>
+        <input class="form-control" asp-for="RoastLevel" >
+    </div>
+    <div class="col-md-4">
+        <label asp-for="CaffeineContent" class="form-label"></label>
+        <input class="form-control" asp-for="CaffeineContent" >
+    </div>
+    <div class="col-md-6">
+        <label asp-for="FlavorNotes" class="form-label"></label>
+        <textarea class="form-control" asp-for="FlavorNotes"></textarea>        
+    </div>
+    <div class="col-md-6">
+        <label asp-for="ImageUrl" class="form-label"></label>
+        <input class="form-control" asp-for="ImageUrl" >
+    </div>
+
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">Değişiklikleri Kaydet</button>
+    </div>
+</form>
