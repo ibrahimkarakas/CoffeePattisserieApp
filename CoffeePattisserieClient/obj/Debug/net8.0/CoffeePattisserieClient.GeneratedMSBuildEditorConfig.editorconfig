@@ -17,75 +17,75 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = CoffeePattisserieClient
 build_property.RootNamespace = CoffeePattisserieClient
-build_property.ProjectDir = C:\Users\Admin\Desktop\FinalProject-CoffeePattisserie\CoffeePattisserieClient\
+build_property.ProjectDir = C:\Users\Admin\Desktop\FinalProject-CoffeePattisserie\CoffeePattisserieApp\CoffeePattisserieClient\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Admin\Desktop\FinalProject-CoffeePattisserie\CoffeePattisserieClient
+build_property.MSBuildProjectDirectory = C:\Users\Admin\Desktop\FinalProject-CoffeePattisserie\CoffeePattisserieApp\CoffeePattisserieClient
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Admin/Desktop/FinalProject-CoffeePattisserie/CoffeePattisserieClient/Views/Coffee/Details.cshtml]
+[C:/Users/Admin/Desktop/FinalProject-CoffeePattisserie/CoffeePattisserieApp/CoffeePattisserieClient/Views/Coffee/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29mZmVlXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/FinalProject-CoffeePattisserie/CoffeePattisserieClient/Views/Coffee/Index.cshtml]
+[C:/Users/Admin/Desktop/FinalProject-CoffeePattisserie/CoffeePattisserieApp/CoffeePattisserieClient/Views/Coffee/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29mZmVlXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/FinalProject-CoffeePattisserie/CoffeePattisserieClient/Views/Coffee/Update.cshtml]
+[C:/Users/Admin/Desktop/FinalProject-CoffeePattisserie/CoffeePattisserieApp/CoffeePattisserieClient/Views/Coffee/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29mZmVlXFVwZGF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/FinalProject-CoffeePattisserie/CoffeePattisserieClient/Views/Home/Index.cshtml]
+[C:/Users/Admin/Desktop/FinalProject-CoffeePattisserie/CoffeePattisserieApp/CoffeePattisserieClient/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/FinalProject-CoffeePattisserie/CoffeePattisserieClient/Views/Home/Privacy.cshtml]
+[C:/Users/Admin/Desktop/FinalProject-CoffeePattisserie/CoffeePattisserieApp/CoffeePattisserieClient/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/FinalProject-CoffeePattisserie/CoffeePattisserieClient/Views/Moctail/Details.cshtml]
+[C:/Users/Admin/Desktop/FinalProject-CoffeePattisserie/CoffeePattisserieApp/CoffeePattisserieClient/Views/Moctail/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9jdGFpbFxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/FinalProject-CoffeePattisserie/CoffeePattisserieClient/Views/Moctail/Index.cshtml]
+[C:/Users/Admin/Desktop/FinalProject-CoffeePattisserie/CoffeePattisserieApp/CoffeePattisserieClient/Views/Moctail/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9jdGFpbFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/FinalProject-CoffeePattisserie/CoffeePattisserieClient/Views/Moctail/Update.cshtml]
+[C:/Users/Admin/Desktop/FinalProject-CoffeePattisserie/CoffeePattisserieApp/CoffeePattisserieClient/Views/Moctail/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9jdGFpbFxVcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/FinalProject-CoffeePattisserie/CoffeePattisserieClient/Views/Pattisserie/Details.cshtml]
+[C:/Users/Admin/Desktop/FinalProject-CoffeePattisserie/CoffeePattisserieApp/CoffeePattisserieClient/Views/Pattisserie/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0dGlzc2VyaWVcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/FinalProject-CoffeePattisserie/CoffeePattisserieClient/Views/Pattisserie/Index.cshtml]
+[C:/Users/Admin/Desktop/FinalProject-CoffeePattisserie/CoffeePattisserieApp/CoffeePattisserieClient/Views/Pattisserie/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0dGlzc2VyaWVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/FinalProject-CoffeePattisserie/CoffeePattisserieClient/Views/Pattisserie/Update.cshtml]
+[C:/Users/Admin/Desktop/FinalProject-CoffeePattisserie/CoffeePattisserieApp/CoffeePattisserieClient/Views/Pattisserie/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0dGlzc2VyaWVcVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/FinalProject-CoffeePattisserie/CoffeePattisserieClient/Views/Shared/Error.cshtml]
+[C:/Users/Admin/Desktop/FinalProject-CoffeePattisserie/CoffeePattisserieApp/CoffeePattisserieClient/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/FinalProject-CoffeePattisserie/CoffeePattisserieClient/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Admin/Desktop/FinalProject-CoffeePattisserie/CoffeePattisserieApp/CoffeePattisserieClient/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/FinalProject-CoffeePattisserie/CoffeePattisserieClient/Views/_ViewImports.cshtml]
+[C:/Users/Admin/Desktop/FinalProject-CoffeePattisserie/CoffeePattisserieApp/CoffeePattisserieClient/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/FinalProject-CoffeePattisserie/CoffeePattisserieClient/Views/_ViewStart.cshtml]
+[C:/Users/Admin/Desktop/FinalProject-CoffeePattisserie/CoffeePattisserieApp/CoffeePattisserieClient/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/FinalProject-CoffeePattisserie/CoffeePattisserieClient/Views/Shared/_Layout.cshtml]
+[C:/Users/Admin/Desktop/FinalProject-CoffeePattisserie/CoffeePattisserieApp/CoffeePattisserieClient/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-wwpsqoxhpp

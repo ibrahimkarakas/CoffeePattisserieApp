@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LiHgqHq/oZA=",
+  "dgSpecHash": "PhzNmXXuRuc=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieClient\\CoffeePattisserieClient.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\CoffeePattisserieClient.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

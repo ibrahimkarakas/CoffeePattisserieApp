@@ -4,7 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Text.Json.Serialization;
 
-
 namespace CoffeePattisserieClient.Models
 {
     public class CategoryViewModel
@@ -13,6 +12,6 @@ namespace CoffeePattisserieClient.Models
         public int Id { get; set; }
 
         [JsonPropertyName("name")]
-        public string Name { get; set; }t; set; 
+        public string Name { get; set; }
     }
 }
