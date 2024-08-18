@@ -1,7 +1,4 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Text.Json.Serialization;
 
 namespace CoffeePattisserieClient.Models
@@ -13,5 +10,15 @@ namespace CoffeePattisserieClient.Models
 
         [JsonPropertyName("name")]
         public string Name { get; set; }
+
+        // Yeni Özellikler
+        [JsonPropertyName("imageUrl")]
+        public string ImageUrl { get; set; }
+
+        [JsonPropertyName("description")]
+        public string Description { get; set; }
+
+        [JsonPropertyName("countOfProducts")]
+        public int CountOfProducts { get; set; }
     }
 }

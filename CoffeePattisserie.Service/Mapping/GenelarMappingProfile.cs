@@ -1,16 +1,13 @@
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using AutoMapper;
 using CoffeePattisserie.Entity.Concrete;
 using CoffeePattisserie.Shared.Dtos;
 
 namespace CoffeePattisserie.Service.Mapping
 {
-    public class GenelarMappingProfile : Profile
+    public class GeneralMappingProfile : Profile
     {
-        public GenelarMappingProfile()
+        public GeneralMappingProfile()
         {
             // Category Mappings
             CreateMap<Category, CategoryDto>().ReverseMap();
@@ -46,6 +43,14 @@ namespace CoffeePattisserie.Service.Mapping
 
             CreateMap<Moctail, AddMoctailDto>().ReverseMap();
             CreateMap<Moctail, EditMoctailDto>().ReverseMap();
+
+            // Cart Mappings
+            CreateMap<Cart, CartDto>().ReverseMap();
+            CreateMap<CartItem, CartItemDto>().ReverseMap();
+
+            // Order Mappings
+            CreateMap<Order, OrderDto>().ReverseMap();
+            CreateMap<OrderItem, OrderItemDto>().ReverseMap();
         }
     }
 }

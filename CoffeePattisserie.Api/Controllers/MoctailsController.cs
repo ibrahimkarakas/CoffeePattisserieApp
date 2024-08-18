@@ -1,10 +1,9 @@
+using System.Text.Json;
 using CoffeePattisserie.Service.Abstract;
 using CoffeePattisserie.Shared.Dtos;
 using CoffeePattisserie.Shared.Helpers.Abstract;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System.Text.Json;
-using System.Threading.Tasks;
 
 namespace CoffeePattisserie.Api.Controllers
 {
@@ -43,17 +42,6 @@ namespace CoffeePattisserie.Api.Controllers
             return Ok(response);
         }
 
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(int id)
-        {
-            var response = await _moctailService.GetByIdAsync(id);
-            if (!response.IsSucceeded)
-            {
-                return NotFound(response);
-            }
-            return Ok(response);
-        }
-
         [HttpGet("homemoctails")]
         public async Task<IActionResult> GetHomeMoctails()
         {
@@ -63,6 +51,17 @@ namespace CoffeePattisserie.Api.Controllers
                 return NotFound(JsonSerializer.Serialize(response));
             }
             return Ok(JsonSerializer.Serialize(response));
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetById(int id)
+        {
+            var response = await _moctailService.GetByIdAsync(id);
+            if (!response.IsSucceeded)
+            {
+                return NotFound(response);
+            }
+            return Ok(response);
         }
 
         [HttpPut]

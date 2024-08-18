@@ -1,0 +1,103 @@
+@model Tuple<List<CoffeeViewModel>, List<MoctailViewModel>, List<PattisserieViewModel>>
+
+<section class="product spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4">
+                <div class="section-title">
+                    <h4>Yeni Ürünler</h4>
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-8">
+                <ul class="filter__controls">
+                    <li class="active" data-filter="*">Hepsi</li>
+                    <li data-filter=".coffee">Kahveler</li>
+                    <li data-filter=".moctail">Moctail'ler</li>
+                    <li data-filter=".pattisserie">Pastalar</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row property__gallery">
+            <!-- Kahve Ürünleri -->
+            @foreach (var coffee in Model.Item1)
+            {
+                <div class="col-lg-3 col-md-4 col-sm-6 mix coffee">
+                    <div class="product__item">
+                        <div class="product__item__pic set-bg" data-setbg="/ui/img/product/@coffee.ImageUrl">
+                            <ul class="product__hover">
+                                <li><a href="/ui/img/product/@coffee.ImageUrl" class="image-popup"><span class="arrow_expand"></span></a></li>
+                                <li><a href="#"><span class="icon_heart_alt"></span></a></li>
+                                <li><a href="#"><span class="icon_bag_alt"></span></a></li>
+                            </ul>
+                        </div>
+                        <div class="product__item__text">
+                            <h6><a href="#">@coffee.Name</a></h6>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <div class="product__price">₺ @coffee.Price</div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+            <!-- Moctail Ürünleri -->
+            @foreach (var moctail in Model.Item2)
+            {
+                <div class="col-lg-3 col-md-4 col-sm-6 mix moctail">
+                    <div class="product__item">
+                        <div class="product__item__pic set-bg" data-setbg="/ui/img/product/@moctail.ImageUrl">
+                            <ul class="product__hover">
+                                <li><a href="/ui/img/product/@moctail.ImageUrl" class="image-popup"><span class="arrow_expand"></span></a></li>
+                                <li><a href="#"><span class="icon_heart_alt"></span></a></li>
+                                <li><a href="#"><span class="icon_bag_alt"></span></a></li>
+                            </ul>
+                        </div>
+                        <div class="product__item__text">
+                            <h6><a href="#">@moctail.Name</a></h6>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <div class="product__price">₺ @moctail.Price</div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+            <!-- Pattisserie Ürünleri -->
+            @foreach (var pattisserie in Model.Item3)
+            {
+                <div class="col-lg-3 col-md-4 col-sm-6 mix pattisserie">
+                    <div class="product__item">
+                        <div class="product__item__pic set-bg" data-setbg="/ui/img/product/@pattisserie.ImageUrl">
+                            <ul class="product__hover">
+                                <li><a href="/ui/img/product/@pattisserie.ImageUrl" class="image-popup"><span class="arrow_expand"></span></a></li>
+                                <li><a href="#"><span class="icon_heart_alt"></span></a></li>
+                                <li><a href="#"><span class="icon_bag_alt"></span></a></li>
+                            </ul>
+                        </div>
+                        <div class="product__item__text">
+                            <h6><a href="#">@pattisserie.Name</a></h6>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <div class="product__price">₺ @pattisserie.Price</div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

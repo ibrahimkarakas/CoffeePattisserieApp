@@ -1,10 +1,9 @@
+using System.Text.Json;
 using CoffeePattisserie.Service.Abstract;
 using CoffeePattisserie.Shared.Dtos;
 using CoffeePattisserie.Shared.Helpers.Abstract;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System.Text.Json;
-using System.Threading.Tasks;
 
 namespace CoffeePattisserie.Api.Controllers
 {
@@ -43,6 +42,17 @@ namespace CoffeePattisserie.Api.Controllers
             return Ok(response);
         }
 
+        [HttpGet("homepattisseries")]
+        public async Task<IActionResult> GetHomePattisseries()
+        {
+            var response = await _pattisserieService.GetHomePattisserieAsync();
+            if (!response.IsSucceeded)
+            {
+                return NotFound(JsonSerializer.Serialize(response));
+            }
+            return Ok(JsonSerializer.Serialize(response));
+        }
+
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
@@ -52,17 +62,6 @@ namespace CoffeePattisserie.Api.Controllers
                 return NotFound(response);
             }
             return Ok(response);
-        }
-
-        [HttpGet("homepattisserie")]
-        public async Task<IActionResult> GetHomePattisserie()
-        {
-            var response = await _pattisserieService.GetHomePattisserieAsync();
-            if (!response.IsSucceeded)
-            {
-                return NotFound(JsonSerializer.Serialize(response));
-            }
-            return Ok(JsonSerializer.Serialize(response));
         }
 
         [HttpPut]
@@ -99,7 +98,7 @@ namespace CoffeePattisserie.Api.Controllers
         }
 
         [HttpGet("active/{isActive}")]
-        public async Task<IActionResult> GetActivePattisserie(bool isActive)
+        public async Task<IActionResult> GetActivePattisseries(bool isActive)
         {
             var response = await _pattisserieService.GetActivePattisserieAsync(isActive);
             if (!response.IsSucceeded)

@@ -15,23 +15,27 @@ namespace CoffeePattisserie.Service.Concrete
     {
         private readonly ICategoryRepository _categoryRepository;
         private readonly ICoffeeRepository _coffeeRepository;
+        private readonly IMoctailRepository _moctailRepository;
+        private readonly IPattisserieRepository _pattisserieRepository;
         private readonly IMapper _mapper;
 
-        public CategoryService(ICategoryRepository categoryRepository, IMapper mapper, ICoffeeRepository coffeeRepository)
+        public CategoryService(ICategoryRepository categoryRepository, IMapper mapper, ICoffeeRepository coffeeRepository, IMoctailRepository moctailRepository, IPattisserieRepository pattisserieRepository)
         {
             _categoryRepository = categoryRepository;
             _mapper = mapper;
             _coffeeRepository = coffeeRepository;
+            _moctailRepository = moctailRepository;
+            _pattisserieRepository = pattisserieRepository;
         }
 
         public async Task<Response<CategoryDto>> AddAsync(AddCategoryDto addCategoryDto)
         {
             Category category = _mapper.Map<Category>(addCategoryDto);
             Category createdCategory = await _categoryRepository.CreateAsync(category);
-            if(createdCategory == null)
+            if (createdCategory == null)
             {
                 return Response<CategoryDto>.Fail("Veri tabanına kayıt işlemi sırasında bir sorun oluştu", 404);
-            }  
+            }
             CategoryDto categoryDto = _mapper.Map<CategoryDto>(createdCategory);
             return Response<CategoryDto>.Success(categoryDto, 201);
         }
@@ -50,7 +54,7 @@ namespace CoffeePattisserie.Service.Concrete
         public async Task<Response<List<CategoryDto>>> GetActiveCategoriesAsync()
         {
             var categories = await _categoryRepository.GetActiveCategoriesAsync();
-            if(categories.Count == 0)
+            if (categories.Count == 0)
             {
                 return Response<List<CategoryDto>>.Fail("Hiç aktif kategori bulunamadı", 404);
             }
@@ -61,7 +65,7 @@ namespace CoffeePattisserie.Service.Concrete
         public async Task<Response<List<CategoryDto>>> GetAllAsync()
         {
             var categories = await _categoryRepository.GetAllAsync();
-            if(categories.Count == 0)
+            if (categories.Count == 0)
             {
                 return Response<List<CategoryDto>>.Fail("Hiç kategori bulunamadı", 404);
             }
@@ -72,7 +76,7 @@ namespace CoffeePattisserie.Service.Concrete
         public async Task<Response<CategoryDto>> GetByIdAsync(int id)
         {
             var category = await _categoryRepository.GetByIdAsync(id);
-            if(category == null)
+            if (category == null)
             {
                 return Response<CategoryDto>.Fail("Bu id'li kategori bulunamadı", 404);
             }
@@ -83,14 +87,18 @@ namespace CoffeePattisserie.Service.Concrete
         public async Task<Response<List<CategoryDto>>> GetHomeCategoriesAsync()
         {
             var categories = await _categoryRepository.GetHomeCategoriesAsync();
-            if(categories.Count == 0)
+            if (categories.Count == 0)
             {
                 return Response<List<CategoryDto>>.Fail("Hiç ana sayfa kategori bulunamadı", 404);
             }
             var categoryDtoList = _mapper.Map<List<CategoryDto>>(categories);
             foreach (var categoryDto in categoryDtoList)
             {
-                categoryDto.CountOfProducts = await _coffeeRepository.GetCount(categoryDto.Id); 
+                int coffeeCount = await _coffeeRepository.GetCount(categoryDto.Id);
+                int moctailCount = await _moctailRepository.GetCount(categoryDto.Id);
+                int pattisserieCount = await _pattisserieRepository.GetCount(categoryDto.Id);
+
+                categoryDto.CountOfProducts = coffeeCount + moctailCount + pattisserieCount;
             }
             return Response<List<CategoryDto>>.Success(categoryDtoList, 200);
         }
@@ -98,7 +106,7 @@ namespace CoffeePattisserie.Service.Concrete
         public async Task<Response<CategoryDto>> UpdateAsync(EditCategoryDto editCategoryDto)
         {
             var editedCategory = _mapper.Map<Category>(editCategoryDto);
-            if(editedCategory == null)
+            if (editedCategory == null)
             {
                 return Response<CategoryDto>.Fail("Bir hata oluştu", 404);
             }

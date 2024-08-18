@@ -7,9 +7,16 @@ namespace CoffeePattisserieClient.Controllers;
 
 public class HomeController : Controller
 {
-    public IActionResult Index()
-    {
-        var categoryList = DataRepository.GetCategories();
-        return View(categoryList);
-    }
+  public IActionResult Index()
+{
+    var coffees = DataRepository.GetCoffees();
+    var moctails = DataRepository.GetMoctails();
+    var pattisseries = DataRepository.GetPattisseries();
+
+    var model = new Tuple<List<CoffeeViewModel>, List<MoctailViewModel>, List<PattisserieViewModel>>(coffees, moctails, pattisseries);
+    return View(model);
 }
+
+
+}
+

@@ -16,5 +16,7 @@ namespace CoffeePattisserie.Entity.Concrete
         public string Description { get; set; }
         public bool IsHome { get; set; }
         public List<CoffeeCategory> CoffeeCategories { get; set; }
+        public List<MoctailCategory> MoctailCategories { get; set; }
+        public List<PattisserieCategory> PattisserieCategories { get; set; }
     }
 }

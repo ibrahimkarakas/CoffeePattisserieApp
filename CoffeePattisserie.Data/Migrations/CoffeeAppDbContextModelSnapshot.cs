@@ -17,6 +17,66 @@ namespace CoffeePattisserie.Data.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.4");
 
+            modelBuilder.Entity("CoffeePattisserie.Entity.Concrete.Cart", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Carts");
+                });
+
+            modelBuilder.Entity("CoffeePattisserie.Entity.Concrete.CartItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("CartId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int?>("CoffeeId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int?>("MoctailId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int?>("PattisserieId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("ProductType")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CartId");
+
+                    b.HasIndex("CoffeeId");
+
+                    b.HasIndex("MoctailId");
+
+                    b.HasIndex("PattisserieId");
+
+                    b.ToTable("CartItems");
+                });
+
             modelBuilder.Entity("CoffeePattisserie.Entity.Concrete.Category", b =>
                 {
                     b.Property<int>("Id")
@@ -52,31 +112,31 @@ namespace CoffeePattisserie.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2024, 8, 8, 11, 27, 1, 866, DateTimeKind.Local).AddTicks(2741),
+                            CreatedDate = new DateTime(2024, 8, 15, 1, 35, 35, 965, DateTimeKind.Local).AddTicks(9167),
                             Description = "Various types of coffee",
                             IsActive = true,
                             IsHome = true,
-                            ModifiedDate = new DateTime(2024, 8, 8, 11, 27, 1, 866, DateTimeKind.Local).AddTicks(2750),
+                            ModifiedDate = new DateTime(2024, 8, 15, 1, 35, 35, 965, DateTimeKind.Local).AddTicks(9178),
                             Name = "Coffee"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2024, 8, 8, 11, 27, 1, 866, DateTimeKind.Local).AddTicks(2752),
+                            CreatedDate = new DateTime(2024, 8, 15, 1, 35, 35, 965, DateTimeKind.Local).AddTicks(9180),
                             Description = "Various types of moctails",
                             IsActive = true,
                             IsHome = true,
-                            ModifiedDate = new DateTime(2024, 8, 8, 11, 27, 1, 866, DateTimeKind.Local).AddTicks(2753),
+                            ModifiedDate = new DateTime(2024, 8, 15, 1, 35, 35, 965, DateTimeKind.Local).AddTicks(9181),
                             Name = "Moctail"
                         },
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2024, 8, 8, 11, 27, 1, 866, DateTimeKind.Local).AddTicks(2754),
+                            CreatedDate = new DateTime(2024, 8, 15, 1, 35, 35, 965, DateTimeKind.Local).AddTicks(9182),
                             Description = "Various types of pattisseries",
                             IsActive = true,
                             IsHome = true,
-                            ModifiedDate = new DateTime(2024, 8, 8, 11, 27, 1, 866, DateTimeKind.Local).AddTicks(2755),
+                            ModifiedDate = new DateTime(2024, 8, 15, 1, 35, 35, 965, DateTimeKind.Local).AddTicks(9182),
                             Name = "Pattisserie"
                         });
                 });
@@ -142,12 +202,12 @@ namespace CoffeePattisserie.Data.Migrations
                             Id = 1,
                             CaffeineContent = 120,
                             CategoryId = 1,
-                            CreatedDate = new DateTime(2024, 7, 29, 11, 27, 1, 866, DateTimeKind.Local).AddTicks(7326),
+                            CreatedDate = new DateTime(2024, 8, 5, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(3046),
                             FlavorNotes = "Floral, Citrus",
                             ImageUrl = "ethiopian-yirgacheffe.jpg",
                             IsActive = true,
                             IsHome = true,
-                            ModifiedDate = new DateTime(2024, 8, 8, 11, 27, 1, 866, DateTimeKind.Local).AddTicks(7325),
+                            ModifiedDate = new DateTime(2024, 8, 15, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(3045),
                             Name = "Ethiopian Yirgacheffe",
                             OriginCountry = "Ethiopia",
                             Price = 120m,
@@ -159,12 +219,12 @@ namespace CoffeePattisserie.Data.Migrations
                             Id = 2,
                             CaffeineContent = 110,
                             CategoryId = 2,
-                            CreatedDate = new DateTime(2024, 7, 17, 11, 27, 1, 866, DateTimeKind.Local).AddTicks(7336),
+                            CreatedDate = new DateTime(2024, 7, 24, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(3057),
                             FlavorNotes = "Nutty, Chocolate",
                             ImageUrl = "colombian-supremo.jpg",
                             IsActive = true,
                             IsHome = false,
-                            ModifiedDate = new DateTime(2024, 8, 8, 11, 27, 1, 866, DateTimeKind.Local).AddTicks(7335),
+                            ModifiedDate = new DateTime(2024, 8, 15, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(3057),
                             Name = "Colombian Supremo",
                             OriginCountry = "Colombia",
                             Price = 125m,
@@ -176,12 +236,12 @@ namespace CoffeePattisserie.Data.Migrations
                             Id = 3,
                             CaffeineContent = 100,
                             CategoryId = 3,
-                            CreatedDate = new DateTime(2024, 8, 3, 11, 27, 1, 866, DateTimeKind.Local).AddTicks(7340),
+                            CreatedDate = new DateTime(2024, 8, 10, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(3061),
                             FlavorNotes = "Earthy, Herbal",
                             ImageUrl = "sumatra-mandheling.jpg",
                             IsActive = true,
                             IsHome = true,
-                            ModifiedDate = new DateTime(2024, 8, 8, 11, 27, 1, 866, DateTimeKind.Local).AddTicks(7339),
+                            ModifiedDate = new DateTime(2024, 8, 15, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(3060),
                             Name = "Sumatra Mandheling",
                             OriginCountry = "Indonesia",
                             Price = 130m,
@@ -193,12 +253,12 @@ namespace CoffeePattisserie.Data.Migrations
                             Id = 4,
                             CaffeineContent = 115,
                             CategoryId = 4,
-                            CreatedDate = new DateTime(2024, 7, 29, 11, 27, 1, 866, DateTimeKind.Local).AddTicks(7342),
+                            CreatedDate = new DateTime(2024, 8, 5, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(3063),
                             FlavorNotes = "Sweet, Nutty",
                             ImageUrl = "brazil-santos.jpg",
                             IsActive = true,
                             IsHome = false,
-                            ModifiedDate = new DateTime(2024, 8, 8, 11, 27, 1, 866, DateTimeKind.Local).AddTicks(7342),
+                            ModifiedDate = new DateTime(2024, 8, 15, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(3063),
                             Name = "Brazil Santos",
                             OriginCountry = "Brazil",
                             Price = 135m,
@@ -210,12 +270,12 @@ namespace CoffeePattisserie.Data.Migrations
                             Id = 5,
                             CaffeineContent = 105,
                             CategoryId = 1,
-                            CreatedDate = new DateTime(2024, 7, 9, 11, 27, 1, 866, DateTimeKind.Local).AddTicks(7345),
+                            CreatedDate = new DateTime(2024, 7, 16, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(3066),
                             FlavorNotes = "Smooth, Sweet, Mild",
                             ImageUrl = "jamaican-blue-mountain.jpg",
                             IsActive = true,
                             IsHome = true,
-                            ModifiedDate = new DateTime(2024, 8, 8, 11, 27, 1, 866, DateTimeKind.Local).AddTicks(7344),
+                            ModifiedDate = new DateTime(2024, 8, 15, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(3065),
                             Name = "Jamaican Blue Mountain",
                             OriginCountry = "Jamaica",
                             Price = 140m,
@@ -227,12 +287,12 @@ namespace CoffeePattisserie.Data.Migrations
                             Id = 6,
                             CaffeineContent = 110,
                             CategoryId = 2,
-                            CreatedDate = new DateTime(2024, 7, 24, 11, 27, 1, 866, DateTimeKind.Local).AddTicks(7348),
+                            CreatedDate = new DateTime(2024, 7, 31, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(3069),
                             FlavorNotes = "Fruity, Winey",
                             ImageUrl = "kenyan-aa.jpg",
                             IsActive = true,
                             IsHome = false,
-                            ModifiedDate = new DateTime(2024, 8, 8, 11, 27, 1, 866, DateTimeKind.Local).AddTicks(7347),
+                            ModifiedDate = new DateTime(2024, 8, 15, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(3068),
                             Name = "Kenyan AA",
                             OriginCountry = "Kenya",
                             Price = 145m,
@@ -244,12 +304,12 @@ namespace CoffeePattisserie.Data.Migrations
                             Id = 7,
                             CaffeineContent = 115,
                             CategoryId = 3,
-                            CreatedDate = new DateTime(2024, 7, 19, 11, 27, 1, 866, DateTimeKind.Local).AddTicks(7350),
+                            CreatedDate = new DateTime(2024, 7, 26, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(3071),
                             FlavorNotes = "Citrus, Chocolate",
                             ImageUrl = "costa-rican-tarrazu.jpg",
                             IsActive = true,
                             IsHome = true,
-                            ModifiedDate = new DateTime(2024, 8, 8, 11, 27, 1, 866, DateTimeKind.Local).AddTicks(7350),
+                            ModifiedDate = new DateTime(2024, 8, 15, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(3071),
                             Name = "Costa Rican Tarrazu",
                             OriginCountry = "Costa Rica",
                             Price = 125m,
@@ -261,12 +321,12 @@ namespace CoffeePattisserie.Data.Migrations
                             Id = 8,
                             CaffeineContent = 105,
                             CategoryId = 4,
-                            CreatedDate = new DateTime(2024, 7, 14, 11, 27, 1, 866, DateTimeKind.Local).AddTicks(7353),
+                            CreatedDate = new DateTime(2024, 7, 21, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(3074),
                             FlavorNotes = "Spicy, Smoky",
                             ImageUrl = "guatemalan-antigua.jpg",
                             IsActive = true,
                             IsHome = false,
-                            ModifiedDate = new DateTime(2024, 8, 8, 11, 27, 1, 866, DateTimeKind.Local).AddTicks(7352),
+                            ModifiedDate = new DateTime(2024, 8, 15, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(3073),
                             Name = "Guatemalan Antigua",
                             OriginCountry = "Guatemala",
                             Price = 150m,
@@ -278,12 +338,12 @@ namespace CoffeePattisserie.Data.Migrations
                             Id = 9,
                             CaffeineContent = 100,
                             CategoryId = 1,
-                            CreatedDate = new DateTime(2024, 7, 21, 11, 27, 1, 866, DateTimeKind.Local).AddTicks(7355),
+                            CreatedDate = new DateTime(2024, 7, 28, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(3076),
                             FlavorNotes = "Nutty, Caramel",
                             ImageUrl = "mexican-altura.jpg",
                             IsActive = true,
                             IsHome = true,
-                            ModifiedDate = new DateTime(2024, 8, 8, 11, 27, 1, 866, DateTimeKind.Local).AddTicks(7355),
+                            ModifiedDate = new DateTime(2024, 8, 15, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(3076),
                             Name = "Mexican Altura",
                             OriginCountry = "Mexico",
                             Price = 140m,
@@ -295,12 +355,12 @@ namespace CoffeePattisserie.Data.Migrations
                             Id = 10,
                             CaffeineContent = 110,
                             CategoryId = 2,
-                            CreatedDate = new DateTime(2024, 7, 27, 11, 27, 1, 866, DateTimeKind.Local).AddTicks(7358),
+                            CreatedDate = new DateTime(2024, 8, 3, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(3079),
                             FlavorNotes = "Rich, Buttery",
                             ImageUrl = "hawaiian-kona.jpg",
                             IsActive = true,
                             IsHome = false,
-                            ModifiedDate = new DateTime(2024, 8, 8, 11, 27, 1, 866, DateTimeKind.Local).AddTicks(7358),
+                            ModifiedDate = new DateTime(2024, 8, 15, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(3078),
                             Name = "Hawaiian Kona",
                             OriginCountry = "Hawaii",
                             Price = 130m,
@@ -312,12 +372,12 @@ namespace CoffeePattisserie.Data.Migrations
                             Id = 11,
                             CaffeineContent = 105,
                             CategoryId = 3,
-                            CreatedDate = new DateTime(2024, 7, 31, 11, 27, 1, 866, DateTimeKind.Local).AddTicks(7361),
+                            CreatedDate = new DateTime(2024, 8, 7, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(3081),
                             FlavorNotes = "Chocolate, Spicy",
                             ImageUrl = "yemen-mocha.jpg",
                             IsActive = true,
                             IsHome = true,
-                            ModifiedDate = new DateTime(2024, 8, 8, 11, 27, 1, 866, DateTimeKind.Local).AddTicks(7361),
+                            ModifiedDate = new DateTime(2024, 8, 15, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(3081),
                             Name = "Yemen Mocha",
                             OriginCountry = "Yemen",
                             Price = 125m,
@@ -329,12 +389,12 @@ namespace CoffeePattisserie.Data.Migrations
                             Id = 12,
                             CaffeineContent = 115,
                             CategoryId = 4,
-                            CreatedDate = new DateTime(2024, 8, 2, 11, 27, 1, 866, DateTimeKind.Local).AddTicks(7364),
+                            CreatedDate = new DateTime(2024, 8, 9, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(3083),
                             FlavorNotes = "Sweet, Floral",
                             ImageUrl = "ecuador-vilcabamba.jpg",
                             IsActive = true,
                             IsHome = false,
-                            ModifiedDate = new DateTime(2024, 8, 8, 11, 27, 1, 866, DateTimeKind.Local).AddTicks(7364),
+                            ModifiedDate = new DateTime(2024, 8, 15, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(3083),
                             Name = "Ecuador Vilcabamba",
                             OriginCountry = "Ecuador",
                             Price = 140m,
@@ -487,7 +547,7 @@ namespace CoffeePattisserie.Data.Migrations
                         {
                             Id = 1,
                             CategoryId = 1,
-                            CreatedDate = new DateTime(2024, 7, 29, 11, 27, 1, 867, DateTimeKind.Local).AddTicks(1142),
+                            CreatedDate = new DateTime(2024, 8, 5, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(6419),
                             Description = "A refreshing mint and lime drink.",
                             FlavorProfile = "Minty, Citrusy",
                             ImageUrl = "virgin-mojito.jpg",
@@ -504,7 +564,7 @@ namespace CoffeePattisserie.Data.Migrations
                         {
                             Id = 2,
                             CategoryId = 1,
-                            CreatedDate = new DateTime(2024, 7, 30, 11, 27, 1, 867, DateTimeKind.Local).AddTicks(1150),
+                            CreatedDate = new DateTime(2024, 8, 6, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(6428),
                             Description = "A sweet and fizzy drink with grenadine.",
                             FlavorProfile = "Sweet, Fizzy",
                             ImageUrl = "shirley-temple.jpg",
@@ -521,7 +581,7 @@ namespace CoffeePattisserie.Data.Migrations
                         {
                             Id = 3,
                             CategoryId = 2,
-                            CreatedDate = new DateTime(2024, 7, 31, 11, 27, 1, 867, DateTimeKind.Local).AddTicks(1154),
+                            CreatedDate = new DateTime(2024, 8, 7, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(6430),
                             Description = "A tropical blend of pineapple and coconut.",
                             FlavorProfile = "Tropical, Creamy",
                             ImageUrl = "pina-colada.jpg",
@@ -538,7 +598,7 @@ namespace CoffeePattisserie.Data.Migrations
                         {
                             Id = 4,
                             CategoryId = 2,
-                            CreatedDate = new DateTime(2024, 8, 1, 11, 27, 1, 867, DateTimeKind.Local).AddTicks(1156),
+                            CreatedDate = new DateTime(2024, 8, 8, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(6433),
                             Description = "A fruity drink with orange, pineapple, and lemon.",
                             FlavorProfile = "Fruity, Tangy",
                             ImageUrl = "cinderella.jpg",
@@ -555,7 +615,7 @@ namespace CoffeePattisserie.Data.Migrations
                         {
                             Id = 5,
                             CategoryId = 1,
-                            CreatedDate = new DateTime(2024, 8, 2, 11, 27, 1, 867, DateTimeKind.Local).AddTicks(1158),
+                            CreatedDate = new DateTime(2024, 8, 9, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(6435),
                             Description = "A vibrant mix of orange and grenadine.",
                             FlavorProfile = "Citrusy, Sweet",
                             ImageUrl = "sunrise.jpg",
@@ -572,7 +632,7 @@ namespace CoffeePattisserie.Data.Migrations
                         {
                             Id = 6,
                             CategoryId = 3,
-                            CreatedDate = new DateTime(2024, 8, 3, 11, 27, 1, 867, DateTimeKind.Local).AddTicks(1161),
+                            CreatedDate = new DateTime(2024, 8, 10, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(6437),
                             Description = "A delightful mix of various fruit juices.",
                             FlavorProfile = "Fruity, Refreshing",
                             ImageUrl = "fruit-punch.jpg",
@@ -589,7 +649,7 @@ namespace CoffeePattisserie.Data.Migrations
                         {
                             Id = 7,
                             CategoryId = 3,
-                            CreatedDate = new DateTime(2024, 8, 4, 11, 27, 1, 867, DateTimeKind.Local).AddTicks(1163),
+                            CreatedDate = new DateTime(2024, 8, 11, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(6439),
                             Description = "A non-alcoholic version of the classic Bloody Mary.",
                             FlavorProfile = "Savory, Spicy",
                             ImageUrl = "virgin-mary.jpg",
@@ -606,7 +666,7 @@ namespace CoffeePattisserie.Data.Migrations
                         {
                             Id = 8,
                             CategoryId = 3,
-                            CreatedDate = new DateTime(2024, 8, 5, 11, 27, 1, 867, DateTimeKind.Local).AddTicks(1165),
+                            CreatedDate = new DateTime(2024, 8, 12, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(6442),
                             Description = "A refreshing mix of various berries.",
                             FlavorProfile = "Berry, Tangy",
                             ImageUrl = "berry-cooler.jpg",
@@ -623,7 +683,7 @@ namespace CoffeePattisserie.Data.Migrations
                         {
                             Id = 9,
                             CategoryId = 1,
-                            CreatedDate = new DateTime(2024, 8, 6, 11, 27, 1, 867, DateTimeKind.Local).AddTicks(1167),
+                            CreatedDate = new DateTime(2024, 8, 13, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(6444),
                             Description = "A refreshing lemonade with a hint of mint.",
                             FlavorProfile = "Minty, Citrusy",
                             ImageUrl = "mint-lemonade.jpg",
@@ -640,7 +700,7 @@ namespace CoffeePattisserie.Data.Migrations
                         {
                             Id = 10,
                             CategoryId = 2,
-                            CreatedDate = new DateTime(2024, 8, 7, 11, 27, 1, 867, DateTimeKind.Local).AddTicks(1170),
+                            CreatedDate = new DateTime(2024, 8, 14, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(6446),
                             Description = "A fizzy drink with tropical flavors.",
                             FlavorProfile = "Tropical, Fizzy",
                             ImageUrl = "tropical-fizz.jpg",
@@ -657,7 +717,7 @@ namespace CoffeePattisserie.Data.Migrations
                         {
                             Id = 11,
                             CategoryId = 1,
-                            CreatedDate = new DateTime(2024, 7, 27, 11, 27, 1, 867, DateTimeKind.Local).AddTicks(1173),
+                            CreatedDate = new DateTime(2024, 8, 3, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(6448),
                             Description = "A zesty mix of lemon and ginger ale.",
                             FlavorProfile = "Zesty, Fizzy",
                             ImageUrl = "lemon-ginger-ale.jpg",
@@ -674,7 +734,7 @@ namespace CoffeePattisserie.Data.Migrations
                         {
                             Id = 12,
                             CategoryId = 2,
-                            CreatedDate = new DateTime(2024, 7, 28, 11, 27, 1, 867, DateTimeKind.Local).AddTicks(1175),
+                            CreatedDate = new DateTime(2024, 8, 4, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(6450),
                             Description = "A vibrant blue drink with a tropical taste.",
                             FlavorProfile = "Tropical, Sweet",
                             ImageUrl = "blue-lagoon.jpg",
@@ -691,7 +751,7 @@ namespace CoffeePattisserie.Data.Migrations
                         {
                             Id = 13,
                             CategoryId = 3,
-                            CreatedDate = new DateTime(2024, 7, 29, 11, 27, 1, 867, DateTimeKind.Local).AddTicks(1177),
+                            CreatedDate = new DateTime(2024, 8, 5, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(6453),
                             Description = "A refreshing iced tea with a hint of peach.",
                             FlavorProfile = "Peachy, Refreshing",
                             ImageUrl = "peach-iced-tea.jpg",
@@ -708,7 +768,7 @@ namespace CoffeePattisserie.Data.Migrations
                         {
                             Id = 14,
                             CategoryId = 2,
-                            CreatedDate = new DateTime(2024, 7, 30, 11, 27, 1, 867, DateTimeKind.Local).AddTicks(1179),
+                            CreatedDate = new DateTime(2024, 8, 6, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(6455),
                             Description = "A tropical twist on the classic Moscow Mule.",
                             FlavorProfile = "Tropical, Spicy",
                             ImageUrl = "mango-mule.jpg",
@@ -780,6 +840,66 @@ namespace CoffeePattisserie.Data.Migrations
                         });
                 });
 
+            modelBuilder.Entity("CoffeePattisserie.Entity.Concrete.Order", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("OrderDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Orders");
+                });
+
+            modelBuilder.Entity("CoffeePattisserie.Entity.Concrete.OrderItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int?>("CoffeeId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int?>("MoctailId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("OrderId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int?>("PattisserieId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("ProductType")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CoffeeId");
+
+                    b.HasIndex("MoctailId");
+
+                    b.HasIndex("OrderId");
+
+                    b.HasIndex("PattisserieId");
+
+                    b.ToTable("OrderItems");
+                });
+
             modelBuilder.Entity("CoffeePattisserie.Entity.Concrete.Pattisserie", b =>
                 {
                     b.Property<int>("Id")
@@ -843,7 +963,7 @@ namespace CoffeePattisserie.Data.Migrations
                             Id = 1,
                             Allergens = "Eggs, Milk, Gluten",
                             CategoryId = 1,
-                            CreatedDate = new DateTime(2024, 7, 29, 11, 27, 1, 867, DateTimeKind.Local).AddTicks(4853),
+                            CreatedDate = new DateTime(2024, 8, 5, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(9773),
                             Description = "A rich and moist chocolate cake.",
                             ImageUrl = "chocolate-cake.jpg",
                             Ingredients = "Flour, Sugar, Cocoa, Baking Powder, Eggs, Milk",
@@ -860,7 +980,7 @@ namespace CoffeePattisserie.Data.Migrations
                             Id = 2,
                             Allergens = "Eggs, Milk, Gluten",
                             CategoryId = 1,
-                            CreatedDate = new DateTime(2024, 7, 30, 11, 27, 1, 867, DateTimeKind.Local).AddTicks(4861),
+                            CreatedDate = new DateTime(2024, 8, 6, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(9781),
                             Description = "A fluffy vanilla cupcake with buttercream frosting.",
                             ImageUrl = "vanilla-cupcake.jpg",
                             Ingredients = "Flour, Sugar, Butter, Eggs, Vanilla Extract",
@@ -877,7 +997,7 @@ namespace CoffeePattisserie.Data.Migrations
                             Id = 3,
                             Allergens = "Milk, Gluten",
                             CategoryId = 2,
-                            CreatedDate = new DateTime(2024, 7, 31, 11, 27, 1, 867, DateTimeKind.Local).AddTicks(4864),
+                            CreatedDate = new DateTime(2024, 8, 7, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(9807),
                             Description = "A tart filled with fresh strawberries and cream.",
                             ImageUrl = "strawberry-tart.jpg",
                             Ingredients = "Flour, Sugar, Butter, Strawberries, Cream",
@@ -894,7 +1014,7 @@ namespace CoffeePattisserie.Data.Migrations
                             Id = 4,
                             Allergens = "Eggs, Milk, Gluten",
                             CategoryId = 2,
-                            CreatedDate = new DateTime(2024, 8, 1, 11, 27, 1, 867, DateTimeKind.Local).AddTicks(4867),
+                            CreatedDate = new DateTime(2024, 8, 8, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(9809),
                             Description = "A tart lemon pie with a fluffy meringue topping.",
                             ImageUrl = "lemon-meringue-pie.jpg",
                             Ingredients = "Flour, Sugar, Eggs, Lemons, Butter",
@@ -911,7 +1031,7 @@ namespace CoffeePattisserie.Data.Migrations
                             Id = 5,
                             Allergens = "Eggs, Milk, Gluten",
                             CategoryId = 3,
-                            CreatedDate = new DateTime(2024, 8, 2, 11, 27, 1, 867, DateTimeKind.Local).AddTicks(4869),
+                            CreatedDate = new DateTime(2024, 8, 9, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(9812),
                             Description = "A moist muffin packed with fresh blueberries.",
                             ImageUrl = "blueberry-muffin.jpg",
                             Ingredients = "Flour, Sugar, Blueberries, Eggs, Milk",
@@ -928,7 +1048,7 @@ namespace CoffeePattisserie.Data.Migrations
                             Id = 6,
                             Allergens = "Eggs, Milk, Gluten",
                             CategoryId = 3,
-                            CreatedDate = new DateTime(2024, 8, 3, 11, 27, 1, 867, DateTimeKind.Local).AddTicks(4871),
+                            CreatedDate = new DateTime(2024, 8, 10, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(9814),
                             Description = "A creamy cheesecake with a raspberry swirl.",
                             ImageUrl = "raspberry-cheesecake.jpg",
                             Ingredients = "Cream Cheese, Sugar, Eggs, Raspberries, Graham Cracker Crust",
@@ -945,7 +1065,7 @@ namespace CoffeePattisserie.Data.Migrations
                             Id = 7,
                             Allergens = "Eggs, Milk, Gluten",
                             CategoryId = 1,
-                            CreatedDate = new DateTime(2024, 8, 4, 11, 27, 1, 867, DateTimeKind.Local).AddTicks(4873),
+                            CreatedDate = new DateTime(2024, 8, 11, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(9816),
                             Description = "A classic cookie loaded with chocolate chips.",
                             ImageUrl = "chocolate-chip-cookie.jpg",
                             Ingredients = "Flour, Sugar, Butter, Eggs, Chocolate Chips",
@@ -962,7 +1082,7 @@ namespace CoffeePattisserie.Data.Migrations
                             Id = 8,
                             Allergens = "Eggs, Nuts",
                             CategoryId = 2,
-                            CreatedDate = new DateTime(2024, 8, 5, 11, 27, 1, 867, DateTimeKind.Local).AddTicks(4875),
+                            CreatedDate = new DateTime(2024, 8, 12, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(9818),
                             Description = "A delicate French pastry with a creamy filling.",
                             ImageUrl = "macaron.jpg",
                             Ingredients = "Almond Flour, Sugar, Egg Whites, Food Coloring",
@@ -979,7 +1099,7 @@ namespace CoffeePattisserie.Data.Migrations
                             Id = 9,
                             Allergens = "Milk, Gluten",
                             CategoryId = 1,
-                            CreatedDate = new DateTime(2024, 8, 6, 11, 27, 1, 867, DateTimeKind.Local).AddTicks(4878),
+                            CreatedDate = new DateTime(2024, 8, 13, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(9821),
                             Description = "A buttery, flaky pastry.",
                             ImageUrl = "croissant.jpg",
                             Ingredients = "Flour, Butter, Sugar, Yeast, Salt",
@@ -996,7 +1116,7 @@ namespace CoffeePattisserie.Data.Migrations
                             Id = 10,
                             Allergens = "Eggs, Milk, Gluten",
                             CategoryId = 2,
-                            CreatedDate = new DateTime(2024, 8, 7, 11, 27, 1, 867, DateTimeKind.Local).AddTicks(4880),
+                            CreatedDate = new DateTime(2024, 8, 14, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(9823),
                             Description = "A spiced pumpkin pie with a flaky crust.",
                             ImageUrl = "pumpkin-pie.jpg",
                             Ingredients = "Pumpkin, Sugar, Eggs, Cream, Spices, Flour",
@@ -1013,7 +1133,7 @@ namespace CoffeePattisserie.Data.Migrations
                             Id = 11,
                             Allergens = "Eggs, Milk, Gluten",
                             CategoryId = 3,
-                            CreatedDate = new DateTime(2024, 7, 27, 11, 27, 1, 867, DateTimeKind.Local).AddTicks(4882),
+                            CreatedDate = new DateTime(2024, 8, 3, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(9825),
                             Description = "A classic red velvet cake with cream cheese frosting.",
                             ImageUrl = "red-velvet-cake.jpg",
                             Ingredients = "Flour, Sugar, Cocoa, Buttermilk, Eggs, Red Food Coloring",
@@ -1030,7 +1150,7 @@ namespace CoffeePattisserie.Data.Migrations
                             Id = 12,
                             Allergens = "Eggs, Milk, Gluten",
                             CategoryId = 2,
-                            CreatedDate = new DateTime(2024, 7, 28, 11, 27, 1, 867, DateTimeKind.Local).AddTicks(4884),
+                            CreatedDate = new DateTime(2024, 8, 4, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(9827),
                             Description = "A moist bread made with ripe bananas.",
                             ImageUrl = "banana-bread.jpg",
                             Ingredients = "Flour, Sugar, Bananas, Eggs, Butter",
@@ -1047,7 +1167,7 @@ namespace CoffeePattisserie.Data.Migrations
                             Id = 13,
                             Allergens = "Milk, Gluten",
                             CategoryId = 3,
-                            CreatedDate = new DateTime(2024, 7, 29, 11, 27, 1, 867, DateTimeKind.Local).AddTicks(4886),
+                            CreatedDate = new DateTime(2024, 8, 5, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(9829),
                             Description = "A classic pie filled with spiced apples.",
                             ImageUrl = "apple-pie.jpg",
                             Ingredients = "Apples, Sugar, Flour, Butter, Cinnamon",
@@ -1064,7 +1184,7 @@ namespace CoffeePattisserie.Data.Migrations
                             Id = 14,
                             Allergens = "Eggs, Milk, Gluten",
                             CategoryId = 1,
-                            CreatedDate = new DateTime(2024, 7, 30, 11, 27, 1, 867, DateTimeKind.Local).AddTicks(4889),
+                            CreatedDate = new DateTime(2024, 8, 6, 1, 35, 35, 966, DateTimeKind.Local).AddTicks(9831),
                             Description = "A choux pastry filled with cream and topped with chocolate.",
                             ImageUrl = "chocolate-eclair.jpg",
                             Ingredients = "Flour, Eggs, Butter, Cream, Chocolate",
@@ -1145,6 +1265,35 @@ namespace CoffeePattisserie.Data.Migrations
                         });
                 });
 
+            modelBuilder.Entity("CoffeePattisserie.Entity.Concrete.CartItem", b =>
+                {
+                    b.HasOne("CoffeePattisserie.Entity.Concrete.Cart", "Cart")
+                        .WithMany("CartItems")
+                        .HasForeignKey("CartId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CoffeePattisserie.Entity.Concrete.Coffee", "Coffee")
+                        .WithMany()
+                        .HasForeignKey("CoffeeId");
+
+                    b.HasOne("CoffeePattisserie.Entity.Concrete.Moctail", "Moctail")
+                        .WithMany()
+                        .HasForeignKey("MoctailId");
+
+                    b.HasOne("CoffeePattisserie.Entity.Concrete.Pattisserie", "Pattisserie")
+                        .WithMany()
+                        .HasForeignKey("PattisserieId");
+
+                    b.Navigation("Cart");
+
+                    b.Navigation("Coffee");
+
+                    b.Navigation("Moctail");
+
+                    b.Navigation("Pattisserie");
+                });
+
             modelBuilder.Entity("CoffeePattisserie.Entity.Concrete.CoffeeCategory", b =>
                 {
                     b.HasOne("CoffeePattisserie.Entity.Concrete.Category", "Category")
@@ -1167,7 +1316,7 @@ namespace CoffeePattisserie.Data.Migrations
             modelBuilder.Entity("CoffeePattisserie.Entity.Concrete.MoctailCategory", b =>
                 {
                     b.HasOne("CoffeePattisserie.Entity.Concrete.Category", "Category")
-                        .WithMany()
+                        .WithMany("MoctailCategories")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1183,10 +1332,39 @@ namespace CoffeePattisserie.Data.Migrations
                     b.Navigation("Moctail");
                 });
 
+            modelBuilder.Entity("CoffeePattisserie.Entity.Concrete.OrderItem", b =>
+                {
+                    b.HasOne("CoffeePattisserie.Entity.Concrete.Coffee", "Coffee")
+                        .WithMany()
+                        .HasForeignKey("CoffeeId");
+
+                    b.HasOne("CoffeePattisserie.Entity.Concrete.Moctail", "Moctail")
+                        .WithMany()
+                        .HasForeignKey("MoctailId");
+
+                    b.HasOne("CoffeePattisserie.Entity.Concrete.Order", "Order")
+                        .WithMany("OrderItems")
+                        .HasForeignKey("OrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CoffeePattisserie.Entity.Concrete.Pattisserie", "Pattisserie")
+                        .WithMany()
+                        .HasForeignKey("PattisserieId");
+
+                    b.Navigation("Coffee");
+
+                    b.Navigation("Moctail");
+
+                    b.Navigation("Order");
+
+                    b.Navigation("Pattisserie");
+                });
+
             modelBuilder.Entity("CoffeePattisserie.Entity.Concrete.PattisserieCategory", b =>
                 {
                     b.HasOne("CoffeePattisserie.Entity.Concrete.Category", "Category")
-                        .WithMany()
+                        .WithMany("PattisserieCategories")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1202,9 +1380,18 @@ namespace CoffeePattisserie.Data.Migrations
                     b.Navigation("Pattisserie");
                 });
 
+            modelBuilder.Entity("CoffeePattisserie.Entity.Concrete.Cart", b =>
+                {
+                    b.Navigation("CartItems");
+                });
+
             modelBuilder.Entity("CoffeePattisserie.Entity.Concrete.Category", b =>
                 {
                     b.Navigation("CoffeeCategories");
+
+                    b.Navigation("MoctailCategories");
+
+                    b.Navigation("PattisserieCategories");
                 });
 
             modelBuilder.Entity("CoffeePattisserie.Entity.Concrete.Coffee", b =>
@@ -1215,6 +1402,11 @@ namespace CoffeePattisserie.Data.Migrations
             modelBuilder.Entity("CoffeePattisserie.Entity.Concrete.Moctail", b =>
                 {
                     b.Navigation("MoctailCategories");
+                });
+
+            modelBuilder.Entity("CoffeePattisserie.Entity.Concrete.Order", b =>
+                {
+                    b.Navigation("OrderItems");
                 });
 
             modelBuilder.Entity("CoffeePattisserie.Entity.Concrete.Pattisserie", b =>

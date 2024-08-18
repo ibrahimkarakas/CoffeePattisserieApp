@@ -1,10 +1,9 @@
-﻿using CoffeePattisserie.Service.Abstract;
+﻿using System.Text.Json;
+using CoffeePattisserie.Service.Abstract;
 using CoffeePattisserie.Shared.Dtos;
 using CoffeePattisserie.Shared.Helpers.Abstract;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System.Text.Json;
-using System.Threading.Tasks;
 
 namespace CoffeePattisserie.Api.Controllers
 {
@@ -43,6 +42,17 @@ namespace CoffeePattisserie.Api.Controllers
             return Ok(response);
         }
 
+        [HttpGet("homecoffees")]
+        public async Task<IActionResult> GetHomeCoffees()
+        {
+            var response = await _coffeeService.GetHomeCoffeesAsync();
+            if (!response.IsSucceeded)
+            {
+                return NotFound(JsonSerializer.Serialize(response));
+            }
+            return Ok(JsonSerializer.Serialize(response));
+        }
+
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
@@ -53,17 +63,6 @@ namespace CoffeePattisserie.Api.Controllers
             }
             return Ok(response);
         }
-
-        [HttpGet("homecoffees")]
-        public async Task<IActionResult> GetHomeCoffees()
-        {
-            var response = await _coffeeService.GetHomeCoffeesAsync();
-            if (!response.IsSucceeded)
-            {
-                return NotFound(JsonSerializer.Serialize(response));
-            }
-            return Ok(JsonSerializer.Serialize(response));
-        }  
 
         [HttpPut]
         public async Task<IActionResult> Update(EditCoffeeDto editCoffeeDto)

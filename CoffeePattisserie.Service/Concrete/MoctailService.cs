@@ -1,8 +1,9 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
-using CoffeePattisserie.Data.Abstract;
 using AutoMapper;
+using CoffeePattisserie.Data.Abstract;
 using CoffeePattisserie.Entity.Concrete;
 using CoffeePattisserie.Service.Abstract;
 using CoffeePattisserie.Shared.Dtos;
@@ -28,7 +29,7 @@ namespace CoffeePattisserie.Service.Concrete
             var createdMoctail = await _moctailRepository.CreateMoctailWithCategoriesAsync(moctail, addMoctailDto.CategoryIds);
             if (createdMoctail == null)
             {
-                return Response<MoctailDto>.Fail("Bir sorun oluştu.", 404);
+                return Response<MoctailDto>.Fail("Bir sorun oluştu", 404);
             }
             var moctailDto = _mapper.Map<MoctailDto>(createdMoctail);
             return Response<MoctailDto>.Success(moctailDto, 201);
@@ -39,7 +40,7 @@ namespace CoffeePattisserie.Service.Concrete
             var moctail = await _moctailRepository.GetByIdAsync(id);
             if (moctail == null)
             {
-                return Response<NoContent>.Fail("Böyle bir ürün bulunamadı.", 404);
+                return Response<NoContent>.Fail("Böyle bir moctail bulunamadı", 404);
             }
             await _moctailRepository.DeleteAsync(moctail);
             return Response<NoContent>.Success(200);
@@ -47,10 +48,10 @@ namespace CoffeePattisserie.Service.Concrete
 
         public async Task<Response<List<MoctailDto>>> GetActiveMoctailsAsync(bool isActive = true)
         {
-            var moctails = await _moctailRepository.GetActiveMoctailsAsync(isActive);
+            List<Moctail> moctails = await _moctailRepository.GetActiveMoctailsAsync(isActive);
             if (moctails.Count == 0)
             {
-                return Response<List<MoctailDto>>.Fail("İstediğiniz kriterde ürün bulunamadı", 404);
+                return Response<List<MoctailDto>>.Fail("İstediğiniz kriterde moctail bulunamadı", 404);
             }
             var moctailDtos = _mapper.Map<List<MoctailDto>>(moctails);
             return Response<List<MoctailDto>>.Success(moctailDtos, 200);
@@ -61,21 +62,10 @@ namespace CoffeePattisserie.Service.Concrete
             var moctails = await _moctailRepository.GetMoctailsWithCategoriesAsync();
             if (moctails.Count == 0)
             {
-                return Response<List<MoctailDto>>.Fail("Hiç ürün bulunamadı.", 404);
+                return Response<List<MoctailDto>>.Fail("Hiç moctail bulunamadı", 404);
             }
             var moctailDtos = _mapper.Map<List<MoctailDto>>(moctails);
             return Response<List<MoctailDto>>.Success(moctailDtos, 200);
-        }
-
-        public async Task<Response<MoctailDto>> GetByIdAsync(int id)
-        {
-            var moctail = await _moctailRepository.GetMoctailWithCategoriesAsync(id);
-            if (moctail == null)
-            {
-                return Response<MoctailDto>.Fail("Böyle bir ürün bulunamadı", 404);
-            }
-            var moctailDto = _mapper.Map<MoctailDto>(moctail);
-            return Response<MoctailDto>.Success(moctailDto, 200);
         }
 
         public async Task<Response<List<MoctailDto>>> GetMoctailsByCategoryIdAsync(int categoryId)
@@ -83,7 +73,7 @@ namespace CoffeePattisserie.Service.Concrete
             var moctails = await _moctailRepository.GetMoctailsByCategoryIdAsync(categoryId);
             if (moctails.Count == 0)
             {
-                return Response<List<MoctailDto>>.Fail("Bu kategoride hiç ürün bulunamadı.", 404);
+                return Response<List<MoctailDto>>.Fail("Bu kategoride hiç moctail bulunamadı", 404);
             }
             var moctailDtos = _mapper.Map<List<MoctailDto>>(moctails);
             return Response<List<MoctailDto>>.Success(moctailDtos, 200);
@@ -94,10 +84,32 @@ namespace CoffeePattisserie.Service.Concrete
             var moctails = await _moctailRepository.GetMoctailsWithCategoriesAsync();
             if (moctails.Count == 0)
             {
-                return Response<List<MoctailDto>>.Fail("Hiç ürün bulunamadı.", 404);
+                return Response<List<MoctailDto>>.Fail("Hiç moctail bulunamadı", 404);
             }
             var moctailDtos = _mapper.Map<List<MoctailDto>>(moctails);
             return Response<List<MoctailDto>>.Success(moctailDtos, 200);
+        }
+
+        public async Task<Response<MoctailDto>> GetByIdAsync(int id)
+        {
+            var moctail = await _moctailRepository.GetMoctailWithCategoriesAsync(id);
+            if (moctail == null)
+            {
+                return Response<MoctailDto>.Fail("Böyle bir moctail bulunamadı", 404);
+            }
+            var moctailDto = _mapper.Map<MoctailDto>(moctail);
+            return Response<MoctailDto>.Success(moctailDto, 200);
+        }
+
+        public async Task<Response<List<MoctailDto>>> GetHomeMoctailsAsync()
+        {
+            List<Moctail> moctails = await _moctailRepository.GetHomeMoctailsAsync();
+            if (moctails.Count == 0)
+            {
+                return Response<List<MoctailDto>>.Fail("İstediğiniz kriterde moctail bulunamadı", StatusCodes.Status404NotFound);
+            }
+            var moctailDtos = _mapper.Map<List<MoctailDto>>(moctails);
+            return Response<List<MoctailDto>>.Success(moctailDtos, StatusCodes.Status200OK);
         }
 
         public async Task<Response<MoctailDto>> UpdateAsync(EditMoctailDto editMoctailDto)
@@ -105,7 +117,7 @@ namespace CoffeePattisserie.Service.Concrete
             var moctail = _mapper.Map<Moctail>(editMoctailDto);
             if (moctail == null)
             {
-                return Response<MoctailDto>.Fail("Bir hata oluştu.", 400);
+                return Response<MoctailDto>.Fail("Bir hata oluştu", 400);
             }
             moctail.ModifiedDate = DateTime.Now;
             var updatedMoctail = await _moctailRepository.UpdateAsync(moctail);
@@ -121,17 +133,6 @@ namespace CoffeePattisserie.Service.Concrete
             var result = await _moctailRepository.GetMoctailWithCategoriesAsync(updatedMoctail.Id);
             var moctailDto = _mapper.Map<MoctailDto>(result);
             return Response<MoctailDto>.Success(moctailDto, 200);
-        }
-
-        public async Task<Response<List<MoctailDto>>> GetHomeMoctailsAsync()
-        {
-            var moctails = await _moctailRepository.GetHomeMoctailsAsync();
-            if (moctails.Count == 0)
-            {
-                return Response<List<MoctailDto>>.Fail("İstediğiniz kriterde ürün bulunamadı", StatusCodes.Status404NotFound);
-            }
-            var moctailDtos = _mapper.Map<List<MoctailDto>>(moctails);
-            return Response<List<MoctailDto>>.Success(moctailDtos, StatusCodes.Status200OK);
         }
     }
 }
