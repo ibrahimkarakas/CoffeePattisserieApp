@@ -23,9 +23,9 @@ namespace CoffeePattisserieClient.Repository
                 OriginCountry = "Italy", 
                 RoastLevel = "Dark", 
                 FlavorNotes = "Rich and bold", 
-                Price = 25, 
+                Price = 120, 
                 StockQuantity = 50, 
-                ImageUrl = "espresso.png", 
+                ImageUrl = "/UI/images/espresso.jpg",
                 Categories = new List<CategoryViewModel>
                 {
                     new CategoryViewModel() { Id = 2, Name = "Kahveler" }
@@ -40,7 +40,7 @@ namespace CoffeePattisserieClient.Repository
                 FlavorNotes = "Smooth and balanced", 
                 Price = 20, 
                 StockQuantity = 60, 
-                ImageUrl = "americano.png", 
+                ImageUrl = "/UI/images/americano.jpg",
                 Categories = new List<CategoryViewModel>
                 {
                     new CategoryViewModel() { Id = 2, Name = "Kahveler" }

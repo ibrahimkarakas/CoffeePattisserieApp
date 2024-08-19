@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "hXPSW8TzykI/fQ5IY+6YtpD0vvV17dgZFoBdLUYu0o8=",
+  "Hash": "gkX6HdJQfoCuGuE6va/RSLNfD910s+cdVNptjNn7S38=",
   "Source": "CoffeePattisserieClient",
   "BasePath": "_content/CoffeePattisserieClient",
   "Mode": "Default",
@@ -606,6 +606,25 @@
       "OriginalItemSpec": "wwwroot\\UI\\images\\about-img.png"
     },
     {
+      "Identity": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\images\\americano.jpg",
+      "SourceId": "CoffeePattisserieClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\",
+      "BasePath": "_content/CoffeePattisserieClient",
+      "RelativePath": "UI/images/americano.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\UI\\images\\americano.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\images\\banner-bg.png",
       "SourceId": "CoffeePattisserieClient",
       "SourceType": "Discovered",
@@ -642,6 +661,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\UI\\images\\call-icon.png"
+    },
+    {
+      "Identity": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\images\\espresso.jpg",
+      "SourceId": "CoffeePattisserieClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\",
+      "BasePath": "_content/CoffeePattisserieClient",
+      "RelativePath": "UI/images/espresso.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\UI\\images\\espresso.jpg"
     },
     {
       "Identity": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\images\\fb-icon.png",

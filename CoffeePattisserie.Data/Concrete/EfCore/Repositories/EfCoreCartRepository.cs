@@ -23,7 +23,7 @@ namespace CoffeePattisserie.Data.Concrete.EfCore.Repositories
                 .Carts
                 .Where(x => x.UserId == userId)
                 .Include(x => x.CartItems)
-                .ThenInclude(y => y.Product) // Book yerine Product'ı temsil eden sınıfı kullanın.
+                .ThenInclude(y => y.Product) 
                 .FirstOrDefaultAsync();
         }
     }

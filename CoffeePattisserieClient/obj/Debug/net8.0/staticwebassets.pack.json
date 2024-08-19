@@ -113,12 +113,20 @@
       "PackagePath": "staticwebassets\\UI\\images\\about-img.png"
     },
     {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\images\\americano.jpg",
+      "PackagePath": "staticwebassets\\UI\\images\\americano.jpg"
+    },
+    {
       "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\images\\banner-bg.png",
       "PackagePath": "staticwebassets\\UI\\images\\banner-bg.png"
     },
     {
       "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\images\\call-icon.png",
       "PackagePath": "staticwebassets\\UI\\images\\call-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\images\\espresso.jpg",
+      "PackagePath": "staticwebassets\\UI\\images\\espresso.jpg"
     },
     {
       "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\images\\fb-icon.png",
