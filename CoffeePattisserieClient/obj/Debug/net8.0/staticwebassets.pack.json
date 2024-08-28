@@ -121,8 +121,24 @@
       "PackagePath": "staticwebassets\\UI\\images\\banner-bg.png"
     },
     {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\images\\berry_blast.jpg",
+      "PackagePath": "staticwebassets\\UI\\images\\berry_blast.jpg"
+    },
+    {
       "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\images\\call-icon.png",
       "PackagePath": "staticwebassets\\UI\\images\\call-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\images\\cappuccino.jpg",
+      "PackagePath": "staticwebassets\\UI\\images\\cappuccino.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\images\\citrus_cooler.jpg",
+      "PackagePath": "staticwebassets\\UI\\images\\citrus_cooler.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\images\\cold_brew.jpg",
+      "PackagePath": "staticwebassets\\UI\\images\\cold_brew.jpg"
     },
     {
       "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\images\\espresso.jpg",
@@ -193,6 +209,10 @@
       "PackagePath": "staticwebassets\\UI\\images\\instagram-icon.png"
     },
     {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\images\\latte.jpg",
+      "PackagePath": "staticwebassets\\UI\\images\\latte.jpg"
+    },
+    {
       "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\images\\logo.png",
       "PackagePath": "staticwebassets\\UI\\images\\logo.png"
     },
@@ -201,8 +221,16 @@
       "PackagePath": "staticwebassets\\UI\\images\\mail-icon.png"
     },
     {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\images\\mango_delight.jpg",
+      "PackagePath": "staticwebassets\\UI\\images\\mango_delight.jpg"
+    },
+    {
       "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\images\\map-icon.png",
       "PackagePath": "staticwebassets\\UI\\images\\map-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\images\\mocha.jpg",
+      "PackagePath": "staticwebassets\\UI\\images\\mocha.jpg"
     },
     {
       "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\images\\quick-icon.png",
@@ -265,20 +293,56 @@
       "PackagePath": "staticwebassets\\UI\\js\\jquery-3.0.0.min.js"
     },
     {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\js\\jquery-3.3.1.min.js",
+      "PackagePath": "staticwebassets\\UI\\js\\jquery-3.3.1.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\js\\jquery-ui.min.js",
+      "PackagePath": "staticwebassets\\UI\\js\\jquery-ui.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\js\\jquery.countdown.min.js",
+      "PackagePath": "staticwebassets\\UI\\js\\jquery.countdown.min.js"
+    },
+    {
       "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\js\\jquery.mCustomScrollbar.concat.min.js",
       "PackagePath": "staticwebassets\\UI\\js\\jquery.mCustomScrollbar.concat.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\js\\jquery.magnific-popup.min.js",
+      "PackagePath": "staticwebassets\\UI\\js\\jquery.magnific-popup.min.js"
     },
     {
       "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\js\\jquery.min.js",
       "PackagePath": "staticwebassets\\UI\\js\\jquery.min.js"
     },
     {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\js\\jquery.nicescroll.min.js",
+      "PackagePath": "staticwebassets\\UI\\js\\jquery.nicescroll.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\js\\jquery.slicknav.js",
+      "PackagePath": "staticwebassets\\UI\\js\\jquery.slicknav.js"
+    },
+    {
       "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\js\\jquery.validate.js",
       "PackagePath": "staticwebassets\\UI\\js\\jquery.validate.js"
     },
     {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\js\\main.js",
+      "PackagePath": "staticwebassets\\UI\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\js\\mixitup.min.js",
+      "PackagePath": "staticwebassets\\UI\\js\\mixitup.min.js"
+    },
+    {
       "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\js\\modernizer.js",
       "PackagePath": "staticwebassets\\UI\\js\\modernizer.js"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\js\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\UI\\js\\owl.carousel.min.js"
     },
     {
       "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\js\\plugin.js",

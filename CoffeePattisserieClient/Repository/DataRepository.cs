@@ -55,7 +55,7 @@ namespace CoffeePattisserieClient.Repository
                 FlavorNotes = "Creamy and smooth", 
                 Price = 30, 
                 StockQuantity = 40, 
-                ImageUrl = "latte.png", 
+                ImageUrl = "/UI/images/latte.jpg", 
                 Categories = new List<CategoryViewModel>
                 {
                     new CategoryViewModel() { Id = 2, Name = "Kahveler" }
@@ -70,7 +70,7 @@ namespace CoffeePattisserieClient.Repository
                 FlavorNotes = "Rich and frothy", 
                 Price = 28, 
                 StockQuantity = 45, 
-                ImageUrl = "cappuccino.png", 
+                ImageUrl = "/UI/images/cappuccino.jpg", 
                 Categories = new List<CategoryViewModel>
                 {
                     new CategoryViewModel() { Id = 2, Name = "Kahveler" }
@@ -85,7 +85,7 @@ namespace CoffeePattisserieClient.Repository
                 FlavorNotes = "Chocolatey and rich", 
                 Price = 35, 
                 StockQuantity = 35, 
-                ImageUrl = "mocha.png", 
+                ImageUrl = "/UI/images/mocha.jpg", 
                 Categories = new List<CategoryViewModel>
                 {
                     new CategoryViewModel() { Id = 2, Name = "Kahveler" }
@@ -100,7 +100,7 @@ namespace CoffeePattisserieClient.Repository
                 FlavorNotes = "Smooth and velvety", 
                 Price = 30, 
                 StockQuantity = 30, 
-                ImageUrl = "flat_white.png", 
+                ImageUrl = "/UI/images/flat_white.jpg", 
                 Categories = new List<CategoryViewModel>
                 {
                     new CategoryViewModel() { Id = 2, Name = "Kahveler" }
@@ -115,7 +115,7 @@ namespace CoffeePattisserieClient.Repository
                 FlavorNotes = "Cool and refreshing", 
                 Price = 25, 
                 StockQuantity = 25, 
-                ImageUrl = "cold_brew.png", 
+                ImageUrl = "/UI/images/cold_brew.jpg", 
                 Categories = new List<CategoryViewModel>
                 {
                     new CategoryViewModel() { Id = 2, Name = "Kahveler" }
@@ -134,7 +134,7 @@ namespace CoffeePattisserieClient.Repository
                 PreparationMethod = "Shake and serve cold", 
                 Price = 40, 
                 StockQuantity = 30, 
-                ImageUrl = "mango_moctail.png", 
+                ImageUrl = "/UI/images/mango_moctail.jpg", 
                 Categories = new List<CategoryViewModel>
                 {
                     new CategoryViewModel() { Id = 3, Name = "Moctails" }
@@ -148,7 +148,7 @@ namespace CoffeePattisserieClient.Repository
                 PreparationMethod = "Blend and serve cold", 
                 Price = 45, 
                 StockQuantity = 25, 
-                ImageUrl = "berry_blast.png", 
+                ImageUrl = "/UI/images/berry_blast.jpg", 
                 Categories = new List<CategoryViewModel>
                 {
                     new CategoryViewModel() { Id = 3, Name = "Moctails" }
@@ -162,7 +162,7 @@ namespace CoffeePattisserieClient.Repository
                 PreparationMethod = "Mix and serve with ice", 
                 Price = 35, 
                 StockQuantity = 20, 
-                ImageUrl = "citrus_cooler.png", 
+                ImageUrl = "/UI/images/citrus_cooler.jpg", 
                 Categories = new List<CategoryViewModel>
                 {
                     new CategoryViewModel() { Id = 3, Name = "Moctails" }
@@ -176,7 +176,7 @@ namespace CoffeePattisserieClient.Repository
                 PreparationMethod = "Blend and serve cold", 
                 Price = 50, 
                 StockQuantity = 15, 
-                ImageUrl = "pineapple_punch.png", 
+                ImageUrl = "/UI/images/pineapple_punch.jpg", 
                 Categories = new List<CategoryViewModel>
                 {
                     new CategoryViewModel() { Id = 3, Name = "Moctails" }
@@ -190,7 +190,7 @@ namespace CoffeePattisserieClient.Repository
                 PreparationMethod = "Shake and serve cold", 
                 Price = 45, 
                 StockQuantity = 20, 
-                ImageUrl = "tropical_paradise.png", 
+                ImageUrl = "/UI/images/tropical_paradise.jpg", 
                 Categories = new List<CategoryViewModel>
                 {
                     new CategoryViewModel() { Id = 3, Name = "Moctails" }
@@ -204,7 +204,7 @@ namespace CoffeePattisserieClient.Repository
                 PreparationMethod = "Mix and serve with ice", 
                 Price = 30, 
                 StockQuantity = 40, 
-                ImageUrl = "virgin_mojito.png", 
+                ImageUrl = "/UI/images/virgin_mojito.jpg", 
                 Categories = new List<CategoryViewModel>
                 {
                     new CategoryViewModel() { Id = 3, Name = "Moctails" }
@@ -218,7 +218,7 @@ namespace CoffeePattisserieClient.Repository
                 PreparationMethod = "Mix and serve with ice", 
                 Price = 35, 
                 StockQuantity = 35, 
-                ImageUrl = "apple_fizz.png", 
+                ImageUrl = "/UI/images/apple_fizz.jpg", 
                 Categories = new List<CategoryViewModel>
                 {
                     new CategoryViewModel() { Id = 3, Name = "Moctails" }
@@ -232,7 +232,7 @@ namespace CoffeePattisserieClient.Repository
                 PreparationMethod = "Shake and serve cold", 
                 Price = 38, 
                 StockQuantity = 25, 
-                ImageUrl = "grapefruit_spritz.png", 
+                ImageUrl = "/UI/images/grapefruit_spritz.jpg", 
                 Categories = new List<CategoryViewModel>
                 {
                     new CategoryViewModel() { Id = 3, Name = "Moctails" }
@@ -246,7 +246,7 @@ namespace CoffeePattisserieClient.Repository
                 PreparationMethod = "Mix and serve with ice", 
                 Price = 32, 
                 StockQuantity = 30, 
-                ImageUrl = "cucumber_mint.png", 
+                ImageUrl = "/UI/images/cucumber_mint.jpg", 
                 Categories = new List<CategoryViewModel>
                 {
                     new CategoryViewModel() { Id = 3, Name = "Moctails" }
@@ -260,7 +260,7 @@ namespace CoffeePattisserieClient.Repository
                 PreparationMethod = "Mix and serve with ice", 
                 Price = 30, 
                 StockQuantity = 35, 
-                ImageUrl = "peach_iced_tea.png", 
+                ImageUrl = "/UI/images/peach_iced_tea.jpg", 
                 Categories = new List<CategoryViewModel>
                 {
                     new CategoryViewModel() { Id = 3, Name = "Moctails" }
@@ -280,7 +280,7 @@ namespace CoffeePattisserieClient.Repository
                 ShelfLife = "3 days", 
                 Price = 50, 
                 StockQuantity = 10, 
-                ImageUrl = "chocolate_cake.png", 
+                ImageUrl = "/UI/images/chocolate_cake.jpg", 
                 Categories = new List<CategoryViewModel>
                 {
                     new CategoryViewModel() { Id = 1, Name = "Tatlılar" }
@@ -295,7 +295,7 @@ namespace CoffeePattisserieClient.Repository
                 ShelfLife = "5 days", 
                 Price = 60, 
                 StockQuantity = 15, 
-                ImageUrl = "cheesecake.png", 
+                ImageUrl = "/UI/images/cheesecake.jpg", 
                 Categories = new List<CategoryViewModel>
                 {
                     new CategoryViewModel() { Id = 1, Name = "Tatlılar" }
@@ -310,7 +310,7 @@ namespace CoffeePattisserieClient.Repository
                 ShelfLife = "4 days", 
                 Price = 55, 
                 StockQuantity = 12, 
-                ImageUrl = "tiramisu.png", 
+                ImageUrl = "/UI/images/tiramisu.jpg", 
                 Categories = new List<CategoryViewModel>
                 {
                     new CategoryViewModel() { Id = 1, Name = "Tatlılar" }
@@ -325,7 +325,7 @@ namespace CoffeePattisserieClient.Repository
                 ShelfLife = "3 days", 
                 Price = 45, 
                 StockQuantity = 20, 
-                ImageUrl = "lemon_tart.png", 
+                ImageUrl = "/UI/images/lemon_tart.jpg", 
                 Categories = new List<CategoryViewModel>
                 {
                     new CategoryViewModel() { Id = 1, Name = "Tatlılar" }
@@ -340,7 +340,7 @@ namespace CoffeePattisserieClient.Repository
                 ShelfLife = "2 days", 
                 Price = 35, 
                 StockQuantity = 25, 
-                ImageUrl = "eclair.png", 
+                ImageUrl = "/UI/images/eclair.jpg", 
                 Categories = new List<CategoryViewModel>
                 {
                     new CategoryViewModel() { Id = 1, Name = "Tatlılar" }
