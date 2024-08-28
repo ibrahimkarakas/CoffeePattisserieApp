@@ -134,7 +134,7 @@ namespace CoffeePattisserieClient.Repository
                 PreparationMethod = "Shake and serve cold", 
                 Price = 40, 
                 StockQuantity = 30, 
-                ImageUrl = "/UI/images/mango_moctail.jpg", 
+                ImageUrl = "/UI/images/mango_delight.jpg", 
                 Categories = new List<CategoryViewModel>
                 {
                     new CategoryViewModel() { Id = 3, Name = "Moctails" }
@@ -154,20 +154,20 @@ namespace CoffeePattisserieClient.Repository
                     new CategoryViewModel() { Id = 3, Name = "Moctails" }
                 }
             },
-            new MoctailViewModel()
-            {
-                Id = 3, 
-                Name = "Citrus Cooler", 
-                Ingredients = "Lemon, Lime, Ice", 
-                PreparationMethod = "Mix and serve with ice", 
-                Price = 35, 
-                StockQuantity = 20, 
-                ImageUrl = "/UI/images/citrus_cooler.jpg", 
-                Categories = new List<CategoryViewModel>
-                {
-                    new CategoryViewModel() { Id = 3, Name = "Moctails" }
-                }
-            },
+            // new MoctailViewModel()
+            // {
+            //     Id = 3, 
+            //     Name = "Citrus Cooler", 
+            //     Ingredients = "Lemon, Lime, Ice", 
+            //     PreparationMethod = "Mix and serve with ice", 
+            //     Price = 35, 
+            //     StockQuantity = 20, 
+            //     ImageUrl = "/UI/images/citrus_cooler.jpg", 
+            //     Categories = new List<CategoryViewModel>
+            //     {
+            //         new CategoryViewModel() { Id = 3, Name = "Moctails" }
+            //     }
+            // },
             new MoctailViewModel()
             {
                 Id = 4, 

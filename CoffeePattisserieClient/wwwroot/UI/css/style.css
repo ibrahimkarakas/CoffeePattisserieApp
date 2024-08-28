@@ -65,7 +65,7 @@ h6 {
     letter-spacing: 0;
     font-weight: normal;
     position: relative;
-    padding: 0 0 10px 0;
+    padding: 0 0 20px 0;
     font-weight: normal;
     line-height: normal;
     color: #111111;
@@ -996,4 +996,19 @@ a:hover {
 
 .margin_top90 {
     margin-top: 90px;
-}
+    }
+    /* product section start */
+    .product_img img {
+        width: 100%; /* Genişliği kapsayıcıya uydur */
+        height: 200px; /* Sabit bir yükseklik ayarla */
+        object-fit: cover; /* Resmin sığmasını sağlar ve taşan kısımlarını kırpar */
+        border-radius: 10px; /* Köşeleri hafif yuvarla */
+       margin-top: 20px;
+       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Gölge ekler */
+    }
+   .product_text text{
+    font-size: larger;
+   }
+    
+
+    /* product section end */

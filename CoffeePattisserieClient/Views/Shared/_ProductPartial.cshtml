@@ -15,20 +15,21 @@
             {
                 <div class="col-md-4 mix">
                     <div class="product__item">
-                        <div class="container_main">
+                        <div class="container_main product_img">
                             <img src="@coffee.ImageUrl" alt="@coffee.Name" class="image">
                             <div class="overlay">
                               <div class="text"><a href="#"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i></a></div>
                             </div>
                         </div>
                         <div class="product__item__text">
-                            <h6><a href="#">@coffee.Name</a></h6>
-                            <div class="product__price">₺ @coffee.Price</div>
+                            @* <h6><a href="#">@coffee.Name</a></h6> *@
+                            <a class="fs-1 fw-bold" href="#">@coffee.Name</a>
+                            <div class=" fs-1 fw-bold product__price">₺ @coffee.Price</div>
                         </div>
-                        <div class="btn-group d-flex mt-2" role="group">
-            <a href="#" class="btn btn-outline-primary w-50 rounded">Favorilere Ekle</a>
-            <a href="#" class="btn btn-outline-success w-50 rounded">Satın Al</a>
-        </div>
+                        <div class="d-flex mt-2 justify-content-between mb-2" role="group">
+                                <a href="#" class="btn btn-outline-primary flex-grow-1 me-1 ml-1" style="max-width: 48%;">Favorilere Ekle</a>
+                                <a href="#" class="btn btn-outline-success flex-grow-1 ms-1 mr-1" style="max-width: 48%;">Satın Al</a>
+                             </div>
                     </div>
                 </div>
                 
@@ -39,7 +40,7 @@
             {
                 <div class="col-md-4 mix">
                     <div class="product__item">
-                        <div class="container_main">
+                        <div class="container_main product_img">
                             <img src="@moctail.ImageUrl" alt="@moctail.Name" class="image">
                             <div class="overlay">
                                 <div class="text">
@@ -48,11 +49,16 @@
                             </div>
                         </div>
                         <div class="product__item__text">
-                            <h6><a href="#">@moctail.Name</a></h6>
-                            <div class="product__price">₺ @moctail.Price</div>
+                            <a class="fs-1 fw-bold" href="#">@moctail.Name</a>
+                            <div class="fs-1 fw-bold product__price">₺ @moctail.Price</div>
+                            <div class="d-flex mt-2 justify-content-between mb-2" role="group">
+                                <a href="#" class="btn btn-outline-primary flex-grow-1 me-1 ml-1" style="max-width: 48%;">Favorilere Ekle</a>
+                                <a href="#" class="btn btn-outline-success flex-grow-1 ms-1 mr-1" style="max-width: 48%;">Satın Al</a>
+                             </div>
                         </div>
                     </div>
                 </div>
+                
             }
 
             <!-- Pattisserie Ürünleri -->
@@ -60,7 +66,7 @@
             {
                 <div class="col-md-4 mix">
                     <div class="product__item">
-                        <div class="container_main">
+                        <div class="container_main product_img">
                             <img src="@pattisserie.ImageUrl" alt="@pattisserie.Name" class="image">
                             <div class="overlay">
                                 <div class="text">
@@ -69,8 +75,12 @@
                             </div>
                         </div>
                         <div class="product__item__text">
-                            <h6><a href="#">@pattisserie.Name</a></h6>
-                            <div class="product__price">₺ @pattisserie.Price</div>
+                            <a class="fs-1 fw-bold" href="#">@pattisserie.Name</a>
+                            <div class=" fs-1 fw-bold product__price">₺ @pattisserie.Price</div>
+                            <div class="d-flex mt-2 justify-content-between mb-2" role="group">
+                                <a href="#" class="btn btn-outline-primary flex-grow-1 me-1 ml-1" style="max-width: 48%;">Favorilere Ekle</a>
+                                <a href="#" class="btn btn-outline-success flex-grow-1 ms-1 mr-1" style="max-width: 48%;">Satın Al</a>
+                             </div>
                         </div>
                     </div>
                 </div>

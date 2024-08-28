@@ -117,6 +117,10 @@
       "PackagePath": "staticwebassets\\UI\\images\\americano.jpg"
     },
     {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\images\\apple_fizz.jpg",
+      "PackagePath": "staticwebassets\\UI\\images\\apple_fizz.jpg"
+    },
+    {
       "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\images\\banner-bg.png",
       "PackagePath": "staticwebassets\\UI\\images\\banner-bg.png"
     },
@@ -133,12 +137,28 @@
       "PackagePath": "staticwebassets\\UI\\images\\cappuccino.jpg"
     },
     {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\images\\cheesecake.jpg",
+      "PackagePath": "staticwebassets\\UI\\images\\cheesecake.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\images\\chocolate_cake.jpg",
+      "PackagePath": "staticwebassets\\UI\\images\\chocolate_cake.jpg"
+    },
+    {
       "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\images\\citrus_cooler.jpg",
       "PackagePath": "staticwebassets\\UI\\images\\citrus_cooler.jpg"
     },
     {
       "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\images\\cold_brew.jpg",
       "PackagePath": "staticwebassets\\UI\\images\\cold_brew.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\images\\cucumber_mint.jpg",
+      "PackagePath": "staticwebassets\\UI\\images\\cucumber_mint.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\images\\eclair.jpg",
+      "PackagePath": "staticwebassets\\UI\\images\\eclair.jpg"
     },
     {
       "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\images\\espresso.jpg",
@@ -149,8 +169,16 @@
       "PackagePath": "staticwebassets\\UI\\images\\fb-icon.png"
     },
     {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\images\\flat_white.jpg",
+      "PackagePath": "staticwebassets\\UI\\images\\flat_white.jpg"
+    },
+    {
       "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\images\\footer-logo.png",
       "PackagePath": "staticwebassets\\UI\\images\\footer-logo.png"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\images\\grapefruit_spritz.jpg",
+      "PackagePath": "staticwebassets\\UI\\images\\grapefruit_spritz.jpg"
     },
     {
       "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\images\\icon1.png",
@@ -213,6 +241,10 @@
       "PackagePath": "staticwebassets\\UI\\images\\latte.jpg"
     },
     {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\images\\lemon_tart.jpg",
+      "PackagePath": "staticwebassets\\UI\\images\\lemon_tart.jpg"
+    },
+    {
       "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\images\\logo.png",
       "PackagePath": "staticwebassets\\UI\\images\\logo.png"
     },
@@ -233,6 +265,14 @@
       "PackagePath": "staticwebassets\\UI\\images\\mocha.jpg"
     },
     {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\images\\peach_iced_tea.jpg",
+      "PackagePath": "staticwebassets\\UI\\images\\peach_iced_tea.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\images\\pineapple_punch.jpg",
+      "PackagePath": "staticwebassets\\UI\\images\\pineapple_punch.jpg"
+    },
+    {
       "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\images\\quick-icon.png",
       "PackagePath": "staticwebassets\\UI\\images\\quick-icon.png"
     },
@@ -249,8 +289,20 @@
       "PackagePath": "staticwebassets\\UI\\images\\social-icon.png"
     },
     {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\images\\tiramisu.jpg",
+      "PackagePath": "staticwebassets\\UI\\images\\tiramisu.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\images\\tropical_paradise.jpg",
+      "PackagePath": "staticwebassets\\UI\\images\\tropical_paradise.jpg"
+    },
+    {
       "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\images\\twitter-icon.png",
       "PackagePath": "staticwebassets\\UI\\images\\twitter-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\images\\virgin_mojito.jpg",
+      "PackagePath": "staticwebassets\\UI\\images\\virgin_mojito.jpg"
     },
     {
       "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserieClient\\wwwroot\\UI\\js\\bootstrap.bundle.js",
