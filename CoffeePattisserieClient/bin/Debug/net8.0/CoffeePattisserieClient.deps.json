@@ -9,7 +9,8 @@
       "CoffeePattisserieClient/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter": "8.0.4",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "8.0.2"
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "8.0.2",
+          "Newtonsoft.Json": "13.0.3"
         },
         "runtime": {
           "CoffeePattisserieClient.dll": {}

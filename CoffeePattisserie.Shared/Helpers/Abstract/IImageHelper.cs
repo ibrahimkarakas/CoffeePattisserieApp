@@ -1,5 +1,5 @@
-using CoffeePattisserie.Shared.ResponseDtos;
 using CoffeePattisserie.Shared.Dtos;
+using CoffeePattisserie.Shared.ResponseDtos;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
@@ -11,7 +11,7 @@ namespace CoffeePattisserie.Shared.Helpers.Abstract
 {
     public interface IImageHelper
     {
-         Task<Response<ImageDto>> Upload(IFormFile file,string directoryName);
+         Task<Response<ImageDto>> Upload(IFormFile file, string directoryName);
 
     }
 }

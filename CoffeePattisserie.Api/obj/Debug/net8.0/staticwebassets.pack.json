@@ -1,0 +1,105 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\coffees\\americano.jpg",
+      "PackagePath": "staticwebassets\\images\\coffees\\americano.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\coffees\\cappuccino.jpg",
+      "PackagePath": "staticwebassets\\images\\coffees\\cappuccino.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\coffees\\cold_brew.jpg",
+      "PackagePath": "staticwebassets\\images\\coffees\\cold_brew.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\coffees\\espresso.jpg",
+      "PackagePath": "staticwebassets\\images\\coffees\\espresso.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\coffees\\flat_white.jpg",
+      "PackagePath": "staticwebassets\\images\\coffees\\flat_white.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\coffees\\latte.jpg",
+      "PackagePath": "staticwebassets\\images\\coffees\\latte.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\coffees\\mocha.jpg",
+      "PackagePath": "staticwebassets\\images\\coffees\\mocha.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\moctails\\apple_fizz.jpg",
+      "PackagePath": "staticwebassets\\images\\moctails\\apple_fizz.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\moctails\\berry_blast.jpg",
+      "PackagePath": "staticwebassets\\images\\moctails\\berry_blast.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\moctails\\citrus_cooler.jpg",
+      "PackagePath": "staticwebassets\\images\\moctails\\citrus_cooler.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\moctails\\grapefruit_spritz.jpg",
+      "PackagePath": "staticwebassets\\images\\moctails\\grapefruit_spritz.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\moctails\\mango_delight.jpg",
+      "PackagePath": "staticwebassets\\images\\moctails\\mango_delight.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\moctails\\peach_iced_tea.jpg",
+      "PackagePath": "staticwebassets\\images\\moctails\\peach_iced_tea.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\moctails\\pineapple_punch.jpg",
+      "PackagePath": "staticwebassets\\images\\moctails\\pineapple_punch.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\moctails\\tropical_paradise.jpg",
+      "PackagePath": "staticwebassets\\images\\moctails\\tropical_paradise.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\moctails\\virgin_mojito.jpg",
+      "PackagePath": "staticwebassets\\images\\moctails\\virgin_mojito.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\pattisserie\\cheesecake.jpg",
+      "PackagePath": "staticwebassets\\images\\pattisserie\\cheesecake.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\pattisserie\\chocolate_cake.jpg",
+      "PackagePath": "staticwebassets\\images\\pattisserie\\chocolate_cake.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\pattisserie\\eclair.jpg",
+      "PackagePath": "staticwebassets\\images\\pattisserie\\eclair.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\pattisserie\\lemon_tart.jpg",
+      "PackagePath": "staticwebassets\\images\\pattisserie\\lemon_tart.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\pattisserie\\tiramisu.jpg",
+      "PackagePath": "staticwebassets\\images\\pattisserie\\tiramisu.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.CoffeePattisserie.Api.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.CoffeePattisserie.Api.props",
+      "PackagePath": "build\\CoffeePattisserie.Api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.CoffeePattisserie.Api.props",
+      "PackagePath": "buildMultiTargeting\\CoffeePattisserie.Api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.CoffeePattisserie.Api.props",
+      "PackagePath": "buildTransitive\\CoffeePattisserie.Api.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

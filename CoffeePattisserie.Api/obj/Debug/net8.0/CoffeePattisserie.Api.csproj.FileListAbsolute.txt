@@ -1,5 +1,6 @@
 C:\Users\Admin\Desktop\FinalProject-CoffeePattisserie\CoffeePattisserieApp\CoffeePattisserie.Api\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\Admin\Desktop\FinalProject-CoffeePattisserie\CoffeePattisserieApp\CoffeePattisserie.Api\bin\Debug\net8.0\appsettings.json
+C:\Users\Admin\Desktop\FinalProject-CoffeePattisserie\CoffeePattisserieApp\CoffeePattisserie.Api\bin\Debug\net8.0\CoffeePattisserie.Api.staticwebassets.runtime.json
 C:\Users\Admin\Desktop\FinalProject-CoffeePattisserie\CoffeePattisserieApp\CoffeePattisserie.Api\bin\Debug\net8.0\CoffeePattisserie.Api.exe
 C:\Users\Admin\Desktop\FinalProject-CoffeePattisserie\CoffeePattisserieApp\CoffeePattisserie.Api\bin\Debug\net8.0\CoffeePattisserie.Api.deps.json
 C:\Users\Admin\Desktop\FinalProject-CoffeePattisserie\CoffeePattisserieApp\CoffeePattisserie.Api\bin\Debug\net8.0\CoffeePattisserie.Api.runtimeconfig.json

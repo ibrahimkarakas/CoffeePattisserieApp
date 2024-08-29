@@ -4,13 +4,14 @@ using CoffeePattisserie.Shared.ResponseDtos;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using System;
-using System.IO;
+using System.Collections.Generic;
+using System.Text;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace CoffeePattisserie.Shared.Helpers.Concrete
 {
-     public class ImageHelper : IImageHelper
+    public class ImageHelper : IImageHelper
     {
         private string _imagesFolder;
         private readonly string[] permittedExtensions = { ".png", ".jpg", ".jpeg" };
@@ -18,16 +19,7 @@ namespace CoffeePattisserie.Shared.Helpers.Concrete
 
         public ImageHelper(IWebHostEnvironment env)
         {
-            if (env == null)
-            {
-                throw new ArgumentNullException(nameof(env), "IWebHostEnvironment instance is null.");
-            }
-
-            if (string.IsNullOrEmpty(env.WebRootPath))
-            {
-                throw new ArgumentNullException(nameof(env.WebRootPath), "WebRootPath is null or empty.");
-            }
-
+            // wwwroot/images dizini oluşturuluyor
             _imagesFolder = Path.Combine(env.WebRootPath, "images");
         }
 
@@ -45,6 +37,7 @@ namespace CoffeePattisserie.Shared.Helpers.Concrete
                 return Response<ImageDto>.Fail("Resim formatı hatalı. png, jpg ya da jpeg gönderiniz.", 401);
             }
 
+            // Eğer belirtilen dizin yoksa, oluşturulur
             _imagesFolder = Path.Combine(_imagesFolder, directoryName);
             if (!Directory.Exists(_imagesFolder))
             {

@@ -11,10 +11,6 @@ namespace CoffeePattisserieClient.Models
         [JsonPropertyName("name")]
         public string Name { get; set; }
 
-        // Yeni Özellikler
-        [JsonPropertyName("imageUrl")]
-        public string ImageUrl { get; set; }
-
         [JsonPropertyName("description")]
         public string Description { get; set; }
 

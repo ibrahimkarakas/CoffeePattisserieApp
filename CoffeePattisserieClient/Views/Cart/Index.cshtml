@@ -1,0 +1,46 @@
+@model CoffeePattisserieClient.Models.CartViewModel
+
+<!-- Shop Cart Section Begin -->
+<section class="shop-cart spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="shop__cart__table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Ürün</th>
+                                <th>Fiyat</th>
+                                <th>Adet</th>
+                                <th>Toplam</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.CartItems)
+                            {
+                                <tr>
+                                    <td class="cart__product__item">
+                                        <img src="http://localhost:3534/@item.Product.ImageUrl" alt="" width="50">
+                                        <div class="cart__product__item__title">
+                                            <h6>@item.Product.Name</h6>
+                                            <div class="rating">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="cart__price">₺@item.Product.Price</td>
+                                    <td class="cart__quantity">
+                                        <div class="pro-qty">
+                                            <input type="text" value="@item.Quantity">
+                                        </div>
+                                    </td>
+                                    <td class="cart__total">₺@(item.Product.Price * item.Quantity)</td>
+                                    <td class="cart__close"><span class="icon_close"></span></td>
+                                </tr>
+                            }
+                        </tbody>
