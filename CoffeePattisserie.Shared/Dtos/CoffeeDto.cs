@@ -19,5 +19,8 @@ namespace CoffeePattisserie.Shared.Dtos
         public string FlavorNotes { get; set; }
         public int CaffeineContent { get; set; }
         public List<CategoryDto> Categories { get; set; }
+        public string ImageUrl { get; set; }
+        public bool IsHome { get; set; }
+
     }
 }

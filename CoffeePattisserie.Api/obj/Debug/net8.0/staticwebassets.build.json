@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ks3Hx348qALS984WHVCVWKSi0Ko0GjuHsO3dyqvXS3s=",
+  "Hash": "BwJZs6SSM0Y24js3ta3QlRoNMDE0np/JuQs6P3aqEUw=",
   "Source": "CoffeePattisserie.Api",
   "BasePath": "_content/CoffeePattisserie.Api",
   "Mode": "Default",
@@ -17,12 +17,12 @@
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\coffees\\americano.jpg",
+      "Identity": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\americano.jpg",
       "SourceId": "CoffeePattisserie.Api",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\",
       "BasePath": "_content/CoffeePattisserie.Api",
-      "RelativePath": "images/coffees/americano.jpg",
+      "RelativePath": "images/americano.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -33,15 +33,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\coffees\\americano.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\americano.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\coffees\\cappuccino.jpg",
+      "Identity": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\apple_fizz.jpg",
       "SourceId": "CoffeePattisserie.Api",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\",
       "BasePath": "_content/CoffeePattisserie.Api",
-      "RelativePath": "images/coffees/cappuccino.jpg",
+      "RelativePath": "images/apple_fizz.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -52,15 +52,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\coffees\\cappuccino.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\apple_fizz.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\coffees\\cold_brew.jpg",
+      "Identity": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\berry_blast.jpg",
       "SourceId": "CoffeePattisserie.Api",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\",
       "BasePath": "_content/CoffeePattisserie.Api",
-      "RelativePath": "images/coffees/cold_brew.jpg",
+      "RelativePath": "images/berry_blast.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -71,15 +71,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\coffees\\cold_brew.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\berry_blast.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\coffees\\espresso.jpg",
+      "Identity": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\cappuccino.jpg",
       "SourceId": "CoffeePattisserie.Api",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\",
       "BasePath": "_content/CoffeePattisserie.Api",
-      "RelativePath": "images/coffees/espresso.jpg",
+      "RelativePath": "images/cappuccino.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -90,15 +90,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\coffees\\espresso.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\cappuccino.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\coffees\\flat_white.jpg",
+      "Identity": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\cheesecake.jpg",
       "SourceId": "CoffeePattisserie.Api",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\",
       "BasePath": "_content/CoffeePattisserie.Api",
-      "RelativePath": "images/coffees/flat_white.jpg",
+      "RelativePath": "images/cheesecake.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -109,15 +109,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\coffees\\flat_white.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\cheesecake.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\coffees\\latte.jpg",
+      "Identity": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\chocolate_cake.jpg",
       "SourceId": "CoffeePattisserie.Api",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\",
       "BasePath": "_content/CoffeePattisserie.Api",
-      "RelativePath": "images/coffees/latte.jpg",
+      "RelativePath": "images/chocolate_cake.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -128,15 +128,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\coffees\\latte.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\chocolate_cake.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\coffees\\mocha.jpg",
+      "Identity": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\citrus_cooler.jpg",
       "SourceId": "CoffeePattisserie.Api",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\",
       "BasePath": "_content/CoffeePattisserie.Api",
-      "RelativePath": "images/coffees/mocha.jpg",
+      "RelativePath": "images/citrus_cooler.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -147,15 +147,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\coffees\\mocha.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\citrus_cooler.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\moctails\\apple_fizz.jpg",
+      "Identity": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\cold_brew.jpg",
       "SourceId": "CoffeePattisserie.Api",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\",
       "BasePath": "_content/CoffeePattisserie.Api",
-      "RelativePath": "images/moctails/apple_fizz.jpg",
+      "RelativePath": "images/cold_brew.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -166,15 +166,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\moctails\\apple_fizz.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\cold_brew.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\moctails\\berry_blast.jpg",
+      "Identity": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\eclair.jpg",
       "SourceId": "CoffeePattisserie.Api",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\",
       "BasePath": "_content/CoffeePattisserie.Api",
-      "RelativePath": "images/moctails/berry_blast.jpg",
+      "RelativePath": "images/eclair.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -185,15 +185,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\moctails\\berry_blast.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\eclair.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\moctails\\citrus_cooler.jpg",
+      "Identity": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\espresso.jpg",
       "SourceId": "CoffeePattisserie.Api",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\",
       "BasePath": "_content/CoffeePattisserie.Api",
-      "RelativePath": "images/moctails/citrus_cooler.jpg",
+      "RelativePath": "images/espresso.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -204,15 +204,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\moctails\\citrus_cooler.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\espresso.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\moctails\\grapefruit_spritz.jpg",
+      "Identity": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\flat_white.jpg",
       "SourceId": "CoffeePattisserie.Api",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\",
       "BasePath": "_content/CoffeePattisserie.Api",
-      "RelativePath": "images/moctails/grapefruit_spritz.jpg",
+      "RelativePath": "images/flat_white.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -223,15 +223,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\moctails\\grapefruit_spritz.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\flat_white.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\moctails\\mango_delight.jpg",
+      "Identity": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\grapefruit_spritz.jpg",
       "SourceId": "CoffeePattisserie.Api",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\",
       "BasePath": "_content/CoffeePattisserie.Api",
-      "RelativePath": "images/moctails/mango_delight.jpg",
+      "RelativePath": "images/grapefruit_spritz.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -242,15 +242,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\moctails\\mango_delight.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\grapefruit_spritz.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\moctails\\peach_iced_tea.jpg",
+      "Identity": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\latte.jpg",
       "SourceId": "CoffeePattisserie.Api",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\",
       "BasePath": "_content/CoffeePattisserie.Api",
-      "RelativePath": "images/moctails/peach_iced_tea.jpg",
+      "RelativePath": "images/latte.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -261,15 +261,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\moctails\\peach_iced_tea.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\latte.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\moctails\\pineapple_punch.jpg",
+      "Identity": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\lemon_tart.jpg",
       "SourceId": "CoffeePattisserie.Api",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\",
       "BasePath": "_content/CoffeePattisserie.Api",
-      "RelativePath": "images/moctails/pineapple_punch.jpg",
+      "RelativePath": "images/lemon_tart.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -280,15 +280,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\moctails\\pineapple_punch.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\lemon_tart.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\moctails\\tropical_paradise.jpg",
+      "Identity": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\mango_delight.jpg",
       "SourceId": "CoffeePattisserie.Api",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\",
       "BasePath": "_content/CoffeePattisserie.Api",
-      "RelativePath": "images/moctails/tropical_paradise.jpg",
+      "RelativePath": "images/mango_delight.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -299,15 +299,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\moctails\\tropical_paradise.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\mango_delight.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\moctails\\virgin_mojito.jpg",
+      "Identity": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\mocha.jpg",
       "SourceId": "CoffeePattisserie.Api",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\",
       "BasePath": "_content/CoffeePattisserie.Api",
-      "RelativePath": "images/moctails/virgin_mojito.jpg",
+      "RelativePath": "images/mocha.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -318,15 +318,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\moctails\\virgin_mojito.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\mocha.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\pattisserie\\cheesecake.jpg",
+      "Identity": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\peach_iced_tea.jpg",
       "SourceId": "CoffeePattisserie.Api",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\",
       "BasePath": "_content/CoffeePattisserie.Api",
-      "RelativePath": "images/pattisserie/cheesecake.jpg",
+      "RelativePath": "images/peach_iced_tea.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -337,15 +337,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\pattisserie\\cheesecake.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\peach_iced_tea.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\pattisserie\\chocolate_cake.jpg",
+      "Identity": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\pineapple_punch.jpg",
       "SourceId": "CoffeePattisserie.Api",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\",
       "BasePath": "_content/CoffeePattisserie.Api",
-      "RelativePath": "images/pattisserie/chocolate_cake.jpg",
+      "RelativePath": "images/pineapple_punch.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -356,15 +356,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\pattisserie\\chocolate_cake.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\pineapple_punch.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\pattisserie\\eclair.jpg",
+      "Identity": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\tiramisu.jpg",
       "SourceId": "CoffeePattisserie.Api",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\",
       "BasePath": "_content/CoffeePattisserie.Api",
-      "RelativePath": "images/pattisserie/eclair.jpg",
+      "RelativePath": "images/tiramisu.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -375,15 +375,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\pattisserie\\eclair.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\tiramisu.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\pattisserie\\lemon_tart.jpg",
+      "Identity": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\tropical_paradise.jpg",
       "SourceId": "CoffeePattisserie.Api",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\",
       "BasePath": "_content/CoffeePattisserie.Api",
-      "RelativePath": "images/pattisserie/lemon_tart.jpg",
+      "RelativePath": "images/tropical_paradise.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -394,15 +394,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\pattisserie\\lemon_tart.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\tropical_paradise.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\pattisserie\\tiramisu.jpg",
+      "Identity": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\images\\virgin_mojito.jpg",
       "SourceId": "CoffeePattisserie.Api",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\FinalProject-CoffeePattisserie\\CoffeePattisserieApp\\CoffeePattisserie.Api\\wwwroot\\",
       "BasePath": "_content/CoffeePattisserie.Api",
-      "RelativePath": "images/pattisserie/tiramisu.jpg",
+      "RelativePath": "images/virgin_mojito.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -413,7 +413,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\pattisserie\\tiramisu.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\virgin_mojito.jpg"
     }
   ]
 }

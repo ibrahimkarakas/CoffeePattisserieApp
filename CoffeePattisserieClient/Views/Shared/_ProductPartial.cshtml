@@ -1,4 +1,4 @@
-@model Tuple<List<CoffeeViewModel>, List<MoctailViewModel>, List<PattisserieViewModel>>
+@model List<ProductViewModel>
 
 <section class="product spad">
     <div class="container">
@@ -10,77 +10,23 @@
         </div>
 
         <div class="row property__gallery">
-            <!-- Kahve Ürünleri -->
-            @foreach (var coffee in Model.Item1)
+            @foreach (var product in Model)
             {
                 <div class="col-md-4 mix">
                     <div class="product__item">
                         <div class="container_main product_img">
-                            <img src="@coffee.ImageUrl" alt="@coffee.Name" class="image">
+                            <img src="@product.ImageUrl" alt="@product.Name" class="image">
                             <div class="overlay">
-                              <div class="text"><a href="#"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i></a></div>
+                                <div class="text"><a href="#"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i></a></div>
                             </div>
                         </div>
                         <div class="product__item__text">
-                            @* <h6><a href="#">@coffee.Name</a></h6> *@
-                            <a class="fs-1 fw-bold" href="#">@coffee.Name</a>
-                            <div class=" fs-1 fw-bold product__price">₺ @coffee.Price</div>
+                            <a class="fs-1 fw-bold" href="#">@product.Name</a>
+                            <div class="fs-1 fw-bold product__price">₺ @product.Price</div>
                         </div>
                         <div class="d-flex mt-2 justify-content-between mb-2" role="group">
-                                <a href="#" class="btn btn-outline-primary flex-grow-1 me-1 ml-1" style="max-width: 48%;">Favorilere Ekle</a>
-                                <a href="#" class="btn btn-outline-success flex-grow-1 ms-1 mr-1" style="max-width: 48%;">Satın Al</a>
-                             </div>
-                    </div>
-                </div>
-                
-            }
-
-            <!-- Moctail Ürünleri -->
-            @foreach (var moctail in Model.Item2)
-            {
-                <div class="col-md-4 mix">
-                    <div class="product__item">
-                        <div class="container_main product_img">
-                            <img src="@moctail.ImageUrl" alt="@moctail.Name" class="image">
-                            <div class="overlay">
-                                <div class="text">
-                                    <a href="#"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product__item__text">
-                            <a class="fs-1 fw-bold" href="#">@moctail.Name</a>
-                            <div class="fs-1 fw-bold product__price">₺ @moctail.Price</div>
-                            <div class="d-flex mt-2 justify-content-between mb-2" role="group">
-                                <a href="#" class="btn btn-outline-primary flex-grow-1 me-1 ml-1" style="max-width: 48%;">Favorilere Ekle</a>
-                                <a href="#" class="btn btn-outline-success flex-grow-1 ms-1 mr-1" style="max-width: 48%;">Satın Al</a>
-                             </div>
-                        </div>
-                    </div>
-                </div>
-                
-            }
-
-            <!-- Pattisserie Ürünleri -->
-            @foreach (var pattisserie in Model.Item3)
-            {
-                <div class="col-md-4 mix">
-                    <div class="product__item">
-                        <div class="container_main product_img">
-                            <img src="@pattisserie.ImageUrl" alt="@pattisserie.Name" class="image">
-                            <div class="overlay">
-                                <div class="text">
-                                    <a href="#"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product__item__text">
-                            <a class="fs-1 fw-bold" href="#">@pattisserie.Name</a>
-                            <div class=" fs-1 fw-bold product__price">₺ @pattisserie.Price</div>
-                            <div class="d-flex mt-2 justify-content-between mb-2" role="group">
-                                <a href="#" class="btn btn-outline-primary flex-grow-1 me-1 ml-1" style="max-width: 48%;">Favorilere Ekle</a>
-                                <a href="#" class="btn btn-outline-success flex-grow-1 ms-1 mr-1" style="max-width: 48%;">Satın Al</a>
-                             </div>
+                            <a href="#" class="btn btn-outline-primary flex-grow-1 me-1 ml-1" style="max-width: 48%;">Favorilere Ekle</a>
+                            <a href="#" class="btn btn-outline-success flex-grow-1 ms-1 mr-1" style="max-width: 48%;">Satın Al</a>
                         </div>
                     </div>
                 </div>

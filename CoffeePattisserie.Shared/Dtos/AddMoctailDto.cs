@@ -16,6 +16,8 @@ namespace CoffeePattisserie.Shared.Dtos
         public int StockQuantity { get; set; }
         public string FlavorProfile { get; set; }
         public List<int> CategoryIds { get; set; }=[];
+        public string ImageUrl { get; set; }
+        public bool IsHome { get; set; }
 
     }
 }
